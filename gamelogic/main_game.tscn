@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bec6m1wt1u72v"]
+
+[ext_resource type="Script" path="res://gamelogic/main_game.gd" id="1_i41yo"]
+[ext_resource type="PackedScene" uid="uid://byodc7h0glibc" path="res://gamelogic/RoomSelector/room_selector.tscn" id="1_kqtaq"]
+
+[node name="MainGame" type="Node2D"]
+script = ExtResource("1_i41yo")
+
+[node name="RoomSelector" parent="." instance=ExtResource("1_kqtaq")]

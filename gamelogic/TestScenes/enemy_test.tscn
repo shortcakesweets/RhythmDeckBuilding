@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cn2ymeqhlpba"]
+
+[ext_resource type="Script" path="res://gamelogic/TestScenes/enemy_test.gd" id="1_s4pxg"]
+[ext_resource type="Resource" uid="uid://c7rr2e7nkbqrc" path="res://enemy/enemy_resource/sample_resource.tres" id="2_1lk4m"]
+
+[node name="Enemy_Test" type="Node2D"]
+script = ExtResource("1_s4pxg")
+enemy_data = ExtResource("2_1lk4m")

@@ -1,0 +1,18 @@
+res://enemy/enemy.tscn
+res://gamelogic/Arena/Character.gd
+res://gamelogic/Arena/rhythm.gd
+res://assets/enemy animation/enemy_animations.tres
+res://assets/effect animation/some_animations.tres
+res://assets/paper_tileset.tres
+res://enemy/enemy_resource/sample_resource.tres
+res://tools/monster_maker.tscn
+res://gamelogic/Arena/arena.tscn
+res://tools/fsm_maker.tscn
+res://tools/graph_node.tscn
+res://tools/graph_node.gd
+res://tools/editor.gd
+res://tools/graphnode_weight.gd
+res://tools/maker_file_saveload.gd
+res://enemy/fsm_class.gd
+res://tools/FSM maker/fsm_maker.tscn
+res://tools/FSM maker/editor.gd
