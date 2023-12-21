@@ -1,8 +1,18 @@
-res://gamelogic/Arena/arena.tscn
+res://tools/maker_full.tscn
 res://gamelogic/Arena/Character.gd
 res://gamelogic/Arena/rhythm.gd
 res://assets/effect animation/some_animations.tres
 res://assets/paper_tileset.tres
+res://assets/control_theme.tres
 res://assets/enemy animation/enemy_animations.tres
-res://enemy/enemy_resource/sample_resource.tres
+res://tools/file flawless check.gd
+res://room/room_class.gd
+res://room/room_resource/sample_room_resource.tres
+res://gamelogic/Arena/arena.tscn
+res://gamelogic/Arena/arena.gd
+res://gamelogic/Arena/Enemies.gd
+res://gamelogic/Arena/turn_logic.gd
+res://tools/Mob maker/Mob maker.tscn
 res://tools/FSM maker/fsm_maker.tscn
+res://enemy/enemy.gd
+res://enemy/fsm_class.gd

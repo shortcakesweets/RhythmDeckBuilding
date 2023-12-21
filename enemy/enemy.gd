@@ -19,11 +19,13 @@ func set_values_from_resource(new_resource : Enemy = null) -> void:
 		enemy_data_raw = new_resource
 	if enemy_data_raw != null:
 		enemy_data = enemy_data_raw.duplicate(true)
+	draw_enemy()
 
 func draw_enemy() -> void:
 	if enemy_data == null:
 		self.visible = false
 	else:
+		enemy_data.set_FSM_data()
 		self.visible = true
 		var idle_animation : String = enemy_data.enemy_name.to_lower() + "_idle"
 		sprite.play(idle_animation)
@@ -36,6 +38,8 @@ func update_visuals() -> void:
 	hp_bar.get_node("HP_label").text = str(enemy_data.hp) + " / " + str(enemy_data.max_hp)
 
 func turn() -> Dictionary:
-	var effect : Dictionary = enemy_data.turn()
-	# update_visuals()
+	var effect := {}
+	if enemy_data != null:
+		effect = enemy_data.turn()
+		update_visuals()
 	return effect

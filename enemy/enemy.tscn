@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://enemy/enemy.gd" id="1_hgrqm"]
 [ext_resource type="SpriteFrames" uid="uid://5gcsugyuypp2" path="res://assets/enemy animation/enemy_animations.tres" id="2_j5ob7"]
 [ext_resource type="Theme" uid="uid://bl2wxp3u6kuhq" path="res://assets/control_theme.tres" id="3_gkbkt"]
-[ext_resource type="Texture2D" uid="uid://cm6co5hjtnn6a" path="res://assets/others/HB_4.1-Hurt.png" id="4_wsjpp"]
-[ext_resource type="Texture2D" uid="uid://dp1j81jq702in" path="res://assets/others/HB_4-Hurt.png" id="5_yf5lp"]
+[ext_resource type="Texture2D" uid="uid://byckq01x6gugm" path="res://assets/others/HB_4.1-Hurt.png" id="4_wsjpp"]
+[ext_resource type="Texture2D" uid="uid://bbdjvurhpd2me" path="res://assets/others/HB_4-Hurt.png" id="5_yf5lp"]
 
 [node name="Enemy" type="Node2D"]
 script = ExtResource("1_hgrqm")

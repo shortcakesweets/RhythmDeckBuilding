@@ -7,9 +7,6 @@ extends "res://cards/card_effect.gd"
 
 var curr_turn : int = 0
 
-func _ready() -> void:
-	pass
-
 func turn(card_index : int = -1) -> void:
 	# Run Player Card - wip
 	var used_card_id : int = -1
@@ -26,6 +23,9 @@ func turn(card_index : int = -1) -> void:
 	# Run Enemy Queue
 	var effect_array : Array = enemies.turns()
 	# check win/lose traits
+	
+	# Run spawn Queue
+	enemies.spawn(curr_turn)
 	
 	# increment turn count
 	curr_turn += 1

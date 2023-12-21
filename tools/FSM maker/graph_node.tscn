@@ -12,9 +12,9 @@ slot/0/left_enabled = true
 slot/0/left_type = 0
 slot/0/left_color = Color(0, 0.831373, 0.145098, 1)
 slot/0/left_icon = null
-slot/0/right_enabled = false
-slot/0/right_type = 0
-slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_enabled = true
+slot/0/right_type = 1
+slot/0/right_color = Color(0.105882, 0.345098, 1, 1)
 slot/0/right_icon = null
 slot/0/draw_stylebox = true
 slot/1/left_enabled = false
@@ -91,6 +91,17 @@ custom_minimum_size = Vector2(150, 40)
 layout_mode = 2
 text = "Delete state"
 
+[node name="HSeparator2" type="HSeparator" parent="MainSettings"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="Effects" type="Label" parent="MainSettings"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+text = "Edit Effects"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="HBoxContainer" type="HBoxContainer" parent="MainSettings"]
 layout_mode = 2
 alignment = 2
@@ -108,11 +119,6 @@ min_value = 1.0
 value = 1.0
 alignment = 1
 
-[node name="Edit Effects" type="Button" parent="MainSettings"]
-custom_minimum_size = Vector2(0, 40)
-layout_mode = 2
-text = "Edit Effects"
-
 [node name="HSeparator" type="HSeparator" parent="MainSettings"]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
@@ -125,41 +131,98 @@ alignment = 1
 [node name="Label" type="Label" parent="Recursive"]
 custom_minimum_size = Vector2(200, 40)
 layout_mode = 2
-text = "Recursive"
+text = "Self"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Recursive" type="SpinBox" parent="Recursive"]
+[node name="value" type="Label" parent="Recursive"]
+custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
-alignment = 1
+text = "100%"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Weight1" type="SpinBox" parent="."]
+[node name="Weight1" type="HBoxContainer" parent="."]
 layout_mode = 2
-alignment = 1
 
-[node name="Weight2" type="SpinBox" parent="."]
+[node name="state_name" type="Label" parent="Weight1"]
+custom_minimum_size = Vector2(250, 40)
 layout_mode = 2
-alignment = 1
+text = "stateName"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Weight3" type="SpinBox" parent="."]
+[node name="value" type="SpinBox" parent="Weight1"]
 layout_mode = 2
 alignment = 1
+suffix = "%"
 
-[node name="Weight4" type="SpinBox" parent="."]
+[node name="Weight2" type="HBoxContainer" parent="."]
 layout_mode = 2
-alignment = 1
 
-[node name="Weight5" type="SpinBox" parent="."]
+[node name="state_name" type="Label" parent="Weight2"]
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 2
+text = "stateName"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="value" type="SpinBox" parent="Weight2"]
 layout_mode = 2
 alignment = 1
+suffix = "%"
+
+[node name="Weight3" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="state_name" type="Label" parent="Weight3"]
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 2
+text = "stateName"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="value" type="SpinBox" parent="Weight3"]
+layout_mode = 2
+alignment = 1
+suffix = "%"
+
+[node name="Weight4" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="state_name" type="Label" parent="Weight4"]
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 2
+text = "stateName"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="value" type="SpinBox" parent="Weight4"]
+layout_mode = 2
+alignment = 1
+suffix = "%"
+
+[node name="Weight5" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="state_name" type="Label" parent="Weight5"]
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 2
+text = "stateName"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="value" type="SpinBox" parent="Weight5"]
+layout_mode = 2
+alignment = 1
+suffix = "%"
 
 [connection signal="delete_request" from="." to="." method="_on_delete_request"]
 [connection signal="text_changed" from="MainSettings/HBoxContainer2/state_name" to="." method="_on_state_name_text_changed"]
 [connection signal="pressed" from="MainSettings/HBoxContainer2/free" to="." method="_on_delete_request"]
 [connection signal="value_changed" from="MainSettings/HBoxContainer/WaitCount" to="." method="_on_wait_count_value_changed"]
-[connection signal="value_changed" from="Recursive/Recursive" to="." method="_on_recursive_value_changed"]
-[connection signal="value_changed" from="Weight1" to="." method="_on_weight_box_value_changed" binds= [0]]
-[connection signal="value_changed" from="Weight2" to="." method="_on_weight_box_value_changed" binds= [1]]
-[connection signal="value_changed" from="Weight3" to="." method="_on_weight_box_value_changed" binds= [2]]
-[connection signal="value_changed" from="Weight4" to="." method="_on_weight_box_value_changed" binds= [3]]
-[connection signal="value_changed" from="Weight5" to="." method="_on_weight_box_value_changed" binds= [4]]
+[connection signal="value_changed" from="Weight1/value" to="." method="_on_weight_box_value_changed" binds= [0]]
+[connection signal="value_changed" from="Weight2/value" to="." method="_on_weight_box_value_changed" binds= [1]]
+[connection signal="value_changed" from="Weight3/value" to="." method="_on_weight_box_value_changed" binds= [2]]
+[connection signal="value_changed" from="Weight4/value" to="." method="_on_weight_box_value_changed" binds= [3]]
+[connection signal="value_changed" from="Weight5/value" to="." method="_on_weight_box_value_changed" binds= [4]]

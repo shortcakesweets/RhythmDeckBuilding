@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://enemy/enemy_class.gd" id="1_oq8lm"]
+
+[resource]
+script = ExtResource("1_oq8lm")
+enemy_name = "Slime"
+max_hp = 25
+FSM_path = "res://enemy/fsm_resource/slime_fsm_basic.tres"

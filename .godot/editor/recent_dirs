@@ -1,4 +1,8 @@
+res://enemy/enemy_resource
+res://room/room_resource
 res://tools
+res://tools/Mob maker
+res://tools/FSM maker
 res://enemy/fsm_resource
 res://gamelogic/TestScenes
 res://enemy

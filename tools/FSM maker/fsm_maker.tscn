@@ -1,13 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://bvlp58jipxqhn"]
+[gd_scene load_steps=3 format=3 uid="uid://bvlp58jipxqhn"]
 
-[ext_resource type="Script" path="res://tools/FSM maker/fsm_maker.gd" id="1_quyv8"]
 [ext_resource type="Script" path="res://tools/FSM maker/editor.gd" id="3_fcn6m"]
 [ext_resource type="Script" path="res://tools/FSM maker/maker_file_saveload.gd" id="3_nriu2"]
 
-[node name="FSM maker" type="Node"]
-script = ExtResource("1_quyv8")
+[node name="FSM maker" type="Node2D"]
 
-[node name="saveload" type="Node" parent="."]
+[node name="saveload" type="Node2D" parent="."]
 script = ExtResource("3_nriu2")
 
 [node name="Load" type="Button" parent="saveload"]
@@ -50,13 +48,13 @@ ok_button_text = "열기"
 file_mode = 0
 root_subfolder = "enemy/fsm_resource"
 
-[node name="editor" type="Node" parent="."]
+[node name="editor" type="Node2D" parent="."]
 script = ExtResource("3_fcn6m")
 
 [node name="GraphEdit" type="GraphEdit" parent="editor"]
 offset_left = 56.0
 offset_top = 152.0
-offset_right = 1600.0
+offset_right = 1302.0
 offset_bottom = 1024.0
 right_disconnects = true
 
@@ -68,6 +66,30 @@ offset_bottom = 114.0
 theme_override_font_sizes/font_size = 32
 text = "Add State"
 
+[node name="Add Effect" type="Button" parent="editor"]
+offset_left = 339.0
+offset_top = 48.0
+offset_right = 575.0
+offset_bottom = 114.0
+theme_override_font_sizes/font_size = 32
+text = "Add Effect"
+
+[node name="Clear Graph" type="Button" parent="editor"]
+offset_left = 1064.0
+offset_top = 54.0
+offset_right = 1300.0
+offset_bottom = 120.0
+theme_override_font_sizes/font_size = 32
+text = "Clear Graph"
+
+[node name="StateData" type="Label" parent="editor"]
+offset_left = 1339.0
+offset_top = 155.0
+offset_right = 1881.0
+offset_bottom = 674.0
+theme_override_font_sizes/font_size = 24
+text = "sample"
+
 [connection signal="pressed" from="saveload/Load" to="saveload" method="_on_load_pressed"]
 [connection signal="pressed" from="saveload/Save" to="saveload" method="_on_save_pressed"]
 [connection signal="pressed" from="saveload/Save_as" to="saveload" method="_on_save_as_pressed"]
@@ -75,3 +97,5 @@ text = "Add State"
 [connection signal="file_selected" from="saveload/FileDialog_Load" to="saveload" method="_on_file_dialog_load_file_selected"]
 [connection signal="connection_request" from="editor/GraphEdit" to="editor" method="_on_graph_edit_connection_request"]
 [connection signal="pressed" from="editor/Add State" to="editor" method="_on_add_state_pressed"]
+[connection signal="pressed" from="editor/Add Effect" to="editor" method="_on_add_effect_pressed"]
+[connection signal="pressed" from="editor/Clear Graph" to="editor" method="_on_clear_graph_pressed"]

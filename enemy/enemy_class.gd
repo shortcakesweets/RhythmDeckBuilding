@@ -5,10 +5,18 @@ class_name Enemy
 @export var max_hp : int = 10
 var hp : int = 10
 var def : int = 0
-@export var buffs : Dictionary = {}
-@export var id : int = 0
+#@export var buffs : Dictionary = {}
+#@export var id : int = 0
 
-@export var FSM : FiniteStateMachine = null
+@export var FSM_path : String
+var FSM : FiniteStateMachine = null
+
+func set_FSM_data() -> void:
+	if ResourceLoader.exists(FSM_path):
+		FSM = load(FSM_path).duplicate(true)
+		hp = max_hp
+	else:
+		printerr("Critical : FSM data not found")
 
 func turn() -> Dictionary:
 	var effect : Dictionary = FSM.turn()
