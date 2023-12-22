@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=3 uid="uid://cqpgvjwsuypq5"]
+[gd_scene load_steps=61 format=3 uid="uid://cqpgvjwsuypq5"]
 
 [ext_resource type="Script" path="res://gamelogic/Arena/arena.gd" id="1_1g7rs"]
 [ext_resource type="Script" path="res://gamelogic/Arena/rhythm.gd" id="2_il7af"]
@@ -13,12 +13,9 @@
 [ext_resource type="Texture2D" uid="uid://cq3robkv2qxi5" path="res://assets/character animation/player sword atk 64x64.png" id="9_xi5o0"]
 [ext_resource type="PackedScene" uid="uid://bbj5ttmos2y6f" path="res://cards/card.tscn" id="11_avn81"]
 [ext_resource type="Script" path="res://gamelogic/Arena/deck_api.gd" id="11_pe6oj"]
-[ext_resource type="Texture2D" uid="uid://bm1mg6oilasj0" path="res://assets/effect animation/01.png" id="12_ol0ar"]
 [ext_resource type="Theme" uid="uid://bl2wxp3u6kuhq" path="res://assets/control_theme.tres" id="14_0oj6q"]
 [ext_resource type="Script" path="res://gamelogic/Arena/Enemies.gd" id="14_3x377"]
-[ext_resource type="Texture2D" uid="uid://cm6co5hjtnn6a" path="res://assets/others/HB_4.1-Hurt.png" id="14_53p1w"]
 [ext_resource type="PackedScene" uid="uid://dptrctbyf6531" path="res://enemy/enemy.tscn" id="15_ibavq"]
-[ext_resource type="Texture2D" uid="uid://dp1j81jq702in" path="res://assets/others/HB_4-Hurt.png" id="15_y7yei"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_htwj2"]
 atlas = ExtResource("5_rm4j7")
@@ -349,91 +346,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8o2ek"]
-atlas = ExtResource("12_ol0ar")
-region = Rect2(0, 128, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_m3eqy"]
-atlas = ExtResource("12_ol0ar")
-region = Rect2(64, 128, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mlr3i"]
-atlas = ExtResource("12_ol0ar")
-region = Rect2(128, 128, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dpqln"]
-atlas = ExtResource("12_ol0ar")
-region = Rect2(192, 128, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_745fj"]
-atlas = ExtResource("12_ol0ar")
-region = Rect2(256, 128, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_u4lua"]
-atlas = ExtResource("12_ol0ar")
-region = Rect2(320, 128, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ng4wc"]
-atlas = ExtResource("12_ol0ar")
-region = Rect2(384, 128, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8wa2i"]
-atlas = ExtResource("12_ol0ar")
-region = Rect2(448, 128, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_p2j0c"]
-atlas = ExtResource("12_ol0ar")
-region = Rect2(512, 128, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cj8wh"]
-atlas = ExtResource("12_ol0ar")
-region = Rect2(576, 128, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vjvx6"]
-atlas = ExtResource("12_ol0ar")
-region = Rect2(640, 128, 64, 64)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_er0k3"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8o2ek")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_m3eqy")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mlr3i")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dpqln")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_745fj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_u4lua")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ng4wc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8wa2i")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_p2j0c")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cj8wh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vjvx6")
-}],
-"loop": false,
-"name": &"targeted",
-"speed": 5.0
-}]
-
 [node name="Arena" type="Node"]
 script = ExtResource("1_1g7rs")
 wave = ExtResource("2_ywv2h")
@@ -442,10 +354,10 @@ wave = ExtResource("2_ywv2h")
 script = ExtResource("2_t8lpn")
 
 [node name="Rhythm" type="Node" parent="Turn logic"]
-unique_name_in_owner = true
 script = ExtResource("2_il7af")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Turn logic/Rhythm"]
+volume_db = -30.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Turn logic/Rhythm"]
 layer = 3
@@ -468,39 +380,6 @@ sprite_frames = SubResource("SpriteFrames_fjwwe")
 animation = &"Idle Sword"
 speed_scale = 8.0
 metadata/_edit_lock_ = true
-
-[node name="target_sprite" type="AnimatedSprite2D" parent="Turn logic/Character/character"]
-position = Vector2(1382, 578)
-scale = Vector2(4, 4)
-sprite_frames = SubResource("SpriteFrames_er0k3")
-animation = &"targeted"
-frame = 10
-frame_progress = 1.0
-speed_scale = 6.0
-
-[node name="HP" type="TextureProgressBar" parent="Turn logic/Character/character"]
-offset_left = 209.0
-offset_top = 651.0
-offset_right = 582.0
-offset_bottom = 697.0
-theme = ExtResource("14_0oj6q")
-value = 100.0
-nine_patch_stretch = true
-texture_under = ExtResource("14_53p1w")
-texture_progress = ExtResource("15_y7yei")
-
-[node name="Label" type="Label" parent="Turn logic/Character/character/HP"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 24
-text = "# / #"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="deck_hand" type="CanvasLayer" parent="Turn logic/Character"]
 layer = 3

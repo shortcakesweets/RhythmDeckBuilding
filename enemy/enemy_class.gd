@@ -4,7 +4,7 @@ class_name Enemy
 @export var enemy_name := ""
 @export var max_hp : int = 10
 var hp : int = 10
-var def : int = 0
+var defend : int = 0
 #@export var buffs : Dictionary = {}
 #@export var id : int = 0
 

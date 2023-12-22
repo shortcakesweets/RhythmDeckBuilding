@@ -10,9 +10,6 @@ var enemy_data : Enemy = null
 
 func _ready() -> void:
 	set_values_from_resource()
-	if enemy_data != null:
-		set_values_from_resource()
-		draw_enemy()
 
 func set_values_from_resource(new_resource : Enemy = null) -> void:
 	if new_resource != null:

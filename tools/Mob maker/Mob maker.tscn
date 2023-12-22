@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://tools/Mob maker/mob_maker_saveload.gd" id="1_etikc"]
 [ext_resource type="PackedScene" uid="uid://dptrctbyf6531" path="res://enemy/enemy.tscn" id="1_odys7"]
-[ext_resource type="FontFile" uid="uid://csk3yjakarmrm" path="res://assets/Unutterable-Regular.ttf" id="4_tqovl"]
+[ext_resource type="FontFile" uid="uid://b2ndrq0m7ovl" path="res://assets/Unutterable-Regular.ttf" id="4_tqovl"]
 
 [sub_resource type="Theme" id="Theme_1nkv0"]
 default_font = ExtResource("4_tqovl")

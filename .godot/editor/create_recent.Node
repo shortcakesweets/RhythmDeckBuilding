@@ -1,7 +1,8 @@
-Control
 Label
-VBoxContainer
 TextureProgressBar
+AnimatedSprite2D
+Control
+VBoxContainer
 ConfirmationDialog
 Node2D
 Button
@@ -11,4 +12,3 @@ LineEdit
 FileDialog
 HBoxContainer
 GraphNode
-HSlider

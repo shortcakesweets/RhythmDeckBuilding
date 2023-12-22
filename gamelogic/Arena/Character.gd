@@ -29,3 +29,12 @@ func play_attack_animation():
 	play_animation_once(anim_name)
 
 ################################################################
+
+var max_hp := 100
+var hp := 100
+var defend := 0
+
+func update_visuals() -> void:
+	$character/HP.max_value = max_hp
+	$character/HP.value = hp
+	$character/HP/Label.text = str(hp) + " / " + str(max_hp)
