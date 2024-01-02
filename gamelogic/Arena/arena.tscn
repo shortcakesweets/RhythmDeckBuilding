@@ -6,19 +6,19 @@
 [ext_resource type="Resource" uid="uid://b5sf3kbftaqn4" path="res://room/wave_resource/sample_room_resource.tres" id="2_ywv2h"]
 [ext_resource type="Script" path="res://gamelogic/Arena/Character.gd" id="4_v1l8x"]
 [ext_resource type="PackedScene" uid="uid://n4ar5dwpcq83" path="res://gamelogic/Arena/beatbar_ui.tscn" id="5_i8uea"]
-[ext_resource type="Texture2D" uid="uid://c4k23gamsdnu4" path="res://assets/character animation/Player Death 64x64.png" id="5_rm4j7"]
-[ext_resource type="Texture2D" uid="uid://dl8sq7a6dqcdi" path="res://assets/character animation/Character Idle 48x48.png" id="6_jamlm"]
-[ext_resource type="Texture2D" uid="uid://dntjlejh723hi" path="res://assets/character animation/Player Sword Idle 48x48.png" id="7_rvw6q"]
-[ext_resource type="Texture2D" uid="uid://coyfideg5wvox" path="res://assets/character animation/Player Sword Stab 96x48.png" id="8_03p14"]
-[ext_resource type="Texture2D" uid="uid://cq3robkv2qxi5" path="res://assets/character animation/player sword atk 64x64.png" id="9_xi5o0"]
+[ext_resource type="Texture2D" uid="uid://b7ndyh1sxtb0l" path="res://assets/character animation/Player Death 64x64.png" id="5_rm4j7"]
+[ext_resource type="Texture2D" uid="uid://da5axs4cxb5cc" path="res://assets/character animation/Character Idle 48x48.png" id="6_jamlm"]
+[ext_resource type="Texture2D" uid="uid://bfdrpombynyr0" path="res://assets/character animation/Player Sword Idle 48x48.png" id="7_rvw6q"]
+[ext_resource type="Texture2D" uid="uid://hraew3q17h68" path="res://assets/character animation/Player Sword Stab 96x48.png" id="8_03p14"]
+[ext_resource type="Texture2D" uid="uid://d0vmsem8uhojm" path="res://assets/character animation/player sword atk 64x64.png" id="9_xi5o0"]
 [ext_resource type="PackedScene" uid="uid://bbj5ttmos2y6f" path="res://cards/card.tscn" id="11_avn81"]
 [ext_resource type="Script" path="res://gamelogic/Arena/deck_api.gd" id="11_pe6oj"]
-[ext_resource type="Texture2D" uid="uid://bm1mg6oilasj0" path="res://assets/effect animation/01.png" id="12_ol0ar"]
+[ext_resource type="Texture2D" uid="uid://y7esrm4sl5t1" path="res://assets/effect animation/01.png" id="12_ol0ar"]
 [ext_resource type="Theme" uid="uid://bl2wxp3u6kuhq" path="res://assets/control_theme.tres" id="14_0oj6q"]
 [ext_resource type="Script" path="res://gamelogic/Arena/Enemies.gd" id="14_3x377"]
-[ext_resource type="Texture2D" uid="uid://cm6co5hjtnn6a" path="res://assets/others/HB_4.1-Hurt.png" id="14_53p1w"]
+[ext_resource type="Texture2D" uid="uid://mw77oitoetyq" path="res://assets/others/HB_4.1-Hurt.png" id="14_53p1w"]
 [ext_resource type="PackedScene" uid="uid://dptrctbyf6531" path="res://enemy/enemy.tscn" id="15_ibavq"]
-[ext_resource type="Texture2D" uid="uid://dp1j81jq702in" path="res://assets/others/HB_4-Hurt.png" id="15_y7yei"]
+[ext_resource type="Texture2D" uid="uid://cb43843y1kg88" path="res://assets/others/HB_4-Hurt.png" id="15_y7yei"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_htwj2"]
 atlas = ExtResource("5_rm4j7")
@@ -439,6 +439,7 @@ script = ExtResource("1_1g7rs")
 wave = ExtResource("2_ywv2h")
 
 [node name="Turn logic" type="Node" parent="."]
+unique_name_in_owner = true
 script = ExtResource("2_t8lpn")
 
 [node name="Rhythm" type="Node" parent="Turn logic"]
@@ -453,7 +454,7 @@ layer = 3
 [node name="Beatbar_UI" parent="Turn logic/Rhythm/CanvasLayer" instance=ExtResource("5_i8uea")]
 position = Vector2(542, 665)
 
-[node name="Character" type="Node" parent="Turn logic"]
+[node name="Character" type="Node" parent="Turn logic" groups=["character"]]
 unique_name_in_owner = true
 script = ExtResource("4_v1l8x")
 
@@ -502,6 +503,15 @@ text = "# / #"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Defense" type="Label" parent="Turn logic/Character/character"]
+offset_left = 154.0
+offset_top = 637.0
+offset_right = 221.0
+offset_bottom = 711.0
+text = "123"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="deck_hand" type="CanvasLayer" parent="Turn logic/Character"]
 layer = 3
 
@@ -533,7 +543,7 @@ metadata/_edit_lock_ = true
 position = Vector2(1374, 750)
 metadata/_edit_lock_ = true
 
-[node name="Enemies" type="Node" parent="Turn logic"]
+[node name="Enemies" type="Node" parent="Turn logic" groups=["enemies"]]
 unique_name_in_owner = true
 script = ExtResource("14_3x377")
 

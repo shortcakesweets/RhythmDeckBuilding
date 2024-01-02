@@ -1,3 +1,5 @@
+res://cards
+res://cards/card_resource
 res://assets/effect animation
 res://enemy/enemy_resource
 res://tools
@@ -11,5 +13,4 @@ res://assets/enemy animation
 res://gamelogic/Arena
 res://gamelogic
 res://assets
-res://cards
 res://assets/character animation

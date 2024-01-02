@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://dqf4m0tkggqea"]
+
+[ext_resource type="Script" path="res://cards/card_class.gd" id="1_2hbg1"]
+
+[resource]
+script = ExtResource("1_2hbg1")
+card_name = "Swift Attack"
+card_description = "basic swift attack"
+card_rarity = 0
+is_upgraded = false
+id = 0
+effect = {
+"Attack": 5,
+"Defend": 5,
+"Knockback": 0,
+"Parry": 0
+}
+upgraded_effect = {
+"Attack": 7,
+"Defend": 7,
+"Knockback": 0,
+"Parry": 0
+}

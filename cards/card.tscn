@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://cards/card.gd" id="1_d6sy8"]
 [ext_resource type="TileSet" uid="uid://cw4qphsnprf8y" path="res://assets/paper_tileset.tres" id="1_ucf3r"]
 [ext_resource type="Theme" uid="uid://bl2wxp3u6kuhq" path="res://assets/control_theme.tres" id="3_333c7"]
-[ext_resource type="Texture2D" uid="uid://jq1ah1a4o764" path="res://assets/vector icon/Attack.png" id="4_oql1p"]
+[ext_resource type="Texture2D" uid="uid://cdpn50mx0kev3" path="res://assets/vector icon/Attack.png" id="4_oql1p"]
 
 [node name="Card" type="Node2D"]
 script = ExtResource("1_d6sy8")

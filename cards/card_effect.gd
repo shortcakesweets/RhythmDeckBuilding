@@ -2,7 +2,7 @@ extends Node
 # API of card effects
 
 func damage_character(amount : int) -> void:
-	var entity = get_node("%Character")
+	var entity = get_tree().get_nodes_in_group("character")[0]
 	if entity.defend >= amount:
 		entity.defend -= amount
 	else:
@@ -12,12 +12,12 @@ func damage_character(amount : int) -> void:
 	entity.hp = clamp(entity.hp, 0, entity.max_hp)
 
 func damage_character_pierce(amount : int) -> void:
-	var entity = get_node("%Character")
+	var entity = get_tree().get_nodes_in_group("character")[0]
 	entity.hp -= amount
 	entity.hp = clamp(entity.hp, 0, entity.max_hp)
 
 func damage_enemy(index : int, amount : int) -> void:
-	var entity = get_node("%Enemies").get_child(index).enemy_data as Enemy
+	var entity = get_tree().get_nodes_in_group("enemies")[0].get_child(index).enemy_data as Enemy
 	if entity == null:
 		return
 	
@@ -30,14 +30,50 @@ func damage_enemy(index : int, amount : int) -> void:
 	entity.hp = clamp(entity.hp, 0, entity.max_hp)
 
 func defend_character(amount : int) -> void:
-	var entity = get_node("%Character")
+	var entity = get_tree().get_nodes_in_group("character")[0]
 	entity.defend += amount
 	entity.defend = clamp(entity.defend, 0, 999)
 
+func knockback_enemy(index : int, amount : int) -> void:
+	var entity = get_tree().get_nodes_in_group("enemies")[0].get_child(index).enemy_data as Enemy
+	if entity == null:
+		return
+	
+	pass
+
 func draw_cards(many : int) -> void:
-	get_node("%hand").draw_cards(many)
+	var hand = get_tree().get_nodes_in_group("character")[0].get_node("%hand")
+	hand.draw_cards(many)
 
 func add_shuffle_energy(amount : int) -> void:
-	var hand = get_node("%hand")
+	var hand = get_tree().get_nodes_in_group("character")[0].get_node("%hand")
 	hand.shuffle_energy += amount
 	hand.shuffle_energy = clamp(hand.shuffle_energy, 0, hand.shuffle_energy_max)
+
+##
+
+func apply_card_effect(card : Card, target_index : int = -1) -> void:
+	var effect : Dictionary = {}
+	if card.is_upgraded:
+		effect = card.upgraded_effect
+	else:
+		effect = card.effect
+	
+	for key in effect:
+		var value = effect[key]
+		if value == 0:
+			continue
+		
+		match key:
+			"Attack":
+				damage_enemy(target_index,value)
+			"Defend":
+				defend_character(value)
+			"Parry":
+				pass
+			"Knockback":
+				knockback_enemy(target_index,value)
+			"Charge":
+				add_shuffle_energy(value)
+			_:
+				pass

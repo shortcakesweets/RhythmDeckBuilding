@@ -1,6 +1,6 @@
 [gd_resource type="SpriteFrames" load_steps=9 format=3 uid="uid://5gcsugyuypp2"]
 
-[ext_resource type="Texture2D" uid="uid://c2n20y1dnsqw6" path="res://assets/enemy animation/slime/Sprite Sheet - Green Idle.png" id="1_1fwub"]
+[ext_resource type="Texture2D" uid="uid://bbnjrx18qe872" path="res://assets/enemy animation/slime/Sprite Sheet - Green Idle.png" id="1_1fwub"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c7hxn"]
 atlas = ExtResource("1_1fwub")

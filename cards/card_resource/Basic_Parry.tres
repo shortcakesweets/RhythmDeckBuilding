@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://dasbqloigovj1"]
+
+[ext_resource type="Script" path="res://cards/card_class.gd" id="1_mlb4f"]
+
+[resource]
+script = ExtResource("1_mlb4f")
+card_name = "Parry"
+card_description = "basic parry"
+card_rarity = 0
+is_upgraded = false
+id = 0
+effect = {
+"Attack": 0,
+"Defend": 0,
+"Knockback": 0,
+"Parry": 8
+}
+upgraded_effect = {
+"Attack": 0,
+"Defend": 0,
+"Knockback": 0,
+"Parry": 11
+}

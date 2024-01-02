@@ -1,5 +1,5 @@
 extends Node2D
-@export var card_id : int = -1
+@export var card_resource_raw : Card = null
 
 @onready var pair_box = [$EffectIcon/Control/VBoxContainer/Pair1, $EffectIcon/Control/VBoxContainer/Pair2, $EffectIcon/Control/VBoxContainer/Pair3, $EffectIcon/Control/VBoxContainer/Pair4]
 @onready var texture_icon := {
@@ -18,19 +18,19 @@ func draw_icon() -> void:
 	$Rare_Sprite.visible = false
 	for pair_id in range(4):
 		pair_box[pair_id].visible = false
-	if card_id == -1:
+	if card_resource_raw == null:
 		return
 	
 	# Sprites by Rarity
-	$Common_Sprite.visible = (CardDictionary.card_all[card_id].card_rarity == Card.RARITY.COMMON)
-	$Uncommon_Sprite.visible = (CardDictionary.card_all[card_id].card_rarity == Card.RARITY.UNCOMMON)
-	$Rare_Sprite.visible = (CardDictionary.card_all[card_id].card_rarity == Card.RARITY.RARE)
+	$Common_Sprite.visible = (card_resource_raw.card_rarity == Card.RARITY.COMMON)
+	$Uncommon_Sprite.visible = (card_resource_raw.card_rarity == Card.RARITY.UNCOMMON)
+	$Rare_Sprite.visible = (card_resource_raw.card_rarity == Card.RARITY.RARE)
 	
 	var effect : Dictionary
-	if CardDictionary.card_all[card_id].is_upgraded:
-		effect = CardDictionary.card_all[card_id].upgraded_effect
+	if card_resource_raw.is_upgraded:
+		effect = card_resource_raw.upgraded_effect
 	else:
-		effect = CardDictionary.card_all[card_id].effect
+		effect = card_resource_raw.effect
 	
 	var pair_id := 0
 	for key in effect.keys():
@@ -47,7 +47,6 @@ func set_pair(pair_id : int, key : String, value) -> void:
 	pair_box[pair_id].get_node("key").texture = texture_icon[key]
 	pair_box[pair_id].get_node("value").text = str(value)
 
-func animate_and_draw_card(new_card_id : int = -1) -> void:
-	#animate - pass
-	card_id = new_card_id
+func animate_and_draw_card(new_card_resource : Card = null) -> void:
+	card_resource_raw = new_card_resource
 	draw_icon()

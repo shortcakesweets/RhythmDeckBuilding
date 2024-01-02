@@ -18,8 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Rng="*res://gamelogic/rng.gd"
-CardDictionary="*res://cards/card_dictionary.gd"
-EnemyDictionary="*res://enemy/enemy_dictionary.gd"
+CardEffect="*res://cards/card_effect.gd"
 
 [display]
 

@@ -38,3 +38,4 @@ func update_visuals() -> void:
 	$character/HP.max_value = max_hp
 	$character/HP.value = hp
 	$character/HP/Label.text = str(hp) + " / " + str(max_hp)
+	$character/Defense.text = str(defend)

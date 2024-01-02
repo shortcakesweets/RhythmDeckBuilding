@@ -2,7 +2,7 @@ extends "res://cards/card_effect.gd"
 enum {DEBUG = 100, SHUFFLE = 200}
 @onready var rhythm = %Rhythm
 @onready var character = %Character
-@onready var deck = $Character/deck_hand/hand
+@onready var deck = %hand
 @onready var beatbar = $Rhythm/CanvasLayer/Beatbar_UI
 @onready var enemies = $Enemies
 @onready var target_sprite = $Character/character/target_sprite
@@ -22,12 +22,12 @@ func check_curr_target() -> void:
 # Turn mechanics. will be branched later.
 func turn(card_index : int = -1) -> void:
 	# Run Player Card - wip
-	var used_card_id : int = -1
+	var used_card_resource : Card = null
 	if card_index != -1:
-		used_card_id = deck.use_card(card_index)
-	if used_card_id != -1:
+		used_card_resource = deck.use_card(card_index)
+	if used_card_resource != null:
 		character.play_attack_animation()
-		# Use card's effect
+		CardEffect.apply_card_effect(used_card_resource, curr_target)
 		pass
 	else: # no card was selected
 		#character.play_animation_once("Idle Sword")
@@ -94,7 +94,7 @@ func rhythm_input(event : InputEvent) -> void:
 	
 	if 0 <= card_selected and card_selected < 6:
 		# Check valid input
-		var card_validity : bool = deck.cards[card_selected].card_id != -1
+		var card_validity : bool = (deck.cards[card_selected].card_resource_raw != null)
 		var rhythm_validity = rhythm.is_valid_input(curr_turn)
 		if card_validity and rhythm_validity[0]:
 			turn(card_selected)
