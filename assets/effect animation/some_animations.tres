@@ -1,7 +1,7 @@
 [gd_resource type="SpriteFrames" load_steps=42 format=3 uid="uid://bi3df5pqtrnis"]
 
-[ext_resource type="Texture2D" uid="uid://cvt5o2to5ihh" path="res://assets/effect animation/Retro Impact Effect Pack 1 A.png" id="1_ufar4"]
-[ext_resource type="Texture2D" uid="uid://bw8u56xrpyaq5" path="res://assets/effect animation/Retro Impact Effect Pack 3 A.png" id="2_mgbed"]
+[ext_resource type="Texture2D" uid="uid://dovtx53p1vjpv" path="res://assets/effect animation/Retro Impact Effect Pack 1 A.png" id="1_ufar4"]
+[ext_resource type="Texture2D" uid="uid://djrjhffeg6d46" path="res://assets/effect animation/Retro Impact Effect Pack 3 A.png" id="2_mgbed"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3wytg"]
 atlas = ExtResource("1_ufar4")

@@ -1,145 +1,150 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1704155708
-icon.svg::CompressedTexture2D::1333861255536451806::1704155560::1704155708::1::::<><>::
-::res://assets/::1704155852
-control_theme.tres::Theme::3215613842227073166::1704155852::0::1::::<><>::uid://t3q28jc35b6v::::res://assets/Unutterable-Regular.ttf
-malgun.ttf::FontFile::9122243555050599877::1704155560::1704155708::1::::<><>::
-paper_tileset.tres::TileSet::6377861537164796070::1704155852::0::1::::<><>::uid://dvsasmde5xukg::::res://assets/others/UI books & more.png
-Unutterable-Regular.ttf::FontFile::1392412041859248743::1704155560::1704155708::1::::<><>::
-::res://assets/character animation/::1704155708
-Character Idle 48x48.png::CompressedTexture2D::7221235447302220342::1704155560::1704155708::1::::<><>::
-player air spin 48x48.png::CompressedTexture2D::5899506002616700055::1704155560::1704155708::1::::<><>::
-Player Death 64x64.png::CompressedTexture2D::4659526009622619305::1704155560::1704155708::1::::<><>::
-player jump 48x48.png::CompressedTexture2D::242567722430622472::1704155560::1704155708::1::::<><>::
-player land 48x48.png::CompressedTexture2D::170973750284963779::1704155560::1704155708::1::::<><>::
-Player Roll 48x48.png::CompressedTexture2D::5848201312693714729::1704155560::1704155708::1::::<><>::
-player sword atk 64x64.png::CompressedTexture2D::8958096053226294670::1704155560::1704155708::1::::<><>::
-Player Sword Idle 48x48.png::CompressedTexture2D::2744617764873647427::1704155560::1704155708::1::::<><>::
-Player Sword Stab 96x48.png::CompressedTexture2D::526424669992067707::1704155560::1704155708::1::::<><>::
-run cycle 48x48.png::CompressedTexture2D::7945970913521986894::1704155560::1704155708::1::::<><>::
-wall land 48x48.png::CompressedTexture2D::1914097812683773373::1704155560::1704155708::1::::<><>::
-Wall Slide 48x48.png::CompressedTexture2D::8000890525545701884::1704155560::1704155708::1::::<><>::
-::res://assets/effect animation/::1704155852
-01.png::CompressedTexture2D::1750868260480798512::1704155560::1704155708::1::::<><>::
-Retro Impact Effect Pack 1 A.png::CompressedTexture2D::184937594710821381::1704155560::1704155708::1::::<><>::
-Retro Impact Effect Pack 3 A.png::CompressedTexture2D::3999969287834009422::1704155560::1704155708::1::::<><>::
-some_animations.tres::SpriteFrames::3005926689484468942::1704155852::0::1::::<><>::uid://cvt5o2to5ihh::::res://assets/effect animation/Retro Impact Effect Pack 1 A.png<>uid://bw8u56xrpyaq5::::res://assets/effect animation/Retro Impact Effect Pack 3 A.png
-::res://assets/enemy animation/::1704155852
-enemy_animations.tres::SpriteFrames::2118206214795118677::1704155852::0::1::::<><>::uid://bbnjrx18qe872::::res://assets/enemy animation/slime/Sprite Sheet - Green Idle.png
-::res://assets/enemy animation/slime/::1704155708
-Sprite Sheet - Green Death - No Flash.png::CompressedTexture2D::5261936578561591784::1704155560::1704155708::1::::<><>::
-Sprite Sheet - Green Hurt - No Flash.png::CompressedTexture2D::5593664598397617884::1704155560::1704155708::1::::<><>::
-Sprite Sheet - Green Idle.png::CompressedTexture2D::2484024499288106911::1704155560::1704155708::1::::<><>::
-Sprite Sheet - Green Jump Down.png::CompressedTexture2D::2260743892933306376::1704155560::1704155708::1::::<><>::
-Sprite Sheet - Green Jump Land.png::CompressedTexture2D::4620033218766415540::1704155560::1704155708::1::::<><>::
-Sprite Sheet - Green Jump Start-up.png::CompressedTexture2D::5837091849115840545::1704155560::1704155708::1::::<><>::
-Sprite Sheet - Green Jump to Fall.png::CompressedTexture2D::6326429095403396815::1704155560::1704155708::1::::<><>::
-::res://assets/others/::1704155708
-BossText.png::CompressedTexture2D::2428258766253635444::1704155560::1704155708::1::::<><>::
-Circle.png::CompressedTexture2D::5168419181527016631::1704155560::1704155708::1::::<><>::
-Cross.png::CompressedTexture2D::5994840880034861773::1704155560::1704155708::1::::<><>::
-Elite.png::CompressedTexture2D::7390253599589973152::1704155560::1704155708::1::::<><>::
-Event.png::CompressedTexture2D::2112924097800823895::1704155560::1704155708::1::::<><>::
-HB_4-Hurt.png::CompressedTexture2D::4904657740445564427::1704155560::1704155708::1::::<><>::
-HB_4.1-Hurt.png::CompressedTexture2D::889683271986686316::1704155560::1704155708::1::::<><>::
-House.png::CompressedTexture2D::588841339880425713::1704155560::1704155708::1::::<><>::
-Monster.png::CompressedTexture2D::2904246802934624056::1704155560::1704155708::1::::<><>::
-Rest.png::CompressedTexture2D::8290258507628615732::1704155560::1704155708::1::::<><>::
-Shop.png::CompressedTexture2D::2738715915490287393::1704155560::1704155708::1::::<><>::
-Treasure.png::CompressedTexture2D::1355412434974066323::1704155560::1704155708::1::::<><>::
-UI books & more.png::CompressedTexture2D::8670419346478721538::1704155560::1704155708::1::::<><>::
-::res://assets/vector icon/::1704155708
-Attack.png::CompressedTexture2D::5015217792034534966::1704155560::1704155708::1::::<><>::
-Defend.png::CompressedTexture2D::1803402444164747431::1704155560::1704155708::1::::<><>::
-Knockback.png::CompressedTexture2D::8064793418825679338::1704155560::1704155708::1::::<><>::
-Parry.png::CompressedTexture2D::6302469876227162206::1704155560::1704155708::1::::<><>::
-Plate.png::CompressedTexture2D::8685316877668819597::1704155560::1704155708::1::::<><>::
-slice25.png::CompressedTexture2D::2809745621438547840::1704155560::1704155708::1::::<><>::
-slice26.png::CompressedTexture2D::5931176962713463937::1704155560::1704155708::1::::<><>::
-slice27.png::CompressedTexture2D::1825937074863972438::1704155560::1704155708::1::::<><>::
-slice28.png::CompressedTexture2D::2820236024429277751::1704155560::1704155708::1::::<><>::
-slice29.png::CompressedTexture2D::8921351119303065768::1704155560::1704155708::1::::<><>::
-slice30.png::CompressedTexture2D::7231145801011334076::1704155560::1704155708::1::::<><>::
-slice31.png::CompressedTexture2D::4008690180520418982::1704155560::1704155708::1::::<><>::
-slice32.png::CompressedTexture2D::760416201050355925::1704155560::1704155708::1::::<><>::
-slice34.png::CompressedTexture2D::1649646699376647112::1704155560::1704155708::1::::<><>::
-slice36.png::CompressedTexture2D::8865318025035148927::1704155560::1704155708::1::::<><>::
-slice38.png::CompressedTexture2D::6568756563070017652::1704155560::1704155708::1::::<><>::
-slice40.png::CompressedTexture2D::5757841761092916945::1704155560::1704155708::1::::<><>::
-slice41.png::CompressedTexture2D::936029442036524410::1704155560::1704155708::1::::<><>::
-slice42.png::CompressedTexture2D::2064640467110101434::1704155560::1704155708::1::::<><>::
-slice43.png::CompressedTexture2D::4994090568128270454::1704155560::1704155708::1::::<><>::
-slice44.png::CompressedTexture2D::5116403768997445358::1704155560::1704155708::1::::<><>::
-slice45.png::CompressedTexture2D::1844417364567517470::1704155560::1704155708::1::::<><>::
-slice46.png::CompressedTexture2D::9115380525227893027::1704155560::1704155708::1::::<><>::
-slice47.png::CompressedTexture2D::1709895928990862371::1704155560::1704155708::1::::<><>::
-::res://cards/::1704155871
-card.gd::GDScript::-1::1704155560::0::1::::<>Node2D<>::
-card.tscn::PackedScene::2477045384127404091::1704155560::0::1::::<><>::res://cards/card.gd<>uid://cw4qphsnprf8y::::res://assets/paper_tileset.tres<>uid://bl2wxp3u6kuhq::::res://assets/control_theme.tres<>uid://jq1ah1a4o764::::res://assets/vector icon/Attack.png
-card_class.gd::GDScript::-1::1704156673::0::1::::Card<>Resource<>::
-card_dictionary.gd::GDScript::-1::1704155560::0::1::::<>Node<>::
-card_effect.gd::GDScript::-1::1704156673::0::1::::<>Node<>::
-::res://enemy/::1704155560
-enemy.gd::GDScript::-1::1704155560::0::1::::<>Node2D<>::
-enemy.tscn::PackedScene::8252354644028607442::1704155560::0::1::::<><>::res://enemy/enemy.gd<>uid://5gcsugyuypp2::::res://assets/enemy animation/enemy_animations.tres<>uid://bl2wxp3u6kuhq::::res://assets/control_theme.tres<>uid://cm6co5hjtnn6a::::res://assets/others/HB_4.1-Hurt.png<>uid://dp1j81jq702in::::res://assets/others/HB_4-Hurt.png
-enemy_class.gd::GDScript::-1::1704155560::0::1::::Enemy<>Resource<>::
-enemy_dictionary.gd::GDScript::-1::1704155560::0::1::::<>Node<>::
-fsm_class.gd::GDScript::-1::1704155560::0::1::::FiniteStateMachine<>Resource<>::
-::res://enemy/enemy_resource/::1704155560
-slime_basic.tres::Resource/Enemy::-1::1704155560::0::1::::<><>::res://enemy/enemy_class.gd
-::res://enemy/fsm_resource/::1704155560
-sample1.tres::Resource/FiniteStateMachine::-1::1704155560::0::1::::<><>::res://enemy/fsm_class.gd
-slime_fsm_basic.tres::Resource/FiniteStateMachine::-1::1704155560::0::1::::<><>::res://enemy/fsm_class.gd
-::res://gamelogic/::1704155560
-game.tscn::PackedScene::4199855514904602236::1704155560::0::1::::<><>::uid://byodc7h0glibc::::res://gamelogic/RoomSelector/room_selector.tscn<>uid://cqpgvjwsuypq5::::res://gamelogic/Arena/arena.tscn
-mainmenu.tscn::PackedScene::7629463171321216748::1704155560::0::1::::<><>::
-main_game.gd::GDScript::-1::1704155560::0::1::::<>Node2D<>::
-main_game.tscn::PackedScene::2673209870547611979::1704155560::0::1::::<><>::res://gamelogic/main_game.gd<>uid://byodc7h0glibc::::res://gamelogic/RoomSelector/room_selector.tscn
-rng.gd::GDScript::-1::1704155560::0::1::::<>Node<>::
-::res://gamelogic/Arena/::1704155871
-arena.gd::GDScript::-1::1704155560::0::1::::<>Node<>::
-arena.tscn::PackedScene::5927230843075592506::1704156673::0::1::::<><>::res://gamelogic/Arena/arena.gd<>res://gamelogic/Arena/rhythm.gd<>res://gamelogic/Arena/turn_logic.gd<>uid://b5sf3kbftaqn4::::res://room/wave_resource/sample_room_resource.tres<>res://gamelogic/Arena/Character.gd<>uid://n4ar5dwpcq83::::res://gamelogic/Arena/beatbar_ui.tscn<>uid://b7ndyh1sxtb0l::::res://assets/character animation/Player Death 64x64.png<>uid://da5axs4cxb5cc::::res://assets/character animation/Character Idle 48x48.png<>uid://bfdrpombynyr0::::res://assets/character animation/Player Sword Idle 48x48.png<>uid://hraew3q17h68::::res://assets/character animation/Player Sword Stab 96x48.png<>uid://d0vmsem8uhojm::::res://assets/character animation/player sword atk 64x64.png<>uid://bbj5ttmos2y6f::::res://cards/card.tscn<>res://gamelogic/Arena/deck_api.gd<>uid://y7esrm4sl5t1::::res://assets/effect animation/01.png<>uid://bl2wxp3u6kuhq::::res://assets/control_theme.tres<>res://gamelogic/Arena/Enemies.gd<>uid://mw77oitoetyq::::res://assets/others/HB_4.1-Hurt.png<>uid://dptrctbyf6531::::res://enemy/enemy.tscn<>uid://cb43843y1kg88::::res://assets/others/HB_4-Hurt.png
-beatbar_ui.gd::GDScript::-1::1704155560::0::1::::<>Node2D<>::
-beatbar_ui.tscn::PackedScene::972353862013177918::1704155560::0::1::::<><>::res://gamelogic/Arena/beatbar_ui.gd<>uid://bi3df5pqtrnis::::res://assets/effect animation/some_animations.tres<>uid://dqrrhue03clth::::res://icon.svg
-Character.gd::GDScript::-1::1704155852::0::1::::<>Node<>::
-deck_api.gd::GDScript::-1::1704155560::0::1::::<>Node<>::
-Enemies.gd::GDScript::-1::1704155560::0::1::::<>Node<>::
-rhythm.gd::GDScript::-1::1704155852::0::1::::<>Node<>::
-turn_logic.gd::GDScript::-1::1704155560::0::1::::<>Node<>::
-::res://gamelogic/RoomSelector/::1704155560
-Combat_Info.gd::GDScript::-1::1704155560::0::1::::<>Control<>::
-room_icon.gd::GDScript::-1::1704155560::0::1::::<>Control<>::
-room_Icon.tscn::PackedScene::2722136037092639330::1704155560::0::1::::<><>::uid://dqrrhue03clth::::res://icon.svg<>res://gamelogic/RoomSelector/room_icon.gd<>uid://d0xf7x2c1mt7y::::res://assets/others/Cross.png<>uid://csgm66veenlco::::res://assets/others/BossText.png<>uid://dbsw3bpkg3rap::::res://assets/others/Circle.png<>uid://ctcg8capeh82w::::res://assets/others/Elite.png<>uid://b5641wsvxatgq::::res://assets/others/Event.png<>uid://b03vohylukxp4::::res://assets/others/House.png<>uid://bcov5r1s3qg6f::::res://assets/others/Monster.png<>uid://blr1to3meb46e::::res://assets/others/Rest.png<>uid://brtppjcwd3yc::::res://assets/others/Shop.png<>uid://bq3kalrbd7a3i::::res://assets/others/Treasure.png
-room_selector.gd::GDScript::-1::1704155560::0::1::::<>Node<>::
-room_selector.tscn::PackedScene::4100041634834005084::1704155560::0::1::::<><>::res://gamelogic/RoomSelector/room_selector.gd<>uid://chlx7mbqcmhbd::::res://assets/others/UI books & more.png<>uid://b2ndrq0m7ovl::::res://assets/Unutterable-Regular.ttf<>res://gamelogic/RoomSelector/Combat_Info.gd<>uid://cw4qphsnprf8y::::res://assets/paper_tileset.tres
-::res://gamelogic/TestScenes/::1704155560
-beatbar_ui_rhythm_signal_test.gd::GDScript::-1::1704155560::0::1::::<>Node<>::
-beatbar_ui_rhythm_signal_test.tscn::PackedScene::6560590996492794435::1704155560::0::1::::<><>::uid://n4ar5dwpcq83::::res://gamelogic/Arena/beatbar_ui.tscn<>res://gamelogic/TestScenes/beatbar_ui_rhythm_signal_test.gd<>res://gamelogic/Arena/rhythm.gd<>uid://cwpgw8mr83pyh::::res://music/For Whom the Knell Tolls.ogg<>uid://bl2wxp3u6kuhq::::res://assets/control_theme.tres
-enemy_test.gd::GDScript::-1::1704155560::0::1::::<>Node2D<>::
-enemy_test.tscn::PackedScene::168897453133444134::1704155560::0::1::::<><>::res://gamelogic/TestScenes/enemy_test.gd<>uid://c7rr2e7nkbqrc::::res://enemy/enemy_resource/sample_resource.tres
-simple_enemy_test_scene.gd::GDScript::-1::1704155560::0::1::::<>Node2D<>::
-simple_enemy_test_scene.tscn::PackedScene::657114123472290352::1704155560::0::1::::<><>::res://gamelogic/TestScenes/simple_enemy_test_scene.gd<>uid://dptrctbyf6531::::res://enemy/enemy.tscn
-test_arena.tscn::PackedScene::5478512492719360001::1704155560::0::1::::<><>::res://gamelogic/Arena/arena.gd<>res://gamelogic/Arena/turn_logic.gd<>res://gamelogic/Arena/rhythm.gd<>uid://cwpgw8mr83pyh::::res://music/For Whom the Knell Tolls.ogg<>uid://n4ar5dwpcq83::::res://gamelogic/Arena/beatbar_ui.tscn<>res://gamelogic/Arena/Character.gd<>uid://c4k23gamsdnu4::::res://assets/character animation/Player Death 64x64.png<>uid://dl8sq7a6dqcdi::::res://assets/character animation/Character Idle 48x48.png<>uid://dntjlejh723hi::::res://assets/character animation/Player Sword Idle 48x48.png<>uid://coyfideg5wvox::::res://assets/character animation/Player Sword Stab 96x48.png<>uid://cq3robkv2qxi5::::res://assets/character animation/player sword atk 64x64.png<>res://gamelogic/Arena/deck_api.gd<>uid://bbj5ttmos2y6f::::res://cards/card.tscn<>uid://bl2wxp3u6kuhq::::res://assets/control_theme.tres
-::res://music/::1704155708
-For Whom the Knell Tolls.ogg::AudioStreamOggVorbis::4940505707186830540::1704155560::1704155708::1::::<><>::
-sample_music.ogg::AudioStreamOggVorbis::6878760786809528089::1704155560::1704155708::1::::<><>::
-::res://room/::1704155560
-wave_class.gd::GDScript::-1::1704155560::0::1::::Wave<>Resource<>::
-::res://room/wave_resource/::1704155560
-sample_room_resource.tres::Resource/Wave::4529598906631210279::1704155560::0::1::::<><>::res://room/wave_class.gd<>res://enemy/enemy_resource/slime_basic.tres<>uid://cwpgw8mr83pyh::::res://music/For Whom the Knell Tolls.ogg
-::res://tools/::1704155560
-file flawless check.gd::GDScript::-1::1704155560::0::1::::<>ConfirmationDialog<>::
-maker_full.gd::GDScript::-1::1704155560::0::1::::<>Node2D<>::
-maker_full.tscn::PackedScene::5462555761486789032::1704155560::0::1::::<><>::res://tools/maker_full.gd<>uid://bvlp58jipxqhn::::res://tools/FSM maker/fsm_maker.tscn<>uid://bvojmcexaej0y::::res://tools/Mob maker/Mob maker.tscn<>res://tools/file flawless check.gd<>uid://byckq01x6gugm::::res://assets/others/HB_4.1-Hurt.png<>uid://bbdjvurhpd2me::::res://assets/others/HB_4-Hurt.png
-::res://tools/FSM maker/::1704155560
-editor.gd::GDScript::-1::1704155560::0::1::::<>Node2D<>::
-fsm_maker.gd::GDScript::-1::1704155560::0::1::::<>Node<>::
-fsm_maker.tscn::PackedScene::3884060631653328163::1704155560::0::1::::<><>::res://tools/FSM maker/editor.gd<>res://tools/FSM maker/maker_file_saveload.gd
-graph_node.gd::GDScript::-1::1704155560::0::1::::<>GraphNode<>::
-graph_node.tscn::PackedScene::7825909520027940033::1704155560::0::1::::<><>::res://tools/FSM maker/graph_node.gd
-graph_node_effect.gd::GDScript::-1::1704155560::0::1::::<>GraphNode<>::
-graph_node_effect.tscn::PackedScene::7448410237252425280::1704155560::0::1::::<><>::res://tools/FSM maker/graph_node_effect.gd
-maker_file_saveload.gd::GDScript::-1::1704155560::0::1::::<>Node2D<>::
-::res://tools/Mob maker/::1704155560
-Mob maker.tscn::PackedScene::3889855683381476110::1704155560::0::1::::<><>::res://tools/Mob maker/mob_maker_saveload.gd<>uid://dptrctbyf6531::::res://enemy/enemy.tscn<>uid://b2ndrq0m7ovl::::res://assets/Unutterable-Regular.ttf
-mob_maker_saveload.gd::GDScript::-1::1704155560::0::1::::<>Node2D<>::
+::res://::1704251883
+icon.svg::CompressedTexture2D::1562238942851592728::1704251450::1704251884::1::::<><>::
+::res://assets/::1704251450
+control_theme.tres::Theme::3215613842227073166::1704251450::0::1::::<><>::uid://t3q28jc35b6v::::res://assets/Unutterable-Regular.ttf
+malgun.ttf::FontFile::1906555576162329671::1704251450::1704251884::1::::<><>::
+paper_tileset.tres::TileSet::6377861537164796070::1704251450::0::1::::<><>::uid://dvsasmde5xukg::::res://assets/others/UI books & more.png
+Unutterable-Regular.ttf::FontFile::4499820163627648489::1704251450::1704251884::1::::<><>::
+::res://assets/character animation/::1704251450
+Character Idle 48x48.png::CompressedTexture2D::2309208357282886971::1704251450::1704251884::1::::<><>::
+player air spin 48x48.png::CompressedTexture2D::440282355743001198::1704251450::1704251884::1::::<><>::
+Player Death 64x64.png::CompressedTexture2D::4820495841701199974::1704251450::1704251884::1::::<><>::
+player jump 48x48.png::CompressedTexture2D::2632014790423602978::1704251450::1704251884::1::::<><>::
+player land 48x48.png::CompressedTexture2D::634310909063848993::1704251450::1704251884::1::::<><>::
+Player Roll 48x48.png::CompressedTexture2D::7603304130485200425::1704251450::1704251884::1::::<><>::
+player sword atk 64x64.png::CompressedTexture2D::7732201460162618235::1704251450::1704251884::1::::<><>::
+Player Sword Idle 48x48.png::CompressedTexture2D::195190913189374610::1704251450::1704251884::1::::<><>::
+Player Sword Stab 96x48.png::CompressedTexture2D::7576880081377259036::1704251450::1704251884::1::::<><>::
+run cycle 48x48.png::CompressedTexture2D::7553736505902711730::1704251450::1704251884::1::::<><>::
+wall land 48x48.png::CompressedTexture2D::1532553451904032899::1704251450::1704251884::1::::<><>::
+Wall Slide 48x48.png::CompressedTexture2D::2898151839555819481::1704251450::1704251884::1::::<><>::
+::res://assets/effect animation/::1704251450
+01.png::CompressedTexture2D::2360857878197208804::1704251450::1704251885::1::::<><>::
+Retro Impact Effect Pack 1 A.png::CompressedTexture2D::8186454110641527647::1704251450::1704251885::1::::<><>::
+Retro Impact Effect Pack 3 A.png::CompressedTexture2D::7826615289664598685::1704251450::1704251885::1::::<><>::
+some_animations.tres::SpriteFrames::3005926689484468942::1704251450::0::1::::<><>::uid://cvt5o2to5ihh::::res://assets/effect animation/Retro Impact Effect Pack 1 A.png<>uid://bw8u56xrpyaq5::::res://assets/effect animation/Retro Impact Effect Pack 3 A.png
+::res://assets/enemy animation/::1704251450
+enemy_animations.tres::SpriteFrames::2118206214795118677::1704251450::0::1::::<><>::uid://bbnjrx18qe872::::res://assets/enemy animation/slime/Sprite Sheet - Green Idle.png
+::res://assets/enemy animation/slime/::1704251450
+Sprite Sheet - Green Death - No Flash.png::CompressedTexture2D::6034269591481202498::1704251450::1704251884::1::::<><>::
+Sprite Sheet - Green Hurt - No Flash.png::CompressedTexture2D::8589368727089542856::1704251450::1704251884::1::::<><>::
+Sprite Sheet - Green Idle.png::CompressedTexture2D::7390954336667602312::1704251450::1704251884::1::::<><>::
+Sprite Sheet - Green Jump Down.png::CompressedTexture2D::2546442726546980964::1704251450::1704251884::1::::<><>::
+Sprite Sheet - Green Jump Land.png::CompressedTexture2D::54898157890780271::1704251450::1704251885::1::::<><>::
+Sprite Sheet - Green Jump Start-up.png::CompressedTexture2D::2881869638033030455::1704251450::1704251885::1::::<><>::
+Sprite Sheet - Green Jump to Fall.png::CompressedTexture2D::6694757088157912072::1704251450::1704251885::1::::<><>::
+::res://assets/others/::1704251450
+BossText.png::CompressedTexture2D::7282513350154049249::1704251450::1704251885::1::::<><>::
+Circle.png::CompressedTexture2D::1291215641418557216::1704251450::1704251885::1::::<><>::
+Cross.png::CompressedTexture2D::479626028063337675::1704251450::1704251885::1::::<><>::
+Elite.png::CompressedTexture2D::5624986359631568488::1704251450::1704251885::1::::<><>::
+Event.png::CompressedTexture2D::149098977991042736::1704251450::1704251885::1::::<><>::
+HB_4-Hurt.png::CompressedTexture2D::3219398073161868595::1704251450::1704251885::1::::<><>::
+HB_4.1-Hurt.png::CompressedTexture2D::8014016684215208231::1704251450::1704251885::1::::<><>::
+House.png::CompressedTexture2D::859032193162265376::1704251450::1704251885::1::::<><>::
+Monster.png::CompressedTexture2D::4690775975681966691::1704251450::1704251885::1::::<><>::
+Rest.png::CompressedTexture2D::3880071129214217857::1704251450::1704251885::1::::<><>::
+Shop.png::CompressedTexture2D::6889825453576533137::1704251450::1704251885::1::::<><>::
+Treasure.png::CompressedTexture2D::7136199071416423058::1704251450::1704251885::1::::<><>::
+UI books & more.png::CompressedTexture2D::8473338786328223641::1704251450::1704251884::1::::<><>::
+::res://assets/vector icon/::1704251450
+Attack.png::CompressedTexture2D::7156849708488077687::1704251450::1704251884::1::::<><>::
+Defend.png::CompressedTexture2D::1475434557934115958::1704251450::1704251884::1::::<><>::
+Knockback.png::CompressedTexture2D::1260081358114095142::1704251450::1704251884::1::::<><>::
+Parry.png::CompressedTexture2D::6481540981587302642::1704251450::1704251884::1::::<><>::
+Plate.png::CompressedTexture2D::3874579374203291077::1704251450::1704251884::1::::<><>::
+slice25.png::CompressedTexture2D::6452623831471667449::1704251450::1704251884::1::::<><>::
+slice26.png::CompressedTexture2D::4332103391569623064::1704251450::1704251884::1::::<><>::
+slice27.png::CompressedTexture2D::7762113020820458663::1704251450::1704251884::1::::<><>::
+slice28.png::CompressedTexture2D::478860487751286012::1704251450::1704251884::1::::<><>::
+slice29.png::CompressedTexture2D::3680329177461237572::1704251450::1704251884::1::::<><>::
+slice30.png::CompressedTexture2D::7338768622717642371::1704251450::1704251884::1::::<><>::
+slice31.png::CompressedTexture2D::8264776558988805239::1704251450::1704251884::1::::<><>::
+slice32.png::CompressedTexture2D::7775252422570140573::1704251450::1704251884::1::::<><>::
+slice34.png::CompressedTexture2D::6551604988842752865::1704251450::1704251884::1::::<><>::
+slice36.png::CompressedTexture2D::4774229123041237600::1704251450::1704251884::1::::<><>::
+slice38.png::CompressedTexture2D::4780555029322597367::1704251450::1704251884::1::::<><>::
+slice40.png::CompressedTexture2D::8187540824112266613::1704251450::1704251884::1::::<><>::
+slice41.png::CompressedTexture2D::6773980529892357702::1704251450::1704251884::1::::<><>::
+slice42.png::CompressedTexture2D::663728181105797450::1704251450::1704251884::1::::<><>::
+slice43.png::CompressedTexture2D::3976386549611167277::1704251450::1704251884::1::::<><>::
+slice44.png::CompressedTexture2D::7089618657782553846::1704251450::1704251884::1::::<><>::
+slice45.png::CompressedTexture2D::2473248005989996889::1704251450::1704251884::1::::<><>::
+slice46.png::CompressedTexture2D::6672564348905912998::1704251450::1704251884::1::::<><>::
+slice47.png::CompressedTexture2D::1023998432447124990::1704251450::1704251884::1::::<><>::
+::res://cards/::1704251450
+card.gd::GDScript::-1::1704251450::0::1::::<>Node2D<>::
+card.tscn::PackedScene::2477045384127404091::1704251450::0::1::::<><>::res://cards/card.gd<>uid://cw4qphsnprf8y::::res://assets/paper_tileset.tres<>uid://bl2wxp3u6kuhq::::res://assets/control_theme.tres<>uid://cdpn50mx0kev3::::res://assets/vector icon/Attack.png
+card_class.gd::GDScript::-1::1704251450::0::1::::Card<>Resource<>::
+card_dictionary.gd::GDScript::-1::1704251450::0::1::::<>Node<>::
+card_effect.gd::GDScript::-1::1704251450::0::1::::<>Node<>::
+::res://cards/card_resource/::1704251450
+Basic_Attack.tres::Resource/Card::8306205692973835314::1704251450::0::1::::<><>::res://cards/card_class.gd
+Basic_Defend.tres::Resource/Card::671909185388692060::1704251450::0::1::::<><>::res://cards/card_class.gd
+Basic_Parry.tres::Resource/Card::7196510740103813616::1704251450::0::1::::<><>::res://cards/card_class.gd
+Basic_SwiftAttack.tres::Resource/Card::8294389003272870616::1704251450::0::1::::<><>::res://cards/card_class.gd
+::res://enemy/::1704251450
+enemy.gd::GDScript::-1::1704251450::0::1::::<>Node2D<>::
+enemy.tscn::PackedScene::8252354644028607442::1704251450::0::1::::<><>::res://enemy/enemy.gd<>uid://5gcsugyuypp2::::res://assets/enemy animation/enemy_animations.tres<>uid://bl2wxp3u6kuhq::::res://assets/control_theme.tres<>uid://cm6co5hjtnn6a::::res://assets/others/HB_4.1-Hurt.png<>uid://dp1j81jq702in::::res://assets/others/HB_4-Hurt.png
+enemy_class.gd::GDScript::-1::1704251450::0::1::::Enemy<>Resource<>::
+enemy_dictionary.gd::GDScript::-1::1704251450::0::1::::<>Node<>::
+fsm_class.gd::GDScript::-1::1704251450::0::1::::FiniteStateMachine<>Resource<>::
+::res://enemy/enemy_resource/::1704251450
+slime_basic.tres::Resource/Enemy::-1::1704251450::0::1::::<><>::res://enemy/enemy_class.gd
+::res://enemy/fsm_resource/::1704251450
+sample1.tres::Resource/FiniteStateMachine::-1::1704251450::0::1::::<><>::res://enemy/fsm_class.gd
+slime_fsm_basic.tres::Resource/FiniteStateMachine::-1::1704251450::0::1::::<><>::res://enemy/fsm_class.gd
+::res://gamelogic/::1704251450
+game.tscn::PackedScene::4199855514904602236::1704251450::0::1::::<><>::uid://byodc7h0glibc::::res://gamelogic/RoomSelector/room_selector.tscn<>uid://cqpgvjwsuypq5::::res://gamelogic/Arena/arena.tscn
+mainmenu.tscn::PackedScene::7629463171321216748::1704251450::0::1::::<><>::
+main_game.gd::GDScript::-1::1704251450::0::1::::<>Node2D<>::
+main_game.tscn::PackedScene::2673209870547611979::1704251450::0::1::::<><>::res://gamelogic/main_game.gd<>uid://byodc7h0glibc::::res://gamelogic/RoomSelector/room_selector.tscn
+rng.gd::GDScript::-1::1704251450::0::1::::<>Node<>::
+::res://gamelogic/Arena/::1704251450
+arena.gd::GDScript::-1::1704251450::0::1::::<>Node<>::
+arena.tscn::PackedScene::5927230843075592506::1704251450::0::1::::<><>::res://gamelogic/Arena/arena.gd<>res://gamelogic/Arena/rhythm.gd<>res://gamelogic/Arena/turn_logic.gd<>uid://b5sf3kbftaqn4::::res://room/wave_resource/sample_room_resource.tres<>res://gamelogic/Arena/Character.gd<>uid://n4ar5dwpcq83::::res://gamelogic/Arena/beatbar_ui.tscn<>uid://b7ndyh1sxtb0l::::res://assets/character animation/Player Death 64x64.png<>uid://da5axs4cxb5cc::::res://assets/character animation/Character Idle 48x48.png<>uid://bfdrpombynyr0::::res://assets/character animation/Player Sword Idle 48x48.png<>uid://hraew3q17h68::::res://assets/character animation/Player Sword Stab 96x48.png<>uid://d0vmsem8uhojm::::res://assets/character animation/player sword atk 64x64.png<>uid://bbj5ttmos2y6f::::res://cards/card.tscn<>res://gamelogic/Arena/deck_api.gd<>uid://y7esrm4sl5t1::::res://assets/effect animation/01.png<>uid://bl2wxp3u6kuhq::::res://assets/control_theme.tres<>res://gamelogic/Arena/Enemies.gd<>uid://mw77oitoetyq::::res://assets/others/HB_4.1-Hurt.png<>uid://dptrctbyf6531::::res://enemy/enemy.tscn<>uid://cb43843y1kg88::::res://assets/others/HB_4-Hurt.png
+beatbar_ui.gd::GDScript::-1::1704251450::0::1::::<>Node2D<>::
+beatbar_ui.tscn::PackedScene::972353862013177918::1704251450::0::1::::<><>::res://gamelogic/Arena/beatbar_ui.gd<>uid://bi3df5pqtrnis::::res://assets/effect animation/some_animations.tres<>uid://dqrrhue03clth::::res://icon.svg
+Character.gd::GDScript::-1::1704251450::0::1::::<>Node<>::
+deck_api.gd::GDScript::-1::1704251450::0::1::::<>Node<>::
+Enemies.gd::GDScript::-1::1704251450::0::1::::<>Node<>::
+rhythm.gd::GDScript::-1::1704251450::0::1::::<>Node<>::
+turn_logic.gd::GDScript::-1::1704251450::0::1::::<>Node<>::
+::res://gamelogic/RoomSelector/::1704251450
+Combat_Info.gd::GDScript::-1::1704251450::0::1::::<>Control<>::
+room_icon.gd::GDScript::-1::1704251450::0::1::::<>Control<>::
+room_Icon.tscn::PackedScene::2722136037092639330::1704251450::0::1::::<><>::uid://dqrrhue03clth::::res://icon.svg<>res://gamelogic/RoomSelector/room_icon.gd<>uid://d0xf7x2c1mt7y::::res://assets/others/Cross.png<>uid://csgm66veenlco::::res://assets/others/BossText.png<>uid://dbsw3bpkg3rap::::res://assets/others/Circle.png<>uid://ctcg8capeh82w::::res://assets/others/Elite.png<>uid://b5641wsvxatgq::::res://assets/others/Event.png<>uid://b03vohylukxp4::::res://assets/others/House.png<>uid://bcov5r1s3qg6f::::res://assets/others/Monster.png<>uid://blr1to3meb46e::::res://assets/others/Rest.png<>uid://brtppjcwd3yc::::res://assets/others/Shop.png<>uid://bq3kalrbd7a3i::::res://assets/others/Treasure.png
+room_selector.gd::GDScript::-1::1704251450::0::1::::<>Node<>::
+room_selector.tscn::PackedScene::4100041634834005084::1704251450::0::1::::<><>::res://gamelogic/RoomSelector/room_selector.gd<>uid://chlx7mbqcmhbd::::res://assets/others/UI books & more.png<>uid://b2ndrq0m7ovl::::res://assets/Unutterable-Regular.ttf<>res://gamelogic/RoomSelector/Combat_Info.gd<>uid://cw4qphsnprf8y::::res://assets/paper_tileset.tres
+::res://gamelogic/TestScenes/::1704251450
+beatbar_ui_rhythm_signal_test.gd::GDScript::-1::1704251450::0::1::::<>Node<>::
+beatbar_ui_rhythm_signal_test.tscn::PackedScene::6560590996492794435::1704251450::0::1::::<><>::uid://n4ar5dwpcq83::::res://gamelogic/Arena/beatbar_ui.tscn<>res://gamelogic/TestScenes/beatbar_ui_rhythm_signal_test.gd<>res://gamelogic/Arena/rhythm.gd<>uid://cwpgw8mr83pyh::::res://music/For Whom the Knell Tolls.ogg<>uid://bl2wxp3u6kuhq::::res://assets/control_theme.tres
+enemy_test.gd::GDScript::-1::1704251450::0::1::::<>Node2D<>::
+enemy_test.tscn::PackedScene::168897453133444134::1704251450::0::1::::<><>::res://gamelogic/TestScenes/enemy_test.gd<>uid://c7rr2e7nkbqrc::::res://enemy/enemy_resource/sample_resource.tres
+simple_enemy_test_scene.gd::GDScript::-1::1704251450::0::1::::<>Node2D<>::
+simple_enemy_test_scene.tscn::PackedScene::657114123472290352::1704251450::0::1::::<><>::res://gamelogic/TestScenes/simple_enemy_test_scene.gd<>uid://dptrctbyf6531::::res://enemy/enemy.tscn
+test_arena.tscn::PackedScene::5478512492719360001::1704251450::0::1::::<><>::res://gamelogic/Arena/arena.gd<>res://gamelogic/Arena/turn_logic.gd<>res://gamelogic/Arena/rhythm.gd<>uid://cwpgw8mr83pyh::::res://music/For Whom the Knell Tolls.ogg<>uid://n4ar5dwpcq83::::res://gamelogic/Arena/beatbar_ui.tscn<>res://gamelogic/Arena/Character.gd<>uid://c4k23gamsdnu4::::res://assets/character animation/Player Death 64x64.png<>uid://dl8sq7a6dqcdi::::res://assets/character animation/Character Idle 48x48.png<>uid://dntjlejh723hi::::res://assets/character animation/Player Sword Idle 48x48.png<>uid://coyfideg5wvox::::res://assets/character animation/Player Sword Stab 96x48.png<>uid://cq3robkv2qxi5::::res://assets/character animation/player sword atk 64x64.png<>res://gamelogic/Arena/deck_api.gd<>uid://bbj5ttmos2y6f::::res://cards/card.tscn<>uid://bl2wxp3u6kuhq::::res://assets/control_theme.tres
+::res://music/::1704251450
+For Whom the Knell Tolls.ogg::AudioStreamOggVorbis::7067494260961410128::1704251450::1704251884::1::::<><>::
+sample_music.ogg::AudioStreamOggVorbis::5583777840381794393::1704251450::1704251884::1::::<><>::
+::res://room/::1704251450
+wave_class.gd::GDScript::-1::1704251450::0::1::::Wave<>Resource<>::
+::res://room/wave_resource/::1704251450
+sample_room_resource.tres::Resource/Wave::4529598906631210279::1704251450::0::1::::<><>::res://room/wave_class.gd<>res://enemy/enemy_resource/slime_basic.tres<>uid://cwpgw8mr83pyh::::res://music/For Whom the Knell Tolls.ogg
+::res://tools/::1704251450
+file flawless check.gd::GDScript::-1::1704251450::0::1::::<>ConfirmationDialog<>::
+maker_full.gd::GDScript::-1::1704251450::0::1::::<>Node2D<>::
+maker_full.tscn::PackedScene::5462555761486789032::1704251450::0::1::::<><>::res://tools/maker_full.gd<>uid://bvlp58jipxqhn::::res://tools/FSM maker/fsm_maker.tscn<>uid://bvojmcexaej0y::::res://tools/Mob maker/Mob maker.tscn<>res://tools/file flawless check.gd<>uid://byckq01x6gugm::::res://assets/others/HB_4.1-Hurt.png<>uid://bbdjvurhpd2me::::res://assets/others/HB_4-Hurt.png
+::res://tools/FSM maker/::1704251450
+editor.gd::GDScript::-1::1704251450::0::1::::<>Node2D<>::
+fsm_maker.gd::GDScript::-1::1704251450::0::1::::<>Node<>::
+fsm_maker.tscn::PackedScene::3884060631653328163::1704251450::0::1::::<><>::res://tools/FSM maker/editor.gd<>res://tools/FSM maker/maker_file_saveload.gd
+graph_node.gd::GDScript::-1::1704251450::0::1::::<>GraphNode<>::
+graph_node.tscn::PackedScene::7825909520027940033::1704251450::0::1::::<><>::res://tools/FSM maker/graph_node.gd
+graph_node_effect.gd::GDScript::-1::1704251450::0::1::::<>GraphNode<>::
+graph_node_effect.tscn::PackedScene::7448410237252425280::1704251450::0::1::::<><>::res://tools/FSM maker/graph_node_effect.gd
+maker_file_saveload.gd::GDScript::-1::1704251450::0::1::::<>Node2D<>::
+::res://tools/Mob maker/::1704251450
+Mob maker.tscn::PackedScene::3889855683381476110::1704251450::0::1::::<><>::res://tools/Mob maker/mob_maker_saveload.gd<>uid://dptrctbyf6531::::res://enemy/enemy.tscn<>uid://b2ndrq0m7ovl::::res://assets/Unutterable-Regular.ttf
+mob_maker_saveload.gd::GDScript::-1::1704251450::0::1::::<>Node2D<>::

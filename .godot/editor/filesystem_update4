@@ -5,15 +5,4 @@ res://assets/effect animation/some_animations.tres
 res://assets/paper_tileset.tres
 res://assets/control_theme.tres
 res://assets/enemy animation/enemy_animations.tres
-res://cards/card_effect.gd
-res://cards/card_class.gd
-res://cards/card_resource/test_card.tres
-res://cards/card.tscn
-res://cards/card.gd
-res://gamelogic/Arena/arena.gd
 res://gamelogic/Arena/turn_logic.gd
-res://cards/card_resource/Basic_Attack.tres
-res://cards/card_resource/Basic_Defend.tres
-res://cards/card_resource/Basic_Parry.tres
-res://cards/card_resource/Basic_SwiftAttack.tres
-res://gamelogic/Arena/deck_api.gd

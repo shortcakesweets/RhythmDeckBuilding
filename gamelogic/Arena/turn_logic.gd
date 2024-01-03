@@ -21,7 +21,7 @@ func check_curr_target() -> void:
 
 # Turn mechanics. will be branched later.
 func turn(card_index : int = -1) -> void:
-	# Run Player Card - wip
+	# 1. Run Player Card
 	var used_card_resource : Card = null
 	if card_index != -1:
 		used_card_resource = deck.use_card(card_index)
@@ -33,17 +33,17 @@ func turn(card_index : int = -1) -> void:
 		#character.play_animation_once("Idle Sword")
 		character.play_attack_animation()
 	
-	# check target_sprite animation & it's position
+	# 2. Check target_sprite animation & it's position
 	check_curr_target()
 	if curr_target != -1:
 		var anim_pos = get_node("Enemies").get_child(curr_target).position
 		target_sprite.position = anim_pos
 		target_sprite.play("targeted")
 	
-	# Run Enemy Queue
+	# 3. Run Enemy Queue (Enemy visuals update at this step)
 	var effect_array : Array = enemies.turns()
 	
-	# update visuals
+	# 4. update visuals (Character)
 	character.update_visuals()
 	
 	# check win/lose traits
