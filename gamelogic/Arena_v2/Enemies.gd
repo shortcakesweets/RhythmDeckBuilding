@@ -11,6 +11,10 @@ func turns() -> void:
 		var enemy = enemy_entity_array[enemy_index]
 		var effect : Dictionary = enemy.turn()
 		CardEffect.apply_enemy_effect(effect, enemy_index)
+		
+		# Debug option
+		if not effect.is_empty():
+			print(enemy_index, " ", effect)
 
 # if no vacant slot, return -1
 func get_vacant_slot() -> int:
@@ -27,4 +31,5 @@ func spawn(curr_turn : int) -> void:
 		if enemy_spawn_info[curr_turn] != null:
 			enemy_waiting_queue.push_back(enemy_spawn_info[curr_turn])
 	if vacant_index != -1 and not enemy_waiting_queue.is_empty():
-		enemy_slot[vacant_index].set_values_from_resource(enemy_waiting_queue.pop_front())
+		#enemy_slot[vacant_index].set_values_from_resource(enemy_waiting_queue.pop_front())
+		enemy_slot[vacant_index].spawn(enemy_waiting_queue.pop_front())

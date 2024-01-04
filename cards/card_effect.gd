@@ -1,8 +1,17 @@
 extends Node
 # API of card effects
 
+func _get_player_entity_data() -> Node:
+	return get_tree().get_nodes_in_group("character")[0].stats
+
+func _get_enemy_entity_data_on_index(enemy_index : int) -> Enemy:
+	return get_tree().get_nodes_in_group("enemies")[0].get_child(enemy_index).enemy_data as Enemy
+
+func _get_deck_data() -> Node:
+	return get_tree().get_nodes_in_group("deck")[0]
+
 func damage_character(amount : int) -> void:
-	var entity = get_tree().get_nodes_in_group("character")[0]
+	var entity = _get_player_entity_data()
 	if entity.defend >= amount:
 		entity.defend -= amount
 	else:
@@ -12,12 +21,12 @@ func damage_character(amount : int) -> void:
 	entity.hp = clamp(entity.hp, 0, entity.max_hp)
 
 func damage_character_pierce(amount : int) -> void:
-	var entity = get_tree().get_nodes_in_group("character")[0]
+	var entity = _get_player_entity_data()
 	entity.hp -= amount
 	entity.hp = clamp(entity.hp, 0, entity.max_hp)
 
 func damage_enemy(index : int, amount : int) -> void:
-	var entity = get_tree().get_nodes_in_group("enemies")[0].get_child(index).enemy_data as Enemy
+	var entity = _get_enemy_entity_data_on_index(index)
 	if entity == null:
 		return
 	
@@ -30,30 +39,30 @@ func damage_enemy(index : int, amount : int) -> void:
 	entity.hp = clamp(entity.hp, 0, entity.max_hp)
 
 func defend_character(amount : int) -> void:
-	var entity = get_tree().get_nodes_in_group("character")[0]
+	var entity = _get_player_entity_data()
 	entity.defend += amount
 	entity.defend = clamp(entity.defend, 0, 999)
 
 func defend_enemy(index : int, amount : int) -> void:
-	var entity = get_tree().get_nodes_in_group("enemies")[0].get_child(index).enemy_data as Enemy
+	var entity = _get_enemy_entity_data_on_index(index)
 	if entity == null:
 		return
 	entity.defend += amount
 	entity.defend = clamp(entity.defend, 0, 999)
 
 func knockback_enemy(index : int, amount : int) -> void:
-	var entity = get_tree().get_nodes_in_group("enemies")[0].get_child(index).enemy_data as Enemy
+	var entity = _get_enemy_entity_data_on_index(index)
 	if entity == null:
 		return
 	
 	pass
 
 func draw_cards(many : int) -> void:
-	var hand = get_tree().get_nodes_in_group("character")[0].get_node("%hand")
+	var hand = _get_deck_data()
 	hand.draw_cards(many)
 
 func add_shuffle_energy(amount : int) -> void:
-	var hand = get_tree().get_nodes_in_group("character")[0].get_node("%hand")
+	var hand = _get_deck_data()
 	hand.shuffle_energy += amount
 	hand.shuffle_energy = clamp(hand.shuffle_energy, 0, hand.shuffle_energy_max)
 

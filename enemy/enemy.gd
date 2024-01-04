@@ -10,16 +10,37 @@ var enemy_data : Enemy = null
 @export var appear_turn : int = 0
 
 func _ready() -> void:
-	set_values_from_resource()
+	#set_values_from_resource()
+	spawn()
 
-func set_values_from_resource(new_resource : Enemy = null) -> void:
-	if new_resource != null:
-		enemy_data_raw = new_resource
-	if enemy_data_raw != null:
+# Deprecated. Use "spawn" instead
+#func set_values_from_resource(new_resource : Enemy = null) -> void:
+	#if new_resource != null:
+		#enemy_data_raw = new_resource
+	#if enemy_data_raw != null:
+		#enemy_data = enemy_data_raw.duplicate(true)
+	#draw_enemy()
+
+# Deprecated. included in "spawn"
+#func draw_enemy() -> void:
+	#if enemy_data == null:
+		#self.visible = false
+	#else:
+		#enemy_data.set_FSM_data()
+		#self.visible = true
+		#var idle_animation : String = enemy_data.enemy_name.to_lower() + "_idle"
+		#sprite.play(idle_animation)
+		#update_visuals()
+
+# spawns a new enemy. If existed, replace it.
+# spawn(null) is same as killing an enemy
+func spawn(new_resource : Enemy = null) -> void:
+	enemy_data_raw = new_resource
+	if enemy_data_raw == null:
+		enemy_data = null
+	else:
 		enemy_data = enemy_data_raw.duplicate(true)
-	draw_enemy()
-
-func draw_enemy() -> void:
+	
 	if enemy_data == null:
 		self.visible = false
 	else:
@@ -39,8 +60,7 @@ func turn() -> Dictionary:
 	var effect := {}
 	if enemy_data != null:
 		if enemy_data.hp <= 0:
-			# add Death anim later
-			set_values_from_resource()
+			spawn()
 		else:
 			effect = enemy_data.turn()
 			update_visuals()
