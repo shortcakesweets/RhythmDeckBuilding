@@ -1,4 +1,4 @@
-extends Node
+extends CanvasLayer
 
 @export var enemy_spawn_info : Array[Enemy] = []
 var enemy_waiting_queue : Array[Enemy] = []
@@ -11,11 +11,6 @@ func turns() -> void:
 		var enemy = enemy_entity_array[enemy_index]
 		var effect : Dictionary = enemy.turn()
 		CardEffect.apply_enemy_effect(effect, enemy_index)
-	
-	#var effect_array := []
-	#for enemy in self.get_children():
-		#effect_array.append(enemy.turn())
-	#return effect_array
 
 # if no vacant slot, return -1
 func get_vacant_slot() -> int:

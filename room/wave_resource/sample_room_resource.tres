@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://room/wave_class.gd" id="1_42rtp"]
 [ext_resource type="Resource" path="res://enemy/enemy_resource/slime_basic.tres" id="1_u4iim"]
-[ext_resource type="AudioStream" uid="uid://cwpgw8mr83pyh" path="res://music/For Whom the Knell Tolls.ogg" id="2_0efvr"]
+[ext_resource type="AudioStream" uid="uid://buggsam1c7dfd" path="res://music/For Whom the Knell Tolls.ogg" id="2_0efvr"]
 
 [resource]
 script = ExtResource("1_42rtp")

@@ -6,6 +6,7 @@ var enemy_data : Enemy = null
 @onready var sprite = $sprite
 @onready var turn_counter_label = $turn_counter
 @onready var hp_bar = $HP
+@onready var defend_label = $Defend
 @export var appear_turn : int = 0
 
 func _ready() -> void:
@@ -37,6 +38,10 @@ func update_visuals() -> void:
 func turn() -> Dictionary:
 	var effect := {}
 	if enemy_data != null:
-		effect = enemy_data.turn()
-		update_visuals()
+		if enemy_data.hp <= 0:
+			# add Death anim later
+			set_values_from_resource()
+		else:
+			effect = enemy_data.turn()
+			update_visuals()
 	return effect

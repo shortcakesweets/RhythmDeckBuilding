@@ -5,4 +5,16 @@ res://assets/effect animation/some_animations.tres
 res://assets/paper_tileset.tres
 res://assets/control_theme.tres
 res://assets/enemy animation/enemy_animations.tres
+res://enemy/fsm_resource/slime_fsm_basic.tres
+res://tools/maker_full.tscn
+res://room/wave_resource/sample_room_resource.tres
+res://cards/card_effect.gd
+res://gamelogic/Arena/Enemies.gd
 res://gamelogic/Arena/turn_logic.gd
+res://enemy/enemy.tscn
+res://enemy/enemy.gd
+res://enemy/enemy_class.gd
+res://gamelogic/Arena_v2/Arena.tscn
+res://gamelogic/Arena_v2/Hand.gd
+res://gamelogic/Arena_v2/Deck.gd
+res://gamelogic/Arena_v2/Enemies.gd

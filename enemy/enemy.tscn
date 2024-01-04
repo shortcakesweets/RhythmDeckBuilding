@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://enemy/enemy.gd" id="1_hgrqm"]
 [ext_resource type="SpriteFrames" uid="uid://5gcsugyuypp2" path="res://assets/enemy animation/enemy_animations.tres" id="2_j5ob7"]
 [ext_resource type="Theme" uid="uid://bl2wxp3u6kuhq" path="res://assets/control_theme.tres" id="3_gkbkt"]
-[ext_resource type="Texture2D" uid="uid://cm6co5hjtnn6a" path="res://assets/others/HB_4.1-Hurt.png" id="4_wsjpp"]
-[ext_resource type="Texture2D" uid="uid://dp1j81jq702in" path="res://assets/others/HB_4-Hurt.png" id="5_yf5lp"]
+[ext_resource type="Texture2D" uid="uid://d2fap23kh1le7" path="res://assets/others/HB_4.1-Hurt.png" id="4_wsjpp"]
+[ext_resource type="Texture2D" uid="uid://b6p158fv4sq11" path="res://assets/others/HB_4-Hurt.png" id="5_yf5lp"]
 
 [node name="Enemy" type="Node2D"]
 script = ExtResource("1_hgrqm")
@@ -50,3 +50,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "#/#"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Defend" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0

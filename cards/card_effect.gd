@@ -34,6 +34,13 @@ func defend_character(amount : int) -> void:
 	entity.defend += amount
 	entity.defend = clamp(entity.defend, 0, 999)
 
+func defend_enemy(index : int, amount : int) -> void:
+	var entity = get_tree().get_nodes_in_group("enemies")[0].get_child(index).enemy_data as Enemy
+	if entity == null:
+		return
+	entity.defend += amount
+	entity.defend = clamp(entity.defend, 0, 999)
+
 func knockback_enemy(index : int, amount : int) -> void:
 	var entity = get_tree().get_nodes_in_group("enemies")[0].get_child(index).enemy_data as Enemy
 	if entity == null:
@@ -51,7 +58,6 @@ func add_shuffle_energy(amount : int) -> void:
 	hand.shuffle_energy = clamp(hand.shuffle_energy, 0, hand.shuffle_energy_max)
 
 ##
-
 func apply_card_effect(card : Card, target_index : int = -1) -> void:
 	var effect : Dictionary = {}
 	if card.is_upgraded:
@@ -77,3 +83,15 @@ func apply_card_effect(card : Card, target_index : int = -1) -> void:
 				add_shuffle_energy(value)
 			_:
 				pass
+
+func apply_enemy_effect(effect : Dictionary, enemy_index : int = -1) -> void:
+	for key in effect:
+		var value = effect[key]
+		if value == 0:
+			continue
+		
+		match key:
+			"Attack":
+				damage_character(value)
+			"Defend":
+				defend_enemy(enemy_index, value)

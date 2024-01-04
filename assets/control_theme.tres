@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=2 format=3 uid="uid://bl2wxp3u6kuhq"]
 
-[ext_resource type="FontFile" uid="uid://b5d0m7btwrxaf" path="res://assets/Unutterable-Regular.ttf" id="1_36rqv"]
+[ext_resource type="FontFile" uid="uid://bl77bhkyhso6h" path="res://assets/Unutterable-Regular.ttf" id="1_36rqv"]
 
 [resource]
 default_font = ExtResource("1_36rqv")

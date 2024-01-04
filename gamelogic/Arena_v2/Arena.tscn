@@ -1,0 +1,72 @@
+[gd_scene load_steps=7 format=3 uid="uid://bhe85mkgl7er5"]
+
+[ext_resource type="Script" path="res://gamelogic/Arena_v2/Turn.gd" id="1_cqvmu"]
+[ext_resource type="Script" path="res://gamelogic/Arena_v2/Rhythm.gd" id="2_0i7eo"]
+[ext_resource type="Script" path="res://gamelogic/Arena_v2/Deck.gd" id="3_122nm"]
+[ext_resource type="Script" path="res://gamelogic/Arena_v2/Enemies.gd" id="5_ptwhr"]
+[ext_resource type="PackedScene" uid="uid://bbj5ttmos2y6f" path="res://cards/card.tscn" id="5_vn4gb"]
+[ext_resource type="PackedScene" uid="uid://dptrctbyf6531" path="res://enemy/enemy.tscn" id="6_nfiw4"]
+
+[node name="Arena" type="Node2D"]
+
+[node name="Logic" type="Node" parent="."]
+
+[node name="Turn" type="Node" parent="Logic"]
+unique_name_in_owner = true
+script = ExtResource("1_cqvmu")
+
+[node name="Rhythm" type="Node" parent="Logic"]
+unique_name_in_owner = true
+script = ExtResource("2_0i7eo")
+
+[node name="Deck" type="Node" parent="Logic"]
+unique_name_in_owner = true
+script = ExtResource("3_122nm")
+
+[node name="Character" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+layer = 2
+
+[node name="Hand" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+layer = 3
+
+[node name="Card1" parent="Hand" instance=ExtResource("5_vn4gb")]
+position = Vector2(367, 750)
+metadata/_edit_lock_ = true
+
+[node name="Card2" parent="Hand" instance=ExtResource("5_vn4gb")]
+position = Vector2(572, 750)
+metadata/_edit_lock_ = true
+
+[node name="Card3" parent="Hand" instance=ExtResource("5_vn4gb")]
+position = Vector2(771, 750)
+metadata/_edit_lock_ = true
+
+[node name="Card4" parent="Hand" instance=ExtResource("5_vn4gb")]
+position = Vector2(973, 750)
+metadata/_edit_lock_ = true
+
+[node name="Card5" parent="Hand" instance=ExtResource("5_vn4gb")]
+position = Vector2(1173, 750)
+metadata/_edit_lock_ = true
+
+[node name="Card6" parent="Hand" instance=ExtResource("5_vn4gb")]
+position = Vector2(1374, 750)
+metadata/_edit_lock_ = true
+
+[node name="Enemies" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+script = ExtResource("5_ptwhr")
+
+[node name="Enemy1" parent="Enemies" instance=ExtResource("6_nfiw4")]
+unique_name_in_owner = true
+position = Vector2(1081, 489)
+
+[node name="Enemy2" parent="Enemies" instance=ExtResource("6_nfiw4")]
+unique_name_in_owner = true
+position = Vector2(1378, 578)
+
+[node name="Enemy3" parent="Enemies" instance=ExtResource("6_nfiw4")]
+unique_name_in_owner = true
+position = Vector2(1676, 492)

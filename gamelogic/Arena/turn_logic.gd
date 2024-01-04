@@ -40,10 +40,10 @@ func turn(card_index : int = -1) -> void:
 		target_sprite.position = anim_pos
 		target_sprite.play("targeted")
 	
-	# 3. Run Enemy Queue (Enemy visuals update at this step)
-	var effect_array : Array = enemies.turns()
+	# 3. Run Enemy Queue (Enemy visuals, Enemy effects update/apply at this step)
+	enemies.turns()
 	
-	# 4. update visuals (Character)
+	# 4. update visuals, such as hp and defend values (Character)
 	character.update_visuals()
 	
 	# check win/lose traits
