@@ -1,10 +1,13 @@
 extends Node
+signal stop_arena(is_win : bool)
+
 enum {DEBUG = 100, SHUFFLE = 200}
 @onready var rhythm = %Rhythm
 @onready var character = $"%Character/Character"
 @onready var deck = %Deck
 @onready var enemies = %Enemies
 @onready var target_sprite = $"%Character/target_sprite"
+@onready var post_arena = %PostArena
 
 var curr_turn : int = 0
 var curr_target : int = -1
@@ -42,6 +45,12 @@ func turn(card_index : int = -1) -> void:
 	character.update_visuals()
 	
 	# 4. check win/lose traits
+	if character.is_dead():
+		emit_signal("stop_arena", false)
+		return
+	elif enemies.is_wave_done():
+		emit_signal("stop_arena", true)
+		return
 	
 	# 5. Run spawn Queue
 	enemies.spawn(curr_turn)
@@ -63,7 +72,7 @@ func _process(_delta) -> void:
 	pass
 
 # Checks input
-func _unhandled_input(event : InputEvent) -> void:
+func _unhandled_key_input(event : InputEvent) -> void:
 	if event.is_echo():
 		return
 	rhythm_input(event)

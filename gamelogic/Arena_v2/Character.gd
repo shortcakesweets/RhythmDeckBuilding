@@ -32,3 +32,6 @@ func update_visuals() -> void:
 	$HP.value = stats.hp
 	$HP/Label.text = str(stats.hp) + " / " + str(stats.max_hp)
 	$Defense.text = str(stats.defend)
+
+func is_dead() -> bool:
+	return stats.hp <= 0

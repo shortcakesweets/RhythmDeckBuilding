@@ -3,6 +3,7 @@ extends CanvasLayer
 @export var enemy_spawn_info : Array[Enemy] = []
 var enemy_waiting_queue : Array[Enemy] = []
 @onready var enemy_slot = [$Enemy1, $Enemy2, $Enemy3]
+@onready var turn = %Turn
 
 func turns() -> void:
 	# Enemies will get effect on this step
@@ -17,7 +18,7 @@ func turns() -> void:
 			print(enemy_index, " ", effect)
 
 # if no vacant slot, return -1
-func get_vacant_slot() -> int:
+func _get_vacant_slot() -> int:
 	for i in range(enemy_slot.size()):
 		if enemy_slot[i].enemy_data == null:
 			return i
@@ -25,7 +26,7 @@ func get_vacant_slot() -> int:
 
 # spawns if available
 func spawn(curr_turn : int) -> void:
-	var vacant_index = get_vacant_slot()
+	var vacant_index = _get_vacant_slot()
 	if curr_turn < enemy_spawn_info.size():
 		#print(enemy_spawn_info[curr_turn])
 		if enemy_spawn_info[curr_turn] != null:
@@ -33,3 +34,16 @@ func spawn(curr_turn : int) -> void:
 	if vacant_index != -1 and not enemy_waiting_queue.is_empty():
 		#enemy_slot[vacant_index].set_values_from_resource(enemy_waiting_queue.pop_front())
 		enemy_slot[vacant_index].spawn(enemy_waiting_queue.pop_front())
+
+func is_wave_done() -> bool:
+	# check vacant spot
+	for i in range(enemy_slot.size()):
+		if enemy_slot[i].enemy_data != null:
+			return false
+	
+	# check spawn info
+	var curr_turn = turn.curr_turn
+	if curr_turn < enemy_spawn_info.size():
+		return false
+	
+	return enemy_waiting_queue.is_empty()

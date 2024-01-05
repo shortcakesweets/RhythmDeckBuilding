@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://bhe85mkgl7er5"]
+[gd_scene load_steps=26 format=3 uid="uid://bhe85mkgl7er5"]
 
 [ext_resource type="Script" path="res://gamelogic/Arena_v2/Turn.gd" id="1_cqvmu"]
 [ext_resource type="Script" path="res://gamelogic/Arena_v2/Arena.gd" id="1_ih3nh"]
@@ -6,12 +6,13 @@
 [ext_resource type="Resource" uid="uid://b5sf3kbftaqn4" path="res://room/wave_resource/sample_room_resource.tres" id="2_quxkv"]
 [ext_resource type="Script" path="res://gamelogic/Arena_v2/Deck.gd" id="3_122nm"]
 [ext_resource type="PackedScene" uid="uid://7wkcuy3bhphu" path="res://gamelogic/Arena_v2/Character.tscn" id="4_3se7o"]
-[ext_resource type="Texture2D" uid="uid://b2n8fccxdi2jd" path="res://assets/effect animation/01.png" id="5_n6eo4"]
+[ext_resource type="Texture2D" uid="uid://b4kj6d66xopyr" path="res://assets/effect animation/01.png" id="5_n6eo4"]
 [ext_resource type="Script" path="res://gamelogic/Arena_v2/Enemies.gd" id="5_ptwhr"]
 [ext_resource type="PackedScene" uid="uid://bbj5ttmos2y6f" path="res://cards/card.tscn" id="5_vn4gb"]
 [ext_resource type="PackedScene" uid="uid://dptrctbyf6531" path="res://enemy/enemy.tscn" id="6_nfiw4"]
 [ext_resource type="PackedScene" uid="uid://csnk2uav17v0r" path="res://gamelogic/Arena_v2/BeatBar_UI.tscn" id="7_k25cg"]
 [ext_resource type="Theme" uid="uid://bl2wxp3u6kuhq" path="res://assets/control_theme.tres" id="10_7lrtf"]
+[ext_resource type="Script" path="res://gamelogic/Arena_v2/PostArena.gd" id="13_bk67y"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p2j0c"]
 atlas = ExtResource("5_n6eo4")
@@ -111,10 +112,11 @@ editor_description = "All Logics"
 [node name="Turn" type="Node" parent="Logic"]
 unique_name_in_owner = true
 editor_description = "Runs all \"Turn based activities\" here.
-1. Character movement
+1. Character movement (card)
 2. Enemy movement
-3. Enemy spawn
-4. Check win/lose traits"
+3. Update Character visuals
+4. Check win/lose trait
+5. Enemy Spawn"
 script = ExtResource("1_cqvmu")
 
 [node name="Rhythm" type="Node" parent="Logic"]
@@ -279,6 +281,28 @@ text = "+ means late
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="PostArena" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+layer = 10
+script = ExtResource("13_bk67y")
+
+[node name="Win" type="Control" parent="PostArena"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Lose" type="Control" parent="PostArena"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="stop_arena" from="Logic/Turn" to="." method="_on_turn_stop_arena"]
 [connection signal="pressed" from="Debug System/debug button" to="Character/Character" method="play_animation_once"]
 [connection signal="pressed" from="Debug System/game ready" to="Logic/Deck" method="_on_game_ready_pressed"]
 [connection signal="pressed" from="Debug System/show deck on console" to="Logic/Deck" method="_on_show_deck_on_console_pressed"]

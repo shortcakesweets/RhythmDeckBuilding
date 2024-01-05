@@ -15,14 +15,14 @@ var gongbad_turn : int = -1
 
 func _ready() -> void:
 	set_process(false)
-	calculate_unit()
+	_calculate_unit()
 	beatbar.set_idle_speed_by_bpm(bpm * 1.5)
 	character.set_speed_by_bpm(bpm * 2.0)
 
-func calculate_unit() -> void:
+func _calculate_unit() -> void:
 	unit = 60.0 / bpm
 
-func get_time() -> float:
+func _get_time() -> float:
 	var time = (
 		audio_stream.get_playback_position() +
 		AudioServer.get_time_since_last_mix() -
@@ -30,7 +30,7 @@ func get_time() -> float:
 	)
 	return time
 
-func get_interval(curr_turn : int, position : int = MID) -> float: # by seconds
+func _get_interval(curr_turn : int, position : int = MID) -> float: # by seconds
 	if position == LEFT:
 		return float(offset) * 0.001 + unit * (float(curr_turn) - 0.5)
 	elif position == MID:
@@ -42,26 +42,28 @@ func check_timeout(curr_turn : int) -> bool:
 	if no_beat:
 		return false
 	
-	var time = get_time()
+	var time = _get_time()
 	if curr_turn == gongbad_turn:
-		return get_interval(curr_turn) < time
+		return _get_interval(curr_turn) < time
 	else:
-		return get_interval(curr_turn, RIGHT) < time
+		return _get_interval(curr_turn, RIGHT) < time
 
 # Returns [valid, precision]
 func is_valid_input(curr_turn : int) -> Array:
+	if is_processing():
+		return [false, 0.00]
 	if no_beat:
 		return [true, 0.00]
 	
-	var time : float = get_time()
-	var precision : float = time - get_interval(curr_turn)
+	var time : float = _get_time()
+	var precision : float = time - _get_interval(curr_turn)
 	var valid : bool = false
 	
 	if curr_turn != gongbad_turn: # not gongbad
-		if time < get_interval(curr_turn, LEFT):
+		if time < _get_interval(curr_turn, LEFT):
 			gongbad_turn = curr_turn
 			valid = false
-		elif time < get_interval(curr_turn, RIGHT):
+		elif time < _get_interval(curr_turn, RIGHT):
 			valid = true
 			
 	return [valid, precision]
@@ -75,8 +77,8 @@ func _process(_delta) -> void:
 		turn.turn()
 		$"../../Debug System/Label".text = "curr_turn : " + str(turn.curr_turn)
 	
-	var time = get_time()
-	if get_interval(beat_count) < time:
+	var time = _get_time()
+	if _get_interval(beat_count) < time:
 		beatbar.play_idle()
 		beat_count += 1
 	$"../../Debug System/beatcount".text = str(beat_count)
@@ -88,3 +90,10 @@ func _on_music_start_toggled(toggled_on):
 	else:
 		audio_stream.stop()
 		beat_count = 0
+
+func kill_process_and_fade_out(fade_out_duration : float = 1.5) -> void:
+	set_process(false)
+	var tween = create_tween()
+	tween.tween_property(audio_stream, "volume_db", -80, fade_out_duration)
+	await tween.finished
+	audio_stream.stop()

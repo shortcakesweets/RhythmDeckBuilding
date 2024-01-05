@@ -5,6 +5,7 @@ extends Node2D
 @onready var rhythm = %Rhythm
 @onready var enemies = %Enemies
 @onready var BGM = %BGM
+@onready var turn = %Turn
 
 func _ready() -> void: 
 	reload()
@@ -19,3 +20,16 @@ func reload() -> void:
 		enemies.enemy_spawn_info = wave.enemy_info
 	
 	rhythm._ready()
+
+func _on_turn_stop_arena(is_win : bool) -> void:
+	# 1. Show "PostArena", so that any clickable UI from game are banned
+	pass
+	
+	# 2. Stop rhythm, turn logic.
+	# Because of fadeout duration, this process takes 1.5 sec duration (default)
+	turn.set_process_unhandled_key_input(false)
+	rhythm.kill_process_and_fade_out()
+	
+	# 3. Show screen
+	if is_win:
+		pass

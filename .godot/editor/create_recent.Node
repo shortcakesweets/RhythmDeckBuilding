@@ -1,9 +1,9 @@
 Node
+Control
 CanvasLayer
 Label
 TextureProgressBar
 AnimatedSprite2D
-Control
 VBoxContainer
 ConfirmationDialog
 Node2D
