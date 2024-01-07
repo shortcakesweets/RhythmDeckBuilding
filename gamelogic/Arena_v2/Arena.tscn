@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://bhe85mkgl7er5"]
+[gd_scene load_steps=19 format=3 uid="uid://bhe85mkgl7er5"]
 
 [ext_resource type="Script" path="res://gamelogic/Arena_v2/Turn.gd" id="1_cqvmu"]
 [ext_resource type="Script" path="res://gamelogic/Arena_v2/Arena.gd" id="1_ih3nh"]
@@ -6,93 +6,44 @@
 [ext_resource type="Resource" uid="uid://b5sf3kbftaqn4" path="res://room/wave_resource/sample_room_resource.tres" id="2_quxkv"]
 [ext_resource type="Script" path="res://gamelogic/Arena_v2/Deck.gd" id="3_122nm"]
 [ext_resource type="PackedScene" uid="uid://7wkcuy3bhphu" path="res://gamelogic/Arena_v2/Character.tscn" id="4_3se7o"]
-[ext_resource type="Texture2D" uid="uid://b4kj6d66xopyr" path="res://assets/effect animation/01.png" id="5_n6eo4"]
 [ext_resource type="Script" path="res://gamelogic/Arena_v2/Enemies.gd" id="5_ptwhr"]
 [ext_resource type="PackedScene" uid="uid://bbj5ttmos2y6f" path="res://cards/card.tscn" id="5_vn4gb"]
 [ext_resource type="PackedScene" uid="uid://dptrctbyf6531" path="res://enemy/enemy.tscn" id="6_nfiw4"]
 [ext_resource type="PackedScene" uid="uid://csnk2uav17v0r" path="res://gamelogic/Arena_v2/BeatBar_UI.tscn" id="7_k25cg"]
+[ext_resource type="Texture2D" uid="uid://cdr2muh77d3jv" path="res://assets/effect animation/Spritesheet_UI_Flat_Select_01.png" id="7_v3wts"]
 [ext_resource type="Theme" uid="uid://bl2wxp3u6kuhq" path="res://assets/control_theme.tres" id="10_7lrtf"]
 [ext_resource type="Script" path="res://gamelogic/Arena_v2/PostArena.gd" id="13_bk67y"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_p2j0c"]
-atlas = ExtResource("5_n6eo4")
-region = Rect2(512, 128, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ecxpo"]
+atlas = ExtResource("7_v3wts")
+region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8o2ek"]
-atlas = ExtResource("5_n6eo4")
-region = Rect2(0, 128, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_dn4mw"]
+atlas = ExtResource("7_v3wts")
+region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_m3eqy"]
-atlas = ExtResource("5_n6eo4")
-region = Rect2(64, 128, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_xxsd8"]
+atlas = ExtResource("7_v3wts")
+region = Rect2(64, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mlr3i"]
-atlas = ExtResource("5_n6eo4")
-region = Rect2(128, 128, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dpqln"]
-atlas = ExtResource("5_n6eo4")
-region = Rect2(192, 128, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_745fj"]
-atlas = ExtResource("5_n6eo4")
-region = Rect2(256, 128, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_u4lua"]
-atlas = ExtResource("5_n6eo4")
-region = Rect2(320, 128, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ng4wc"]
-atlas = ExtResource("5_n6eo4")
-region = Rect2(384, 128, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8wa2i"]
-atlas = ExtResource("5_n6eo4")
-region = Rect2(448, 128, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cj8wh"]
-atlas = ExtResource("5_n6eo4")
-region = Rect2(576, 128, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vjvx6"]
-atlas = ExtResource("5_n6eo4")
-region = Rect2(640, 128, 64, 64)
+[sub_resource type="AtlasTexture" id="AtlasTexture_6kpsq"]
+atlas = ExtResource("7_v3wts")
+region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_b6asr"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_p2j0c")
+"texture": SubResource("AtlasTexture_ecxpo")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8o2ek")
+"texture": SubResource("AtlasTexture_dn4mw")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_m3eqy")
+"texture": SubResource("AtlasTexture_xxsd8")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_mlr3i")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dpqln")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_745fj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_u4lua")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ng4wc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8wa2i")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cj8wh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vjvx6")
+"texture": SubResource("AtlasTexture_6kpsq")
 }],
 "loop": false,
 "name": &"targeted",
@@ -140,6 +91,7 @@ layer = 2
 position = Vector2(328, 496)
 
 [node name="target_sprite" type="AnimatedSprite2D" parent="Character"]
+visible = false
 position = Vector2(1382, 578)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_b6asr")
@@ -284,6 +236,7 @@ vertical_alignment = 1
 [node name="PostArena" type="CanvasLayer" parent="."]
 unique_name_in_owner = true
 layer = 10
+visible = false
 script = ExtResource("13_bk67y")
 
 [node name="Win" type="Control" parent="PostArena"]

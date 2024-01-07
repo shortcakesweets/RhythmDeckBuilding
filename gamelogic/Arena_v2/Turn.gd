@@ -20,6 +20,7 @@ func check_curr_target(play_anim : bool = false) -> void:
 			if enemies.get_child(index).enemy_data != null:
 				curr_target = index
 				break
+	target_sprite.visible = (curr_target != -1)
 	var anim_pos = enemies.get_child(curr_target).position
 	target_sprite.position = anim_pos
 	if curr_target != -1 and play_anim:
