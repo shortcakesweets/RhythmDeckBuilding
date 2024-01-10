@@ -55,7 +55,6 @@ editor_description = "Arena v2
  - changed tree structure"
 script = ExtResource("1_ih3nh")
 wave = ExtResource("2_quxkv")
-metadata/_edit_lock_ = true
 
 [node name="Logic" type="Node" parent="."]
 editor_description = "All Logics"
@@ -74,6 +73,7 @@ script = ExtResource("1_cqvmu")
 unique_name_in_owner = true
 editor_description = "Checks the \"Rhythm\" part of the game, especially the validity."
 script = ExtResource("2_0i7eo")
+no_beat = true
 
 [node name="Deck" type="Node" parent="Logic" groups=["deck"]]
 unique_name_in_owner = true

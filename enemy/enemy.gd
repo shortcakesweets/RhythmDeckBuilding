@@ -3,10 +3,12 @@ extends Node2D
 @export var enemy_data_raw : Enemy = null
 var enemy_data : Enemy = null
 
-@onready var sprite = $sprite
+@onready var sprite = $sprite as AnimatedSprite2D
+@onready var intent = $intent as AnimatedSprite2D
 @onready var turn_counter_label = $turn_counter
 @onready var hp_bar = $HP
 @onready var defend_label = $Defend
+
 @export var appear_turn : int = 0
 
 func _ready() -> void:
@@ -52,9 +54,12 @@ func spawn(new_resource : Enemy = null) -> void:
 
 func update_visuals() -> void:
 	turn_counter_label.text = str(enemy_data.get_current_state_counter())
+	intent.play(enemy_data.get_current_state())
+	
 	hp_bar.max_value = enemy_data.max_hp
 	hp_bar.value = enemy_data.hp
 	hp_bar.get_node("HP_label").text = str(enemy_data.hp) + " / " + str(enemy_data.max_hp)
+	defend_label.text = str(enemy_data.defend)
 
 func turn() -> Dictionary:
 	var effect := {}

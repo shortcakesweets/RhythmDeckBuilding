@@ -51,7 +51,9 @@ func check_timeout(curr_turn : int) -> bool:
 # Returns [valid, precision]
 func is_valid_input(curr_turn : int) -> Array:
 	if is_processing():
-		return [false, 0.00]
+		# this is currently buggy. fix later
+		# return [false, 0.00]
+		pass
 	if no_beat:
 		return [true, 0.00]
 	
