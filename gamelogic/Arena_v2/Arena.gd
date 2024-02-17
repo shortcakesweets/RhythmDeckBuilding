@@ -6,12 +6,13 @@ extends Node2D
 @onready var enemies = %Enemies
 @onready var BGM = %BGM
 @onready var turn = %Turn
+@onready var deck = %Deck
 
 func _ready() -> void: 
 	reload()
 
 func reload() -> void:
-	character.update_visuals()
+	character.update_visuals(deck.shuffle_energy, deck.shuffle_energy_max)
 	if wave != null:
 		rhythm.offset = wave.music_offset
 		rhythm.bpm = wave.bpm

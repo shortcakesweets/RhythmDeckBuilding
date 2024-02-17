@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 
 enum MAP_TYPE {MONSTER, EVENT, ELITE, REST, SHOP, TREASURE, BOSS, NONE = -1}
 const TYPE_WEIGHT := [45, 22, 16, 12, 5, 0]

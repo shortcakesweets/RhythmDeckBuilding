@@ -29,9 +29,13 @@ func check_curr_target(play_anim : bool = false) -> void:
 # Turn mechanics. will be branched later.
 func turn(card_index : int = -1) -> void:
 	# 1. Run Player Card
+	var shuffle_succeed : bool = false
 	var used_card_resource : Card = null
-	if card_index != -1:
+	if card_index == SHUFFLE:
+		shuffle_succeed = deck.use_shuffle()
+	elif card_index != -1:
 		used_card_resource = deck.use_card(card_index)
+	
 	if used_card_resource != null:
 		character.play_attack_animation()
 		CardEffect.apply_card_effect(used_card_resource, curr_target)
@@ -39,11 +43,15 @@ func turn(card_index : int = -1) -> void:
 	else: # no card was selected
 		character.play_animation_once("Idle Sword")
 	
+	# 1-a. Refill energy
+	if used_card_resource != null: # If card using was succesful : +1, else 0
+		CardEffect.add_shuffle_energy(1)
+	
 	# 2. Run Enemy Queue (Enemy visuals, Enemy effects update/apply at this step)
 	enemies.turns()
 	
 	# 3. update visuals, such as hp and defend values (Character)
-	character.update_visuals()
+	character.update_visuals(deck.shuffle_energy, deck.shuffle_energy_max)
 	
 	# 4. check win/lose traits
 	if character.is_dead():
@@ -81,7 +89,7 @@ func _unhandled_key_input(event : InputEvent) -> void:
 
 func rhythm_input(event : InputEvent) -> void:
 	var card_selected : int = -1
-	var shuffle_succeed : bool = false
+	# var shuffle_succeed : bool = false
 	if event.is_action_pressed("select_card_1"):
 		card_selected = 0
 	elif event.is_action_pressed("select_card_2"):
@@ -97,7 +105,7 @@ func rhythm_input(event : InputEvent) -> void:
 	elif event.is_action_pressed("beat_debug"):
 		card_selected = DEBUG # debug mode
 	elif event.is_action_pressed("shuffle"):
-		shuffle_succeed = deck.use_shuffle()
+		#shuffle_succeed = deck.use_shuffle() # moved to turn()
 		card_selected = SHUFFLE
 	else:
 		return
@@ -117,7 +125,7 @@ func rhythm_input(event : InputEvent) -> void:
 	elif card_selected == SHUFFLE:
 		var rhythm_validity = rhythm.is_valid_input(curr_turn)
 		if rhythm_validity[0]:
-			turn()
+			turn(card_selected)
 		$"../../Debug System/precision".text = str(rhythm_validity[1]).left(5)
 
 func non_rhythm_input(event : InputEvent) -> void:

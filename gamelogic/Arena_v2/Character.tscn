@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://7wkcuy3bhphu"]
+[gd_scene load_steps=57 format=3 uid="uid://7wkcuy3bhphu"]
 
 [ext_resource type="Texture2D" uid="uid://c4rrp0o6povuw" path="res://assets/character animation/Player Death 64x64.png" id="1_8nq0d"]
 [ext_resource type="Script" path="res://gamelogic/Arena_v2/Character.gd" id="1_siwk6"]
@@ -10,6 +10,8 @@
 [ext_resource type="Theme" uid="uid://bl2wxp3u6kuhq" path="res://assets/control_theme.tres" id="6_swh7h"]
 [ext_resource type="Texture2D" uid="uid://byckq01x6gugm" path="res://assets/others/HB_4.1-Hurt.png" id="7_a0jri"]
 [ext_resource type="Texture2D" uid="uid://bbdjvurhpd2me" path="res://assets/others/HB_4-Hurt.png" id="8_u3vip"]
+[ext_resource type="Texture2D" uid="uid://c4p71xrvqaqkt" path="res://assets/others/UI_Flat_Textfield_01.png" id="11_k5pu1"]
+[ext_resource type="Texture2D" uid="uid://dsrtfi8g2tgwc" path="res://assets/others/UI_Flat_Frame_01_Lite.png" id="12_74st0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_htwj2"]
 atlas = ExtResource("1_8nq0d")
@@ -391,3 +393,29 @@ text = "123"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="ShuffleEnergy" type="TextureProgressBar" parent="."]
+offset_left = -224.0
+offset_top = -128.0
+offset_right = -128.0
+offset_bottom = -32.0
+theme = ExtResource("6_swh7h")
+value = 75.0
+fill_mode = 4
+nine_patch_stretch = true
+texture_under = ExtResource("11_k5pu1")
+texture_progress = ExtResource("12_74st0")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="ShuffleEnergy"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "#"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,11 +1,9 @@
-res://enemy/enemy.tscn
+res://gamelogic/Arena_v2/Arena.tscn
 res://gamelogic/Arena/Character.gd
 res://gamelogic/Arena/rhythm.gd
 res://assets/control_theme.tres
 res://assets/paper_tileset.tres
 res://assets/enemy animation/enemy_animations.tres
 res://assets/effect animation/some_animations.tres
-res://enemy/enemy.gd
-res://gamelogic/Arena_v2/Arena.tscn
-res://gamelogic/Arena_v2/Character.tscn
-res://gamelogic/Arena_v2/Rhythm.gd
+res://gamelogic/RoomSelector/room_selector.tscn
+res://gamelogic/RoomSelector/room_selector.gd

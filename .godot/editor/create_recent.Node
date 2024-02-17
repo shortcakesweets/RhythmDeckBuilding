@@ -1,12 +1,12 @@
+Node2D
+TextureProgressBar
 AnimatedSprite2D
 Node
 Control
 CanvasLayer
 Label
-TextureProgressBar
 VBoxContainer
 ConfirmationDialog
-Node2D
 Button
 SpinBox
 LineEdit

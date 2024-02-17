@@ -27,11 +27,14 @@ func play_attack_animation():
 
 ################################################################
 
-func update_visuals() -> void:
+func update_visuals(shuffle_energy : int, shuffle_energy_max : int) -> void:
 	$HP.max_value = stats.max_hp
 	$HP.value = stats.hp
 	$HP/Label.text = str(stats.hp) + " / " + str(stats.max_hp)
 	$Defense.text = str(stats.defend)
+	$ShuffleEnergy.value = shuffle_energy
+	$ShuffleEnergy.max_value = shuffle_energy_max
+	$ShuffleEnergy/Label.text = str(shuffle_energy)
 
 func is_dead() -> bool:
 	return stats.hp <= 0

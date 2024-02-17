@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://byodc7h0glibc"]
 
 [ext_resource type="Script" path="res://gamelogic/RoomSelector/room_selector.gd" id="1_kuhpg"]
-[ext_resource type="Texture2D" uid="uid://chlx7mbqcmhbd" path="res://assets/others/UI books & more.png" id="2_8asmt"]
-[ext_resource type="FontFile" uid="uid://b2ndrq0m7ovl" path="res://assets/Unutterable-Regular.ttf" id="2_aoogq"]
+[ext_resource type="Texture2D" uid="uid://dx8hjh5pykhyo" path="res://assets/others/UI books & more.png" id="2_8asmt"]
+[ext_resource type="FontFile" uid="uid://csk3yjakarmrm" path="res://assets/Unutterable-Regular.ttf" id="2_aoogq"]
 [ext_resource type="Script" path="res://gamelogic/RoomSelector/Combat_Info.gd" id="2_iasqh"]
 [ext_resource type="TileSet" uid="uid://cw4qphsnprf8y" path="res://assets/paper_tileset.tres" id="4_tgw1k"]
 
@@ -929,7 +929,7 @@ texture = ExtResource("2_8asmt")
 [sub_resource type="TileSet" id="TileSet_8jg80"]
 sources/0 = SubResource("TileSetAtlasSource_vg1t0")
 
-[node name="RoomSelector" type="Node"]
+[node name="RoomSelector" type="Node2D"]
 script = ExtResource("1_kuhpg")
 
 [node name="Map" type="CanvasLayer" parent="."]
