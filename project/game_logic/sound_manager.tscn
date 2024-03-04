@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://ban8lmk53j20s"]
+
+[ext_resource type="Script" path="res://game_logic/sound_manager.gd" id="1_5oaij"]
+
+[node name="Sound Manager" type="Node"]
+script = ExtResource("1_5oaij")
+
+[node name="SFX" type="Node" parent="."]
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+bus = &"BGM"

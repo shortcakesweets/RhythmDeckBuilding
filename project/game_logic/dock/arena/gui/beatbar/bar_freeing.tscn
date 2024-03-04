@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://ca33whsel1b1c"]
+
+[ext_resource type="Script" path="res://game_logic/dock/arena/gui/beatbar/bar_freeing.gd" id="1_wwy57"]
+[ext_resource type="Texture2D" uid="uid://1ysrkmngbfnr" path="res://assets/gui/beatbar/bar.png" id="2_c77yq"]
+[ext_resource type="Material" uid="uid://bupy0xwm5h01q" path="res://game_logic/dock/arena/gui/beatbar/bar_freeing_shader_material.tres" id="2_itwm3"]
+
+[node name="Bar_Freeing" type="Node2D"]
+script = ExtResource("1_wwy57")
+
+[node name="Bar_Left" type="Sprite2D" parent="."]
+material = ExtResource("2_itwm3")
+position = Vector2(-50, 0)
+scale = Vector2(2, 2)
+texture = ExtResource("2_c77yq")
+
+[node name="Bar_Right" type="Sprite2D" parent="."]
+material = ExtResource("2_itwm3")
+position = Vector2(50, 0)
+scale = Vector2(2, 2)
+texture = ExtResource("2_c77yq")

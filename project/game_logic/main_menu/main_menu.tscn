@@ -1,0 +1,405 @@
+[gd_scene load_steps=9 format=3 uid="uid://b776v5pyse4j1"]
+
+[ext_resource type="Script" path="res://game_logic/main_menu/main_menu.gd" id="1_80gdu"]
+[ext_resource type="Texture2D" uid="uid://70rbxju80c73" path="res://assets/gui/ButtonsText/ButtonText_Large_Blue_Round.png" id="2_65cmt"]
+[ext_resource type="Theme" uid="uid://rglalewkhbya" path="res://theme/main_menu.tres" id="2_wdq4b"]
+[ext_resource type="Texture2D" uid="uid://p7ikagr6dvhg" path="res://assets/gui/ButtonsText/ButtonText_Large_Green_Round.png" id="3_5r1l2"]
+[ext_resource type="Script" path="res://game_logic/global_pause_menu/Options.gd" id="5_pu2r7"]
+[ext_resource type="Texture2D" uid="uid://d1cjysc3fsli" path="res://assets/gui/ButtonsText/ButtonText_Small_Round.png" id="5_ru8m0"]
+[ext_resource type="Texture2D" uid="uid://bnbwffjtir7ls" path="res://assets/gui/ButtonsText/ButtonText_Small_Green_Round.png" id="6_p6neb"]
+[ext_resource type="Texture2D" uid="uid://bcg6mg5amw53u" path="res://assets/gui/ButtonsText/ButtonText_Small_Orange_Round.png" id="7_ibyl0"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_80gdu")
+
+[node name="Main" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme = ExtResource("2_wdq4b")
+metadata/_edit_lock_ = true
+
+[node name="Start" type="TextureButton" parent="Main"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -224.0
+offset_top = 36.0
+offset_right = 224.0
+offset_bottom = 164.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("2_65cmt")
+texture_hover = ExtResource("3_5r1l2")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Main/Start"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "START"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Options" type="TextureButton" parent="Main"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -224.0
+offset_top = 196.0
+offset_right = 224.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("2_65cmt")
+texture_hover = ExtResource("3_5r1l2")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Main/Options"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "OPTIONS"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="QuitGame" type="TextureButton" parent="Main"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -224.0
+offset_top = 356.0
+offset_right = 224.0
+offset_bottom = 484.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("2_65cmt")
+texture_hover = ExtResource("3_5r1l2")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Main/QuitGame"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "QUIT"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Options" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme = ExtResource("2_wdq4b")
+script = ExtResource("5_pu2r7")
+metadata/_edit_lock_ = true
+
+[node name="SubOptions" type="Control" parent="Options"]
+layout_mode = 1
+anchor_right = 0.2
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="Video" type="TextureButton" parent="Options/SubOptions"]
+texture_filter = 1
+layout_mode = 1
+offset_left = 40.0
+offset_top = 64.0
+offset_right = 344.0
+offset_bottom = 192.0
+toggle_mode = true
+button_pressed = true
+texture_normal = ExtResource("5_ru8m0")
+texture_pressed = ExtResource("6_p6neb")
+texture_hover = ExtResource("7_ibyl0")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Options/SubOptions/Video"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "VIDEO"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Music" type="TextureButton" parent="Options/SubOptions"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 40.0
+offset_top = 256.0
+offset_right = 344.0
+offset_bottom = 384.0
+toggle_mode = true
+texture_normal = ExtResource("5_ru8m0")
+texture_pressed = ExtResource("6_p6neb")
+texture_hover = ExtResource("7_ibyl0")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Options/SubOptions/Music"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "MUSIC"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Apply" type="TextureButton" parent="Options/SubOptions"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 40.0
+offset_top = 704.0
+offset_right = 344.0
+offset_bottom = 832.0
+texture_normal = ExtResource("5_ru8m0")
+texture_pressed = ExtResource("6_p6neb")
+texture_hover = ExtResource("7_ibyl0")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Options/SubOptions/Apply"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "APPLY"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="EXIT" type="TextureButton" parent="Options/SubOptions"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 40.0
+offset_top = 888.0
+offset_right = 344.0
+offset_bottom = 1016.0
+texture_normal = ExtResource("5_ru8m0")
+texture_pressed = ExtResource("6_p6neb")
+texture_hover = ExtResource("7_ibyl0")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Options/SubOptions/EXIT"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "EXIT"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Line2D" type="Line2D" parent="Options"]
+points = PackedVector2Array(384, 64, 384, 1024)
+width = 8.0
+default_color = Color(0, 1, 1, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Video" type="Control" parent="Options"]
+layout_mode = 1
+anchor_left = 0.2
+anchor_right = 1.0
+anchor_bottom = 0.83
+offset_bottom = -0.400024
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="Label_Resolution" type="Label" parent="Options/Video"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 128.0
+offset_right = 576.0
+offset_bottom = 256.0
+text = "RESOLUTION"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label_ScreenMode" type="Label" parent="Options/Video"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 320.0
+offset_right = 576.0
+offset_bottom = 448.0
+text = "SCREEN MODE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label_VSync" type="Label" parent="Options/Video"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 512.0
+offset_right = 576.0
+offset_bottom = 640.0
+text = "VSYNC"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Resolution_Dropdown" type="OptionButton" parent="Options/Video"]
+layout_mode = 0
+offset_left = 768.0
+offset_top = 128.0
+offset_right = 1280.0
+offset_bottom = 256.0
+alignment = 1
+item_count = 3
+selected = 0
+popup/item_0/text = "1920x1080"
+popup/item_0/id = 0
+popup/item_1/text = "1600x900"
+popup/item_1/id = 1
+popup/item_2/text = "1280x720"
+popup/item_2/id = 2
+
+[node name="ScreenMode_Dropdown" type="OptionButton" parent="Options/Video"]
+layout_mode = 0
+offset_left = 768.0
+offset_top = 320.0
+offset_right = 1280.0
+offset_bottom = 448.0
+alignment = 1
+item_count = 2
+selected = 0
+popup/item_0/text = "FULLSCREEN"
+popup/item_0/id = 3
+popup/item_1/text = "WINDOWED"
+popup/item_1/id = 0
+
+[node name="VSync_Button" type="TextureButton" parent="Options/Video"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 872.0
+offset_top = 512.0
+offset_right = 1176.0
+offset_bottom = 640.0
+toggle_mode = true
+texture_normal = ExtResource("5_ru8m0")
+texture_pressed = ExtResource("6_p6neb")
+texture_hover = ExtResource("7_ibyl0")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Options/Video/VSync_Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "OFF"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Music" type="Control" parent="Options"]
+visible = false
+layout_mode = 1
+anchor_left = 0.2
+anchor_right = 1.0
+anchor_bottom = 0.83
+offset_bottom = -0.400024
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="Label_BGM" type="Label" parent="Options/Music"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 128.0
+offset_right = 576.0
+offset_bottom = 256.0
+text = "BGM VOLUME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label_SFX" type="Label" parent="Options/Music"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 320.0
+offset_right = 576.0
+offset_bottom = 448.0
+text = "SFX VOLUME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSlider_BGM" type="HSlider" parent="Options/Music"]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 176.0
+offset_right = 1472.0
+offset_bottom = 208.0
+min_value = -40.0
+max_value = 40.0
+step = 5.0
+
+[node name="HSlider_SFX" type="HSlider" parent="Options/Music"]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 368.0
+offset_right = 1472.0
+offset_bottom = 400.0
+min_value = -40.0
+max_value = 40.0
+step = 5.0
+
+[connection signal="pressed" from="Main/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Main/Start" to="Options" method="_on_any_button_pressed"]
+[connection signal="pressed" from="Main/Options" to="Options" method="_on_any_button_pressed"]
+[connection signal="pressed" from="Main/Options" to="Options" method="_change_option_visibility" binds= [true]]
+[connection signal="pressed" from="Main/QuitGame" to="." method="_on_quit_game_pressed"]
+[connection signal="pressed" from="Main/QuitGame" to="Options" method="_on_any_button_pressed"]
+[connection signal="pressed" from="Options/SubOptions/Video" to="Options" method="_on_any_button_pressed"]
+[connection signal="toggled" from="Options/SubOptions/Video" to="Options" method="_on_video_toggled"]
+[connection signal="pressed" from="Options/SubOptions/Music" to="Options" method="_on_any_button_pressed"]
+[connection signal="toggled" from="Options/SubOptions/Music" to="Options" method="_on_music_toggled"]
+[connection signal="pressed" from="Options/SubOptions/Apply" to="Options" method="_on_apply_pressed"]
+[connection signal="pressed" from="Options/SubOptions/Apply" to="Options" method="_on_any_button_pressed"]
+[connection signal="pressed" from="Options/SubOptions/EXIT" to="Options" method="_on_any_button_pressed"]
+[connection signal="pressed" from="Options/SubOptions/EXIT" to="Options" method="_change_option_visibility" binds= [false]]
+[connection signal="pressed" from="Options/Video/VSync_Button" to="Options" method="_on_any_button_pressed"]
+[connection signal="toggled" from="Options/Video/VSync_Button" to="Options" method="_on_v_sync_button_toggled"]

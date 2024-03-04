@@ -1,0 +1,144 @@
+[gd_scene load_steps=12 format=3 uid="uid://djfc1gxr06khg"]
+
+[ext_resource type="Script" path="res://game_logic/dock/arena/Arena.gd" id="1_s6y5m"]
+[ext_resource type="Script" path="res://game_logic/dock/arena/Rhythm.gd" id="2_63u43"]
+[ext_resource type="AudioStream" uid="uid://de6mc5m3m031q" path="res://assets/music/sample_music.ogg" id="2_linwy"]
+[ext_resource type="Theme" uid="uid://rglalewkhbya" path="res://theme/main_menu.tres" id="2_rlpo2"]
+[ext_resource type="Script" path="res://game_logic/dock/arena/Debug.gd" id="3_5a4i5"]
+[ext_resource type="Script" path="res://game_logic/dock/arena/Turn.gd" id="3_fi2f4"]
+[ext_resource type="Script" path="res://game_logic/dock/arena/Four_Beat_Helper.gd" id="5_253hl"]
+[ext_resource type="PackedScene" uid="uid://ityamiduu6tq" path="res://game_logic/dock/arena/gui/character.tscn" id="5_l5j0i"]
+[ext_resource type="Script" path="res://game_logic/dock/arena/Input.gd" id="6_s8oj5"]
+[ext_resource type="PackedScene" uid="uid://dwtw21s0va41k" path="res://game_logic/dock/arena/gui/energy_gui.tscn" id="6_xko6c"]
+[ext_resource type="PackedScene" uid="uid://cqwfm8sp0l62y" path="res://game_logic/dock/arena/gui/beatbar/beatbar_gui.tscn" id="8_xjhsb"]
+
+[node name="Arena" type="Node2D"]
+process_mode = 1
+script = ExtResource("1_s6y5m")
+metadata/_edit_lock_ = true
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("2_linwy")
+volume_db = -15.0
+
+[node name="SFX_beat_ticks" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+volume_db = -5.0
+
+[node name="Logic" type="Node" parent="."]
+
+[node name="Turn" type="Node" parent="Logic"]
+unique_name_in_owner = true
+editor_description = "Handles Turn based operations"
+script = ExtResource("3_fi2f4")
+
+[node name="Rhythm" type="Node" parent="Logic"]
+unique_name_in_owner = true
+editor_description = "Handles Rhythm based calculation
+If input timeout, calls %Turn for automatic turn"
+script = ExtResource("2_63u43")
+
+[node name="Four_Beat_Helper" type="Node" parent="Logic/Rhythm"]
+script = ExtResource("5_253hl")
+
+[node name="Deck" type="Node" parent="Logic"]
+unique_name_in_owner = true
+
+[node name="Input" type="Node" parent="Logic"]
+unique_name_in_owner = true
+process_mode = 3
+script = ExtResource("6_s8oj5")
+
+[node name="GUI" type="Control" parent="."]
+editor_description = "Group of Rendering nodes.
+These node should not contain any variable data in game, except render options."
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+mouse_force_pass_scroll_events = false
+metadata/_edit_lock_ = true
+
+[node name="Character" parent="GUI" instance=ExtResource("5_l5j0i")]
+unique_name_in_owner = true
+position = Vector2(384, 512)
+scale = Vector2(8, 8)
+
+[node name="Energy_GUI" parent="GUI" instance=ExtResource("6_xko6c")]
+position = Vector2(128, 384)
+
+[node name="BeatBar_GUI" parent="GUI" instance=ExtResource("8_xjhsb")]
+unique_name_in_owner = true
+editor_description = "Renders Beatbar GUI"
+position = Vector2(1024, 704)
+
+[node name="Debug" type="Control" parent="."]
+unique_name_in_owner = true
+z_index = 101
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+theme = ExtResource("2_rlpo2")
+script = ExtResource("3_5a4i5")
+metadata/_edit_lock_ = true
+
+[node name="Win" type="Button" parent="Debug"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 448.0
+offset_bottom = 128.0
+text = "Win"
+
+[node name="Lose" type="Button" parent="Debug"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 152.0
+offset_right = 448.0
+offset_bottom = 216.0
+text = "Lose"
+
+[node name="ReturnToMain" type="Button" parent="Debug"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 256.0
+offset_right = 448.0
+offset_bottom = 320.0
+text = "Return to Main"
+
+[node name="StartMusic" type="Button" parent="Debug"]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 64.0
+offset_right = 960.0
+offset_bottom = 128.0
+toggle_mode = true
+text = "Start Music"
+
+[node name="Label_Turn" type="Label" parent="Debug"]
+layout_mode = 0
+offset_left = 1024.0
+offset_top = 64.0
+offset_right = 1472.0
+offset_bottom = 312.0
+text = "curr_turn : "
+horizontal_alignment = 1
+
+[node name="Label_Precision" type="Label" parent="Debug"]
+layout_mode = 0
+offset_left = 1536.0
+offset_top = 64.0
+offset_right = 1920.0
+offset_bottom = 312.0
+text = "precision:
+"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Debug/Win" to="Debug" method="_on_win_pressed"]
+[connection signal="pressed" from="Debug/Lose" to="Debug" method="_on_lose_pressed"]
+[connection signal="pressed" from="Debug/ReturnToMain" to="Debug" method="_on_return_to_main_pressed"]
+[connection signal="toggled" from="Debug/StartMusic" to="Logic/Rhythm" method="_on_start_music_toggled"]
