@@ -8,8 +8,6 @@ signal back_to_map(win : bool)
 signal back_to_main
 
 func set_room(node_data : MapNode) -> void:
-	
-	
 	match node_data.room_type:
 		ROOM_TYPE.MONSTER, ROOM_TYPE.ELITE:
 			_make_arena(node_data)

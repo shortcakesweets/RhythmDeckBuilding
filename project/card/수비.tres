@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Card" load_steps=5 format=3 uid="uid://biqsblotlmeyt"]
+
+[ext_resource type="Script" path="res://card/수비.gd" id="1_og46a"]
+[ext_resource type="Script" path="res://card/card_resource.gd" id="1_secf8"]
+[ext_resource type="Texture2D" uid="uid://qg7fdn4satt3" path="res://assets/card/illust/수비.png" id="2_fw2eb"]
+[ext_resource type="AudioStream" uid="uid://bnaec2akp7nmx" path="res://assets/sound/cardPlace2.ogg" id="4_8xy41"]
+
+[resource]
+script = ExtResource("1_secf8")
+card_name = "수비"
+card_rarity = 0
+is_normal_use = true
+is_parry_use = false
+card_functions = ExtResource("1_og46a")
+card_energy = 0
+card_illust = ExtResource("2_fw2eb")
+use_description = "방어도 4를 얻는다."
+parry_success_description = ""
+parry_failed_description = ""
+discard_description = ""
+holding_description = ""
+character_animation = ""
+use_sfx = ExtResource("4_8xy41")

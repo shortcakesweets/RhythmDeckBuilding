@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Card" load_steps=5 format=3 uid="uid://xgm2qtfyrg17"]
+
+[ext_resource type="Script" path="res://card/준비자세.gd" id="1_27573"]
+[ext_resource type="Script" path="res://card/card_resource.gd" id="1_d3n5l"]
+[ext_resource type="Texture2D" uid="uid://d1l456reydvgt" path="res://assets/card/illust/준비자세.png" id="1_ouuto"]
+[ext_resource type="AudioStream" uid="uid://bnaec2akp7nmx" path="res://assets/sound/cardPlace2.ogg" id="2_quib8"]
+
+[resource]
+script = ExtResource("1_d3n5l")
+card_name = "준비자세"
+card_rarity = 0
+is_normal_use = true
+is_parry_use = false
+card_functions = ExtResource("1_27573")
+card_energy = 1
+card_illust = ExtResource("1_ouuto")
+use_description = "다음 3번의 공격카드의 위력이 2 증가한다."
+parry_success_description = ""
+parry_failed_description = ""
+discard_description = ""
+holding_description = ""
+character_animation = ""
+use_sfx = ExtResource("2_quib8")

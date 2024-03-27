@@ -1,5 +1,5 @@
 extends Node
-@onready var character = $"../../GUI/Character"
+
 enum {LEFT, MID, RIGHT}
 const DEFAULT_UNIT : int = 500 #ms
 
@@ -76,6 +76,7 @@ func _process(_delta) -> void:
 	
 	if _get_interval(beat_count)[MID] < time:
 		beat_count += 1
+		%AudioVisualizer.update_visuals()
 
 func _check_timeout() -> bool:
 	var curr_turn = %Turn.curr_turn

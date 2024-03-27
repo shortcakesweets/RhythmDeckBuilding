@@ -12,3 +12,7 @@ func change_energy_value(value : int) -> void:
 
 func change_energy_max_value(max_value : int) -> void:
 	progress_bar.max_value = max_value
+
+func update_visuals() -> void:
+	change_energy_value(%Deck.energy)
+	change_energy_max_value(%Character.character_data.max_energy)

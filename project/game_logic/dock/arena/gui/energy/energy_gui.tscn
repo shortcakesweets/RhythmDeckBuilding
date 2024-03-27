@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dwtw21s0va41k"]
 
-[ext_resource type="Script" path="res://game_logic/dock/arena/gui/energy_gui.gd" id="1_00nxm"]
+[ext_resource type="Script" path="res://game_logic/dock/arena/gui/energy/energy_gui.gd" id="1_00nxm"]
 [ext_resource type="Theme" uid="uid://rglalewkhbya" path="res://theme/main_menu.tres" id="1_8h5b3"]
 [ext_resource type="Texture2D" uid="uid://cluxgjq7hw20" path="res://assets/gui/ButtonsIcons/IconButton_Large_Blank_Circle.png" id="1_pup14"]
 [ext_resource type="Texture2D" uid="uid://cpk08ou0w1r6t" path="res://assets/gui/ButtonsIcons/IconButton_Large_Blue_Circle.png" id="2_5bt2x"]
@@ -17,6 +17,7 @@ theme = ExtResource("1_8h5b3")
 metadata/_edit_lock_ = true
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="Control"]
+layout_mode = 0
 offset_right = 128.0
 offset_bottom = 128.0
 max_value = 12.0
@@ -27,6 +28,7 @@ texture_progress = ExtResource("2_5bt2x")
 metadata/_edit_lock_ = true
 
 [node name="Label_energy" type="Label" parent="Control"]
+layout_mode = 0
 offset_right = 128.0
 offset_bottom = 128.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)

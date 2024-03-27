@@ -6,7 +6,8 @@ extends Node
 var sfx_list := {
 	"beat_count" = preload("res://assets/sound/sfx_countin_beat1.ogg"),
 	"select" = preload("res://assets/sound/select.ogg"),
-	"pause" = preload("res://assets/sound/pause.ogg")
+	"pause" = preload("res://assets/sound/pause.ogg"),
+	"reload" = preload("res://assets/sound/cardFan1.ogg")
 }
 
 var bgm_list := {
@@ -14,8 +15,12 @@ var bgm_list := {
 	"act_1" = preload("res://assets/music/loop/act1.ogg")
 }
 
-func play_sfx(sfx_name : String) -> void:
-	var music = sfx_list[sfx_name]
+func play_sfx(music) -> void:
+	if music == null:
+		return
+	if typeof(music) == TYPE_STRING:
+		music = sfx_list[music]
+	
 	var sfx := AudioStreamPlayer.new() as AudioStreamPlayer
 	SFX.add_child(sfx)
 	sfx.stream = music
@@ -35,3 +40,8 @@ func bgm_toggle_pause(toggle : bool) -> void:
 
 func bgm_stop() -> void:
 	BGM.stop()
+
+func toggle_parry_distortion(toggle : bool) -> void:
+	var idx : int = AudioServer.get_bus_index("BGM")
+	AudioServer.set_bus_effect_enabled(idx, 0, toggle)
+	AudioServer.set_bus_effect_enabled(idx, 1, toggle)

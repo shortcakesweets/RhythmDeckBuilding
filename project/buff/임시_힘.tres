@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Buff" load_steps=4 format=3 uid="uid://sprqlb2rcw7f"]
+
+[ext_resource type="Script" path="res://buff/buff_resource.gd" id="1_51v7i"]
+[ext_resource type="AudioStream" uid="uid://dl2c8d172oe0s" path="res://assets/sound/sample_buff.ogg" id="1_phic2"]
+[ext_resource type="Texture2D" uid="uid://b0oowtfri3i0x" path="res://assets/buff/critical_boost.png" id="2_6rhdx"]
+
+[resource]
+script = ExtResource("1_51v7i")
+buff_name = "임시 힘"
+buff_description = "공격카드의 위력이 2 증가한다."
+buff_icon = ExtResource("2_6rhdx")
+is_debuff = false
+is_decayable = true
+buff_apply_sfx = ExtResource("1_phic2")

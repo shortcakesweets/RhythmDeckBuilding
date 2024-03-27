@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Card" load_steps=5 format=3 uid="uid://bqtcyk83ogorq"]
+
+[ext_resource type="Script" path="res://card/심호흡.gd" id="1_2c1ye"]
+[ext_resource type="Texture2D" uid="uid://b4vu7a12mr3hl" path="res://assets/card/illust/심호흡.png" id="2_toqdp"]
+[ext_resource type="Script" path="res://card/card_resource.gd" id="3_ntge1"]
+[ext_resource type="AudioStream" uid="uid://bnaec2akp7nmx" path="res://assets/sound/cardPlace2.ogg" id="4_767w4"]
+
+[resource]
+script = ExtResource("3_ntge1")
+card_name = "심호흡"
+card_rarity = 0
+is_normal_use = true
+is_parry_use = false
+card_functions = ExtResource("1_2c1ye")
+card_energy = 0
+card_illust = ExtResource("2_toqdp")
+use_description = "에너지 3을 얻는다."
+parry_success_description = ""
+parry_failed_description = ""
+discard_description = ""
+holding_description = ""
+character_animation = ""
+use_sfx = ExtResource("4_767w4")

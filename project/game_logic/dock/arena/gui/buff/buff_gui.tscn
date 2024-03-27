@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://chjuuaxrg7jw3"]
+
+[ext_resource type="Script" path="res://game_logic/dock/arena/gui/buff/buff_gui.gd" id="1_1h775"]
+[ext_resource type="Theme" uid="uid://rglalewkhbya" path="res://theme/main_menu.tres" id="1_uymq3"]
+
+[node name="Buff_GUI" type="TextureRect"]
+texture_filter = 1
+offset_right = 64.0
+offset_bottom = 64.0
+script = ExtResource("1_1h775")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 128.0
+theme = ExtResource("1_uymq3")
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true

@@ -1,0 +1,118 @@
+[gd_scene load_steps=15 format=3 uid="uid://cml3uwlj5ddh2"]
+
+[ext_resource type="Script" path="res://game_logic/dock/arena/gui/enemies/enemy_gui.gd" id="1_w5vi1"]
+[ext_resource type="Texture2D" uid="uid://b0jpkfug2sy1y" path="res://assets/enemy/slime_idle.png" id="2_2pncs"]
+[ext_resource type="Texture2D" uid="uid://clbb5qaymsrdf" path="res://assets/gui/Sliders/ScrollBar_Blank_Base.png" id="2_m67am"]
+[ext_resource type="Texture2D" uid="uid://ckp2ialss0p3i" path="res://assets/gui/Sliders/ScrollBar_Orange_Base.png" id="3_lubwu"]
+[ext_resource type="Theme" uid="uid://rglalewkhbya" path="res://theme/main_menu.tres" id="4_re6ny"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqks4"]
+atlas = ExtResource("2_2pncs")
+region = Rect2(74, 0, 37, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_71wob"]
+atlas = ExtResource("2_2pncs")
+region = Rect2(0, 0, 96, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g71si"]
+atlas = ExtResource("2_2pncs")
+region = Rect2(96, 0, 96, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmah5"]
+atlas = ExtResource("2_2pncs")
+region = Rect2(192, 0, 96, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sga0x"]
+atlas = ExtResource("2_2pncs")
+region = Rect2(288, 0, 96, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ukohl"]
+atlas = ExtResource("2_2pncs")
+region = Rect2(384, 0, 96, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sdcfi"]
+atlas = ExtResource("2_2pncs")
+region = Rect2(480, 0, 96, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cfnof"]
+atlas = ExtResource("2_2pncs")
+region = Rect2(576, 0, 96, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_irf1v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sqks4")
+}],
+"loop": true,
+"name": &"none",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_71wob")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g71si")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hmah5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sga0x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ukohl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sdcfi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cfnof")
+}],
+"loop": true,
+"name": &"slime_idle",
+"speed": 20.0
+}]
+
+[node name="Enemy_GUI" type="Node2D"]
+script = ExtResource("1_w5vi1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -40)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_irf1v")
+animation = &"none"
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+offset_left = -128.0
+offset_top = 24.0
+offset_right = 128.0
+offset_bottom = 64.0
+value = 50.0
+nine_patch_stretch = true
+texture_under = ExtResource("2_m67am")
+texture_progress = ExtResource("3_lubwu")
+
+[node name="Label" type="Label" parent="TextureProgressBar"]
+layout_mode = 0
+offset_top = -8.0
+offset_right = 256.0
+offset_bottom = 56.0
+theme = ExtResource("4_re6ny")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "50"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Turn_Counter" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = -64.0
+offset_top = -320.0
+offset_right = 64.0
+offset_bottom = -192.0
+theme = ExtResource("4_re6ny")
+text = "4"
+horizontal_alignment = 1
+vertical_alignment = 1

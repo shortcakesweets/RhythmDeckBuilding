@@ -18,3 +18,5 @@ func _process(_delta) -> void:
 	debug_text += "curr_beat : " + str(%Rhythm.beat_count) + "\n"
 	#debug_text += "interval : " + str(%Rhythm._get_interval(%Turn.curr_turn)) + "\n"
 	$Label_Turn.text = debug_text
+	
+	$ExpireCount.text = str(%Character.defense_expire_count)

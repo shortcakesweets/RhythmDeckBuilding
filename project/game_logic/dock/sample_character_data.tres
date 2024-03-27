@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=6 format=3 uid="uid://c6e1674pgwokk"]
+
+[ext_resource type="Script" path="res://game_logic/dock/character_data_resource.gd" id="1_3trsv"]
+[ext_resource type="Resource" uid="uid://g72wg5262uy8" path="res://card/타격.tres" id="1_kbhgs"]
+[ext_resource type="Resource" uid="uid://biqsblotlmeyt" path="res://card/수비.tres" id="2_xicl3"]
+[ext_resource type="Resource" uid="uid://bqtcyk83ogorq" path="res://card/심호흡.tres" id="3_nqqav"]
+[ext_resource type="Resource" uid="uid://xgm2qtfyrg17" path="res://card/준비자세.tres" id="4_xmvrp"]
+
+[resource]
+script = ExtResource("1_3trsv")
+max_hp = 100
+hp = 100
+max_energy = 12
+defense_expire_rate = 4
+deck = Array[Resource("res://card/card_resource.gd")]([ExtResource("1_kbhgs"), ExtResource("1_kbhgs"), ExtResource("1_kbhgs"), ExtResource("1_kbhgs"), ExtResource("1_kbhgs"), ExtResource("2_xicl3"), ExtResource("2_xicl3"), ExtResource("2_xicl3"), ExtResource("2_xicl3"), ExtResource("3_nqqav"), ExtResource("3_nqqav"), ExtResource("4_xmvrp")])
+init_buff_list = Array[Resource("res://buff/buff_resource.gd")]([])
