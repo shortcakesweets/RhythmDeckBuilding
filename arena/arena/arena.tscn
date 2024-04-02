@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://bg7xgutugl20h"]
+
+[ext_resource type="Script" path="res://arena/logic/Turn.gd" id="1_r421t"]
+[ext_resource type="Script" path="res://arena/arena.gd" id="1_t0fvt"]
+[ext_resource type="Script" path="res://arena/logic/Deck.gd" id="2_02rqm"]
+[ext_resource type="Script" path="res://arena/logic/Enemies.gd" id="4_lqbhn"]
+[ext_resource type="Script" path="res://arena/logic/Character.gd" id="5_5dd84"]
+
+[node name="Arena" type="Node2D"]
+script = ExtResource("1_t0fvt")
+
+[node name="Logic" type="Node" parent="."]
+
+[node name="Turn" type="Node" parent="Logic"]
+unique_name_in_owner = true
+script = ExtResource("1_r421t")
+
+[node name="Rhythm" type="Node" parent="Logic"]
+
+[node name="Deck" type="Node" parent="Logic"]
+unique_name_in_owner = true
+script = ExtResource("2_02rqm")
+
+[node name="Input" type="Node" parent="Logic"]
+process_mode = 3
+
+[node name="Enemies" type="Node" parent="Logic"]
+unique_name_in_owner = true
+script = ExtResource("4_lqbhn")
+
+[node name="Character" type="Node" parent="Logic"]
+unique_name_in_owner = true
+script = ExtResource("5_5dd84")

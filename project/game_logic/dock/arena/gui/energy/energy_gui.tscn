@@ -1,12 +1,92 @@
-[gd_scene load_steps=5 format=3 uid="uid://dwtw21s0va41k"]
+[gd_scene load_steps=15 format=3 uid="uid://dwtw21s0va41k"]
 
 [ext_resource type="Script" path="res://game_logic/dock/arena/gui/energy/energy_gui.gd" id="1_00nxm"]
 [ext_resource type="Theme" uid="uid://rglalewkhbya" path="res://theme/main_menu.tres" id="1_8h5b3"]
 [ext_resource type="Texture2D" uid="uid://cluxgjq7hw20" path="res://assets/gui/ButtonsIcons/IconButton_Large_Blank_Circle.png" id="1_pup14"]
+[ext_resource type="Texture2D" uid="uid://cw036ndxsbyj8" path="res://assets/animation/energy_gui/Retro Impact Effect Pack 1 C.png" id="2_5baxe"]
 [ext_resource type="Texture2D" uid="uid://cpk08ou0w1r6t" path="res://assets/gui/ButtonsIcons/IconButton_Large_Blue_Circle.png" id="2_5bt2x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3oh3c"]
+atlas = ExtResource("2_5baxe")
+region = Rect2(0, 768, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_usn1f"]
+atlas = ExtResource("2_5baxe")
+region = Rect2(64, 768, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_olxyg"]
+atlas = ExtResource("2_5baxe")
+region = Rect2(128, 768, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fruot"]
+atlas = ExtResource("2_5baxe")
+region = Rect2(192, 768, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dkauc"]
+atlas = ExtResource("2_5baxe")
+region = Rect2(256, 768, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jhrfy"]
+atlas = ExtResource("2_5baxe")
+region = Rect2(320, 768, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bkkf5"]
+atlas = ExtResource("2_5baxe")
+region = Rect2(384, 768, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2g3kp"]
+atlas = ExtResource("2_5baxe")
+region = Rect2(448, 768, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_67mwd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3oh3c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_usn1f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_olxyg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fruot")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dkauc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jhrfy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bkkf5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2g3kp")
+}],
+"loop": true,
+"name": &"charged",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2g3kp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Energy_GUI" type="Node2D"]
 script = ExtResource("1_00nxm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(64, 64)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_67mwd")
+animation = &"charged"
+speed_scale = 3.0
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3

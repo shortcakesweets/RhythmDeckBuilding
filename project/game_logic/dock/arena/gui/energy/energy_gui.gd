@@ -16,3 +16,10 @@ func change_energy_max_value(max_value : int) -> void:
 func update_visuals() -> void:
 	change_energy_value(%Deck.energy)
 	change_energy_max_value(%Character.character_data.max_energy)
+	
+	var charged : bool = false
+	if %Deck.is_reload_available():
+		$AnimatedSprite2D.play("charged")
+	else:
+		$AnimatedSprite2D.play("default")
+	
