@@ -1,7 +1,0 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://rglalewkhbya"]
-
-[ext_resource type="FontFile" uid="uid://yxms8fhsjt56" path="res://assets/fonts/friendlyscribbles.ttf" id="1_ysbad"]
-
-[resource]
-default_font = ExtResource("1_ysbad")
-default_font_size = 48

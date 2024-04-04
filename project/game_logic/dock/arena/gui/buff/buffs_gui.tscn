@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://chfgavfd4jeq2"]
-
-[ext_resource type="Script" path="res://game_logic/dock/arena/gui/buff/buffs_gui.gd" id="1_ov55x"]
-
-[node name="Buffs_GUI" type="Node2D"]
-script = ExtResource("1_ov55x")
