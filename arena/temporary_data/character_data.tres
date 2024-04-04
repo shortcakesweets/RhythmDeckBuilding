@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=7 format=3 uid="uid://cqljc17f2p1j"]
+
+[ext_resource type="Script" path="res://entity/character/character_data.gd" id="1_c34io"]
+[ext_resource type="Resource" uid="uid://683rem6vphgp" path="res://card/tres/타격.tres" id="1_xl5x7"]
+[ext_resource type="Resource" uid="uid://bwmp1va7ngagy" path="res://card/tres/수비.tres" id="2_yqeoh"]
+[ext_resource type="Resource" uid="uid://ccx02p3jm8f8q" path="res://card/tres/심호흡.tres" id="3_x3ipj"]
+[ext_resource type="Resource" uid="uid://be2blwetxy2fl" path="res://card/tres/강타.tres" id="4_aopod"]
+[ext_resource type="Resource" uid="uid://c8a3lctu0cpyw" path="res://card/tres/힘 증가.tres" id="6_oj24k"]
+
+[resource]
+script = ExtResource("1_c34io")
+max_energy = 12
+starting_energy = 3
+max_defense_expire_rate = 4
+emergency_reload_many = 3
+reload_threshold = 8
+deck = Array[Resource("res://card/card.gd")]([ExtResource("1_xl5x7"), ExtResource("1_xl5x7"), ExtResource("1_xl5x7"), ExtResource("1_xl5x7"), ExtResource("1_xl5x7"), ExtResource("2_yqeoh"), ExtResource("2_yqeoh"), ExtResource("2_yqeoh"), ExtResource("2_yqeoh"), ExtResource("3_x3ipj"), ExtResource("3_x3ipj"), ExtResource("4_aopod"), ExtResource("6_oj24k")])
+relic = Array[Resource("res://relic/relic.gd")]([])
+max_hp = 100
+hp = 100
+buff_list = Array[Resource("res://buff/buff.gd")]([])

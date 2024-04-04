@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="BuffStun" load_steps=3 format=3 uid="uid://dn5u1xhx3xvef"]
+
+[ext_resource type="Texture2D" uid="uid://bgaosl7to44ir" path="res://buff/icon/stunned.png" id="1_l20ce"]
+[ext_resource type="Script" path="res://buff/stunned.gd" id="1_pi0uv"]
+
+[resource]
+script = ExtResource("1_pi0uv")
+buff_name = "경직"
+buff_icon = ExtResource("1_l20ce")
+buff_description = "현재 행동이 느려집니다. 받은 경직의 2배만큼 경직면역이 됩니다."
+is_debuff = true
+is_decaying = true

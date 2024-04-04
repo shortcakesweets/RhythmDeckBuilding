@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=3 uid="uid://cml3uwlj5ddh2"]
+
+[ext_resource type="Script" path="res://arena/components/enemies_gui/enemy_gui.gd" id="1_w5vi1"]
+[ext_resource type="SpriteFrames" uid="uid://b1jrxy4mk5gsk" path="res://entity/enemy/enemy_spriteframes.tres" id="2_3xtfh"]
+[ext_resource type="Texture2D" uid="uid://sxpbbhmchds" path="res://arena/components/gui_assets/hp_under.png" id="2_d7qka"]
+[ext_resource type="Texture2D" uid="uid://de0wbw2tmejqi" path="res://arena/components/gui_assets/hp_progress.png" id="3_p4yab"]
+[ext_resource type="Theme" uid="uid://rglalewkhbya" path="res://main_menu.tres" id="4_re6ny"]
+[ext_resource type="PackedScene" uid="uid://dgp57jsx4mka3" path="res://arena/components/buffs_gui/buffs_gui.tscn" id="6_gn5k3"]
+
+[node name="Enemy_GUI" type="Node2D"]
+script = ExtResource("1_w5vi1")
+
+[node name="EnemySprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -40)
+scale = Vector2(3, 3)
+sprite_frames = ExtResource("2_3xtfh")
+animation = &"slime_idle"
+speed_scale = 3.0
+
+[node name="HP" type="TextureProgressBar" parent="."]
+offset_left = -128.0
+offset_top = 24.0
+offset_right = 128.0
+offset_bottom = 64.0
+value = 50.0
+nine_patch_stretch = true
+texture_under = ExtResource("2_d7qka")
+texture_progress = ExtResource("3_p4yab")
+
+[node name="Label" type="Label" parent="HP"]
+layout_mode = 0
+offset_top = -8.0
+offset_right = 256.0
+offset_bottom = 56.0
+theme = ExtResource("4_re6ny")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "50"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Turn_Counter" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = -64.0
+offset_top = -320.0
+offset_right = 64.0
+offset_bottom = -192.0
+theme = ExtResource("4_re6ny")
+text = "4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Buffs_GUI" parent="." instance=ExtResource("6_gn5k3")]
+anchors_preset = 0
+offset_left = -192.0
+offset_top = 64.0
+offset_right = -192.0
+offset_bottom = 64.0

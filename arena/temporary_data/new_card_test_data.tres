@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=5 format=3 uid="uid://5g8d3bop6ito"]
+
+[ext_resource type="Script" path="res://entity/character/character_data.gd" id="1_msbuk"]
+[ext_resource type="Resource" uid="uid://c4vtifymaa3kq" path="res://card/tres/쌍날 베기.tres" id="1_qvi6q"]
+[ext_resource type="Resource" uid="uid://bwmp1va7ngagy" path="res://card/tres/수비.tres" id="2_s64in"]
+[ext_resource type="Resource" uid="uid://crevcbabqjnl6" path="res://card/tres/난격.tres" id="2_ud1i6"]
+
+[resource]
+script = ExtResource("1_msbuk")
+max_energy = 12
+starting_energy = 3
+max_defense_expire_rate = 4
+emergency_reload_many = 3
+reload_threshold = 8
+deck = Array[Resource("res://card/card.gd")]([ExtResource("2_s64in"), ExtResource("2_s64in"), ExtResource("2_s64in"), ExtResource("2_ud1i6"), ExtResource("1_qvi6q")])
+relic = Array[Resource("res://relic/relic.gd")]([])
+max_hp = 100
+hp = 100
+buff_list = Array[Resource("res://buff/buff.gd")]([])

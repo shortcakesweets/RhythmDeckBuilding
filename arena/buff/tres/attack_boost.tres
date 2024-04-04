@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Buff" load_steps=3 format=3 uid="uid://dl1t7x22tvpwi"]
+
+[ext_resource type="Texture2D" uid="uid://bpmoqygr4rx7u" path="res://buff/icon/attack_boost.png" id="1_1cx6r"]
+[ext_resource type="Script" path="res://buff/buff.gd" id="1_oytvg"]
+
+[resource]
+script = ExtResource("1_oytvg")
+buff_name = "attack_boost"
+buff_icon = ExtResource("1_1cx6r")
+buff_description = "X턴간 공격 위력이 2 증가"
+is_debuff = false
+is_decaying = true

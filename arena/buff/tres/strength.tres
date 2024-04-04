@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Buff" load_steps=3 format=3 uid="uid://crwf0mbsikr7a"]
+
+[ext_resource type="Texture2D" uid="uid://cn5uvh8nj7c4y" path="res://buff/icon/strength.png" id="1_2gsgs"]
+[ext_resource type="Script" path="res://buff/buff.gd" id="1_gevbq"]
+
+[resource]
+script = ExtResource("1_gevbq")
+buff_name = "strength"
+buff_icon = ExtResource("1_2gsgs")
+buff_description = "X 만큼 공격 위력이 증가한다."
+is_debuff = false
+is_decaying = false

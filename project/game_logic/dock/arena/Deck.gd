@@ -129,3 +129,12 @@ func is_emergency_reload_available() -> bool:
 func add_energy(amount : int) -> void:
 	var character_data : CharacterData = %Character.character_data
 	energy = clamp(energy + amount, 0, character_data.max_energy)
+
+func cleanse_etherial_cards() -> Array[Card]:
+	var exhausted_cards : Array[Card]
+	for idx in range(6):
+		var card := hand_pile[idx]
+		if card.etherial:
+			exhausted_cards.append(card)
+			hand_pile[idx] = null
+	return exhausted_cards

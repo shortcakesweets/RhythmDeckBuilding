@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="CardBasic" load_steps=2 format=3 uid="uid://dmdrqbrr8pyqx"]
+
+[ext_resource type="Script" path="res://card/card_basic.gd" id="1_x2b7o"]
+
+[resource]
+script = ExtResource("1_x2b7o")
+base_damage = 10
+strength_multiplier = 1
+base_defense = 0
+self_buff_value = 0
+target_buff_value = 0
+card_name = "후속 베기"
+card_rarity = 0
+card_energy = 0
+card_energy_refill = 0
+description = "피해를 10 줍니다. 소멸, 휘발성"
+character_animation = "Sword_Stab"
+exhaust = true
+etherial = true

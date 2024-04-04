@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="EnemyBasic" load_steps=2 format=3 uid="uid://bvjig4tfh4tns"]
+
+[ext_resource type="Script" path="res://entity/enemy/enemy_basic.gd" id="1_ng104"]
+
+[resource]
+script = ExtResource("1_ng104")
+action_name = "attack"
+animation_action = "slime_attack"
+action_description = "6의 데미지로 공격한다."
+action_period = 4
+base_damage = 6
+base_defense = 0
+self_buff_value = 0
+target_buff_value = 0
+name = "Slime"
+max_hp = 60
+hp = 60
+animation_idle = "slime_idle"
+animation_death = "slime_death"
+animation_postdeath = "slime_postdeath"
+turn_counter = 6

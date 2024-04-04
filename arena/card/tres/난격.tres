@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="CardSummon" load_steps=3 format=3 uid="uid://crevcbabqjnl6"]
+
+[ext_resource type="Script" path="res://card/card_summon.gd" id="1_rrtti"]
+[ext_resource type="Resource" uid="uid://cqarmst6sf53c" path="res://card/tres/난격 토큰.tres" id="2_rppuo"]
+
+[resource]
+script = ExtResource("1_rrtti")
+summon = Array[Resource("res://card/card.gd")]([ExtResource("2_rppuo"), ExtResource("2_rppuo"), ExtResource("2_rppuo"), ExtResource("2_rppuo"), ExtResource("2_rppuo"), ExtResource("2_rppuo")])
+summon_here = false
+base_damage = 0
+strength_multiplier = 1
+base_defense = 0
+self_buff_value = 0
+target_buff_value = 0
+discard_all = true
+exhaust_all = false
+draw = 0
+card_name = "난격"
+card_rarity = 0
+card_energy = 0
+card_energy_refill = 0
+description = "피해를 6 줍니다. 손의 모든 카드를 버리고 난격토큰을 6장 얻습니다."
+character_animation = "Sword_Stab"
+exhaust = false
+etherial = false
+etherial_max_count = 1

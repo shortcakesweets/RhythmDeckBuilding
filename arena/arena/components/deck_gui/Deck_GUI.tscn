@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8ixh87g4u0dv"]
+
+[ext_resource type="Script" path="res://arena/components/deck_gui/Deck_GUI.gd" id="1_fc071"]
+[ext_resource type="PackedScene" uid="uid://bs6aid20evtpf" path="res://arena/components/deck_gui/card_gui.tscn" id="2_twui4"]
+
+[node name="Deck_GUI" type="Node2D"]
+script = ExtResource("1_fc071")
+
+[node name="Hand" type="Node2D" parent="."]
+
+[node name="Card_GUI0" parent="Hand" instance=ExtResource("2_twui4")]
+
+[node name="Card_GUI1" parent="Hand" instance=ExtResource("2_twui4")]
+position = Vector2(272, 0)
+
+[node name="Card_GUI2" parent="Hand" instance=ExtResource("2_twui4")]
+position = Vector2(544, 0)
+
+[node name="Card_GUI3" parent="Hand" instance=ExtResource("2_twui4")]
+position = Vector2(816, 0)
+
+[node name="Card_GUI4" parent="Hand" instance=ExtResource("2_twui4")]
+position = Vector2(1088, 0)
+
+[node name="Card_GUI5" parent="Hand" instance=ExtResource("2_twui4")]
+position = Vector2(1360, 0)
+
+[node name="Card_GUI_prev0" parent="." instance=ExtResource("2_twui4")]
+position = Vector2(-208, 128)
+scale = Vector2(0.6, 0.6)
+
+[node name="Card_GUI_prev1" parent="." instance=ExtResource("2_twui4")]
+position = Vector2(-384, 128)
+scale = Vector2(0.6, 0.6)

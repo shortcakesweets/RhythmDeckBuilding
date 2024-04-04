@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CardBasic" load_steps=3 format=3 uid="uid://be2blwetxy2fl"]
+
+[ext_resource type="Script" path="res://card/card_basic.gd" id="1_a7ewq"]
+[ext_resource type="Resource" uid="uid://dn5u1xhx3xvef" path="res://buff/tres/stunned.tres" id="2_am02r"]
+
+[resource]
+script = ExtResource("1_a7ewq")
+base_damage = 3
+strength_multiplier = 1
+base_defense = 0
+self_buff_value = 0
+target_buff = ExtResource("2_am02r")
+target_buff_value = 2
+card_name = "강타"
+card_rarity = 1
+card_energy = 1
+card_energy_refill = 0
+description = "피해를 3 입힌다. 대상에게 경직상태를 2턴간 부여한다."
+character_animation = "Sword_Stab"
+exhaust = false
+etherial = false

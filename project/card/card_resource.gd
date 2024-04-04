@@ -20,6 +20,10 @@ enum RARITY {BASE, COMMON, UNCOMMON, RARE, SPECIAL}
 @export var discard_description := ""
 @export var holding_description := ""
 
+# etherial cards will be exhausted when not used.
+# this is checked on %Deck when turn ends
+@export var etherial : bool = false
+
 @export var character_animation := ""
 @export var use_sfx : AudioStreamOggVorbis = preload("res://assets/sound/cardPlace2.ogg")
 

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CardBasic" load_steps=4 format=3 uid="uid://c8a3lctu0cpyw"]
+
+[ext_resource type="Texture2D" uid="uid://cenl57iu8fgfv" path="res://card/illust/준비자세.png" id="1_h1l85"]
+[ext_resource type="Script" path="res://card/card_basic.gd" id="1_hnp5k"]
+[ext_resource type="Resource" uid="uid://crwf0mbsikr7a" path="res://buff/tres/strength.tres" id="3_pdbgs"]
+
+[resource]
+script = ExtResource("1_hnp5k")
+base_damage = 0
+strength_multiplier = 1
+base_defense = 0
+self_buff = ExtResource("3_pdbgs")
+self_buff_value = 2
+target_buff_value = 0
+card_name = "힘 증가"
+card_rarity = 2
+card_energy = 1
+card_energy_refill = 0
+card_illust = ExtResource("1_h1l85")
+description = "힘을 2 얻는다.\\n소멸"
+character_animation = "Sword_Idle"
+exhaust = true
+etherial = false

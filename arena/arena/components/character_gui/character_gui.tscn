@@ -1,0 +1,76 @@
+[gd_scene load_steps=9 format=3 uid="uid://ityamiduu6tq"]
+
+[ext_resource type="Script" path="res://arena/components/character_gui/character_gui.gd" id="1_evbjs"]
+[ext_resource type="SpriteFrames" uid="uid://c40jpmep6pfva" path="res://entity/character/character_spriteframes.tres" id="2_jwlws"]
+[ext_resource type="Texture2D" uid="uid://sxpbbhmchds" path="res://arena/components/gui_assets/hp_under.png" id="6_ax0uk"]
+[ext_resource type="Texture2D" uid="uid://bptb0vv0gr8uh" path="res://arena/components/gui_assets/defense_under.png" id="6_tn4g6"]
+[ext_resource type="Texture2D" uid="uid://de0wbw2tmejqi" path="res://arena/components/gui_assets/hp_progress.png" id="7_143mw"]
+[ext_resource type="Texture2D" uid="uid://b2d81heokkvpe" path="res://arena/components/gui_assets/defense_progress.png" id="7_wxv2a"]
+[ext_resource type="Theme" uid="uid://rglalewkhbya" path="res://main_menu.tres" id="8_3axqk"]
+[ext_resource type="PackedScene" uid="uid://dgp57jsx4mka3" path="res://arena/components/buffs_gui/buffs_gui.tscn" id="8_ry8nq"]
+
+[node name="Character_GUI" type="Node2D"]
+script = ExtResource("1_evbjs")
+metadata/_edit_lock_ = true
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(8, 8)
+sprite_frames = ExtResource("2_jwlws")
+animation = &"Sword_Idle"
+
+[node name="HP" type="TextureProgressBar" parent="."]
+offset_left = -144.0
+offset_top = 144.0
+offset_right = 144.0
+offset_bottom = 184.0
+value = 50.0
+nine_patch_stretch = true
+texture_under = ExtResource("6_ax0uk")
+texture_progress = ExtResource("7_143mw")
+
+[node name="Label" type="Label" parent="HP"]
+layout_mode = 0
+offset_right = 288.0
+offset_bottom = 48.0
+theme = ExtResource("8_3axqk")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "50"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Defense" type="TextureProgressBar" parent="."]
+texture_filter = 2
+offset_left = -256.0
+offset_top = 96.0
+offset_right = -188.0
+offset_bottom = 164.0
+scale = Vector2(1.875, 1.875)
+value = 50.0
+fill_mode = 4
+nine_patch_stretch = true
+texture_under = ExtResource("6_tn4g6")
+texture_progress = ExtResource("7_wxv2a")
+
+[node name="Label" type="Label" parent="Defense"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("8_3axqk")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Buffs_GUI" parent="." instance=ExtResource("8_ry8nq")]
+anchors_preset = 0
+offset_left = -256.0
+offset_top = 256.0
+offset_right = -256.0
+offset_bottom = 256.0

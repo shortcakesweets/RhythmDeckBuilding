@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CardSummon" load_steps=3 format=3 uid="uid://c4vtifymaa3kq"]
+
+[ext_resource type="Script" path="res://card/card_summon.gd" id="1_ibrx3"]
+[ext_resource type="Resource" uid="uid://dmdrqbrr8pyqx" path="res://card/tres/후속 베기.tres" id="2_hwonx"]
+
+[resource]
+script = ExtResource("1_ibrx3")
+summon = Array[Resource("res://card/card.gd")]([ExtResource("2_hwonx")])
+summon_here = true
+base_damage = 5
+strength_multiplier = 1
+base_defense = 0
+self_buff_value = 0
+target_buff_value = 0
+card_name = "쌍날 베기"
+card_rarity = 1
+card_energy = 0
+card_energy_refill = 0
+description = "피해를 5 줍니다. 후속 베기를 내 손으로 가져옵니다."
+character_animation = "Sword_Attack"
+exhaust = false
+etherial = false

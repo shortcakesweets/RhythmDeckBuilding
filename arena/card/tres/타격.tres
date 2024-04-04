@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CardBasic" load_steps=3 format=3 uid="uid://683rem6vphgp"]
+
+[ext_resource type="Script" path="res://card/card_basic.gd" id="1_2o1ga"]
+[ext_resource type="Texture2D" uid="uid://c28u2mp3rvxsp" path="res://card/illust/타격.png" id="1_l4osx"]
+
+[resource]
+script = ExtResource("1_2o1ga")
+base_damage = 6
+strength_multiplier = 1
+base_defense = 0
+self_buff_value = 0
+target_buff_value = 0
+card_name = "타격"
+card_rarity = 0
+card_energy = 0
+card_energy_refill = 0
+card_illust = ExtResource("1_l4osx")
+description = "피해를 6 입힌다"
+character_animation = "Sword_Attack"
+exhaust = false
+etherial = false

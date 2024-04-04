@@ -7,7 +7,7 @@ class_name Buff
 @export var is_debuff : bool = false
 @export var is_decayable : bool = true
 
-@export var buff_apply_sfx : AudioStreamOggVorbis = null
+@export var buff_apply_sfx : AudioStreamOggVorbis = preload("res://assets/sound/sample_buff.ogg")
 @export var buff_end_sfx : AudioStreamOggVorbis = null
 
 @export var buff_functions : Script = null

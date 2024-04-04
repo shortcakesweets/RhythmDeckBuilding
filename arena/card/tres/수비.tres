@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CardBasic" load_steps=3 format=3 uid="uid://bwmp1va7ngagy"]
+
+[ext_resource type="Texture2D" uid="uid://3x2rekikuu0y" path="res://card/illust/수비.png" id="1_hs5lr"]
+[ext_resource type="Script" path="res://card/card_basic.gd" id="2_2ihmf"]
+
+[resource]
+script = ExtResource("2_2ihmf")
+base_damage = 0
+strength_multiplier = 1
+base_defense = 4
+self_buff_value = 0
+target_buff_value = 0
+card_name = "수비"
+card_rarity = 0
+card_energy = 0
+card_energy_refill = 0
+card_illust = ExtResource("1_hs5lr")
+description = "방어도를 4 얻는다"
+character_animation = "Sword_Idle"
+exhaust = false
+etherial = false

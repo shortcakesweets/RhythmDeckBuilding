@@ -1,28 +1,43 @@
-[gd_scene load_steps=6 format=3 uid="uid://bg7xgutugl20h"]
+[gd_scene load_steps=12 format=3 uid="uid://bg7xgutugl20h"]
 
 [ext_resource type="Script" path="res://arena/logic/Turn.gd" id="1_r421t"]
 [ext_resource type="Script" path="res://arena/arena.gd" id="1_t0fvt"]
 [ext_resource type="Script" path="res://arena/logic/Deck.gd" id="2_02rqm"]
+[ext_resource type="Resource" uid="uid://5g8d3bop6ito" path="res://temporary_data/new_card_test_data.tres" id="2_2ti61"]
+[ext_resource type="Resource" uid="uid://cjoardcmtyes2" path="res://temporary_data/debug_wave.tres" id="3_7c72u"]
+[ext_resource type="Script" path="res://arena/logic/Input.gd" id="4_3ch8h"]
 [ext_resource type="Script" path="res://arena/logic/Enemies.gd" id="4_lqbhn"]
 [ext_resource type="Script" path="res://arena/logic/Character.gd" id="5_5dd84"]
+[ext_resource type="PackedScene" uid="uid://b8ixh87g4u0dv" path="res://arena/components/deck_gui/Deck_GUI.tscn" id="7_udppr"]
+[ext_resource type="PackedScene" uid="uid://hlyp78pg6n11" path="res://arena/components/enemies_gui/enemies_gui.tscn" id="9_ryd5n"]
+[ext_resource type="PackedScene" uid="uid://ityamiduu6tq" path="res://arena/components/character_gui/character_gui.tscn" id="11_dwcjd"]
 
 [node name="Arena" type="Node2D"]
 script = ExtResource("1_t0fvt")
+debug_mode = true
+debug_character_data = ExtResource("2_2ti61")
+debug_wave_data = ExtResource("3_7c72u")
 
 [node name="Logic" type="Node" parent="."]
+editor_description = "Wrapper node for game logics
+Deck, Character, Enemy handles animation logics too"
 
 [node name="Turn" type="Node" parent="Logic"]
 unique_name_in_owner = true
+editor_description = "Turn process"
 script = ExtResource("1_r421t")
 
 [node name="Rhythm" type="Node" parent="Logic"]
+editor_description = "Handles rhythm"
 
 [node name="Deck" type="Node" parent="Logic"]
 unique_name_in_owner = true
 script = ExtResource("2_02rqm")
 
 [node name="Input" type="Node" parent="Logic"]
+unique_name_in_owner = true
 process_mode = 3
+script = ExtResource("4_3ch8h")
 
 [node name="Enemies" type="Node" parent="Logic"]
 unique_name_in_owner = true
@@ -30,4 +45,28 @@ script = ExtResource("4_lqbhn")
 
 [node name="Character" type="Node" parent="Logic"]
 unique_name_in_owner = true
+editor_description = "stores character data,
++ functions for character data"
 script = ExtResource("5_5dd84")
+
+[node name="GUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -56.0
+offset_top = -48.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+metadata/_edit_lock_ = true
+
+[node name="Deck_GUI" parent="GUI" instance=ExtResource("7_udppr")]
+unique_name_in_owner = true
+position = Vector2(440, 752)
+scale = Vector2(0.8, 0.8)
+
+[node name="Enemies_GUI" parent="GUI" instance=ExtResource("9_ryd5n")]
+unique_name_in_owner = true
+position = Vector2(1144, 496)
+
+[node name="Character_GUI" parent="GUI" instance=ExtResource("11_dwcjd")]
+unique_name_in_owner = true
+position = Vector2(376, 432)

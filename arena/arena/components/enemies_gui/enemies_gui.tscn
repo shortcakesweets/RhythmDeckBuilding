@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://hlyp78pg6n11"]
+
+[ext_resource type="Script" path="res://arena/components/enemies_gui/enemies_gui.gd" id="1_qwmuj"]
+[ext_resource type="PackedScene" uid="uid://cml3uwlj5ddh2" path="res://arena/components/enemies_gui/enemy_gui.tscn" id="2_f2rwk"]
+
+[node name="Enemies_GUI" type="Node2D"]
+script = ExtResource("1_qwmuj")
+
+[node name="Enemy_list" type="Node2D" parent="."]
+
+[node name="Enemy_GUI0" parent="Enemy_list" instance=ExtResource("2_f2rwk")]
+
+[node name="Enemy_GUI1" parent="Enemy_list" instance=ExtResource("2_f2rwk")]
+position = Vector2(320, 64)
+
+[node name="Enemy_GUI2" parent="Enemy_list" instance=ExtResource("2_f2rwk")]
+position = Vector2(640, 0)
