@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Skeleton" load_steps=2 format=3 uid="uid://bltnskoyhrfpr"]
+
+[ext_resource type="Script" path="res://entity/enemy/skeleton.gd" id="1_3vmmc"]
+
+[resource]
+script = ExtResource("1_3vmmc")
+action_name = "attack_and_defend"
+action_animation = "skeleton_attack_then_counter_idle"
+action_description = "atk6, def2"
+action_period = 3
+counter_action_name = "counter_attack"
+counter_action_animation = "skeleton_attack_then_idle"
+counter_action_idle_animation = "skeleton_counter_idle"
+counter_action_description = "when attacked, atk6 and immideately return to base action"
+counter_action_period = 3
+current_action = "attack_and_defend"
+base_damage = 6
+base_defense = 2
+counter_damage = 6
+self_buff_value = 0
+target_buff_value = 0
+name = "Skeleton"
+animation_idle = "skeleton_idle"
+animation_death = "skeleton_death"
+animation_postdeath = "skeleton_postdeath"
+turn_counter = 6
+max_hp = 30
+hp = 30
+buff_list = Array[Resource("res://buff/buff.gd")]([])

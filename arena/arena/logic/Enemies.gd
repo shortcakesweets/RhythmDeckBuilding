@@ -4,7 +4,7 @@ var enemy_list : Array[Enemy] = []
 
 func setup(wave : Wave) -> void:
 	enemy_list = wave.enemy_list.duplicate(true)
-	%Enemies_GUI.update_visuals()
+	%Enemies_GUI.update_visuals(true)
 
 func get_target() -> Enemy:
 	for enemy in enemy_list:

@@ -6,7 +6,7 @@ func _ready() -> void:
 	self.visible = false
 	$HP.value = 0
 
-func update_visuals(enemy_data : Enemy) -> void:
+func update_visuals(enemy_data : Enemy, override_idle_anim : bool = false) -> void:
 	if enemy_data == null:
 		self.visible = false
 	else:
@@ -15,7 +15,10 @@ func update_visuals(enemy_data : Enemy) -> void:
 		_animate_buffs(enemy_data)
 		
 		$EnemySprite.stop()
-		$EnemySprite.play(enemy_data.current_animation)
+		if not override_idle_anim:
+			$EnemySprite.play(enemy_data.current_animation)
+		else:
+			$EnemySprite.play(enemy_data.animation_idle)
 		%Turn_Counter.text = str(enemy_data.turn_counter)
 
 func _animate_hp(enemy_data : Enemy, tween_duration : float = 0.2) -> void:

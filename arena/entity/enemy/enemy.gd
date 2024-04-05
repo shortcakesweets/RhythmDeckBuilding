@@ -6,7 +6,8 @@ class_name Enemy
 @export var animation_idle : String = ""
 @export var animation_death : String = ""
 @export var animation_postdeath : String = ""
-var current_animation : String = ""
+var current_animation : String = animation_idle
+var current_icon : CompressedTexture2D = null
 
 @export var turn_counter : int = 0
 

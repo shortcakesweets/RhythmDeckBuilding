@@ -7,7 +7,7 @@ var defense : int = 0
 
 @export var buff_list : Array[Buff] = []
 
-# Character functions
+# Entity functions
 func recieve_damage(arena, attacker : Entity, damage : int):
 	if damage <= defense:
 		apply_defense(-damage)
