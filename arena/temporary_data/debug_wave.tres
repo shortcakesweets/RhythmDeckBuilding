@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="Wave" load_steps=3 format=3 uid="uid://cjoardcmtyes2"]
+[gd_resource type="Resource" script_class="Wave" load_steps=4 format=3 uid="uid://cjoardcmtyes2"]
 
 [ext_resource type="Resource" uid="uid://bltnskoyhrfpr" path="res://entity/enemy/tres/skeleton.tres" id="1_02qjy"]
 [ext_resource type="Script" path="res://wave/wave.gd" id="1_aecht"]
+[ext_resource type="Resource" uid="uid://bvjig4tfh4tns" path="res://entity/enemy/tres/slime_slowstart.tres" id="2_hg6c0"]
 
 [resource]
 script = ExtResource("1_aecht")
-enemy_list = Array[Resource("res://entity/enemy/enemy.gd")]([ExtResource("1_02qjy")])
+enemy_list = Array[Resource("res://entity/enemy/enemy.gd")]([ExtResource("1_02qjy"), ExtResource("2_hg6c0")])
 bpm = 0

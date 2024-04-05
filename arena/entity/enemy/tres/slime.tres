@@ -1,11 +1,13 @@
-[gd_resource type="Resource" script_class="EnemyBasic" load_steps=2 format=3 uid="uid://bo8vv8tguwnhs"]
+[gd_resource type="Resource" script_class="EnemyBasic" load_steps=3 format=3 uid="uid://bo8vv8tguwnhs"]
 
 [ext_resource type="Script" path="res://entity/enemy/enemy_basic.gd" id="1_i5sjx"]
+[ext_resource type="Texture2D" uid="uid://vv5ahwyl3jpg" path="res://entity/enemy/icon/attack.png" id="1_ww51d"]
 
 [resource]
 script = ExtResource("1_i5sjx")
 action_name = "attack"
-animation_action = "slime_attack"
+action_icon = ExtResource("1_ww51d")
+action_animation = "slime_attack"
 action_description = "6의 데미지로 공격한다."
 action_period = 4
 base_damage = 6
@@ -13,9 +15,11 @@ base_defense = 0
 self_buff_value = 0
 target_buff_value = 0
 name = "Slime"
-max_hp = 60
-hp = 60
 animation_idle = "slime_idle"
 animation_death = "slime_death"
 animation_postdeath = "slime_postdeath"
+current_icon = ExtResource("1_ww51d")
 turn_counter = 4
+max_hp = 60
+hp = 60
+buff_list = Array[Resource("res://buff/buff.gd")]([])

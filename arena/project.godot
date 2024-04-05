@@ -33,6 +33,7 @@ folder_colors={
 "res://card/tres/": "red",
 "res://entity/character/animation/": "green",
 "res://entity/enemy/animation/": "green",
+"res://entity/enemy/icon/": "green",
 "res://entity/enemy/tres/": "red",
 "res://temporary_data/": "red",
 "res://wave/tres/": "red"

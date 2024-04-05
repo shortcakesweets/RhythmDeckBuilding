@@ -13,13 +13,13 @@ func update_visuals(enemy_data : Enemy, override_idle_anim : bool = false) -> vo
 		self.visible = true
 		_animate_hp(enemy_data)
 		_animate_buffs(enemy_data)
+		_animate_turn_counter(enemy_data)
 		
 		$EnemySprite.stop()
 		if not override_idle_anim:
 			$EnemySprite.play(enemy_data.current_animation)
 		else:
 			$EnemySprite.play(enemy_data.animation_idle)
-		%Turn_Counter.text = str(enemy_data.turn_counter)
 
 func _animate_hp(enemy_data : Enemy, tween_duration : float = 0.2) -> void:
 	$HP.max_value = enemy_data.max_hp
@@ -35,3 +35,8 @@ func _animate_buffs(enemy_data : Enemy) -> void:
 	if not enemy_data.is_dead():
 		buff_list = enemy_data.buff_list
 	$Buffs_GUI.update_visuals(buff_list)
+
+func _animate_turn_counter(enemy_data : Enemy) -> void:
+	%Turn_Counter.text = str(enemy_data.turn_counter)
+	$Action_Icon.texture = enemy_data.current_icon
+	

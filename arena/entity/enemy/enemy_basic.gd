@@ -25,10 +25,7 @@ func turn(arena) -> void:
 		return
 	turn_counter -= 1
 	if turn_counter == 0:
-		current_animation = action_animation
 		_action(arena)
-		turn_counter = action_period
-	current_icon = action_icon
 
 func _action(arena) -> void:
 	var character_data : CharacterData = arena.get_node("%Character").character_data
@@ -39,3 +36,7 @@ func _action(arena) -> void:
 		apply_buff(arena, self_buff, self_buff_value)
 	if target_buff != null:
 		character_data.apply_buff(arena, target_buff, target_buff_value)
+	
+	current_animation = action_animation
+	turn_counter = action_period
+	current_icon = action_icon

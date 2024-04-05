@@ -65,6 +65,7 @@ func _action_base(arena) -> void:
 	current_animation = action_animation
 	current_action = counter_action_name
 	turn_counter = counter_action_period
+	current_icon = counter_action_icon
 
 func _action_counter(arena) -> void:
 	var character_data : CharacterData = arena.get_node("%Character").character_data
@@ -73,5 +74,6 @@ func _action_counter(arena) -> void:
 	current_animation = counter_action_animation
 	current_action = action_name
 	turn_counter = action_period
+	current_icon = action_icon
 #endregion
 
