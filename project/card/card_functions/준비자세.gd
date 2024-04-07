@@ -3,7 +3,7 @@
 
 static func on_use(arena : Node) -> void:
 	var character_data : CharacterData = arena.get_node("%Character").character_data
-	var buff : Buff = load("res://buff/임시_힘.tres").duplicate(true)
+	var buff : Buff = load("res://buff/tres/임시_힘.tres").duplicate(true)
 	buff.on_apply(arena, character_data, 3)
 	
 	var deck_node := arena.get_node("%Deck")
