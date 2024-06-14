@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CardSpecialConsume" load_steps=2 format=3 uid="uid://ccjj7s2iwfo7p"]
+
+[ext_resource type="Script" path="res://card/card_consume.gd" id="1_j8ta6"]
+
+[resource]
+script = ExtResource("1_j8ta6")
+card_name = "흡수"
+card_rarity = 1
+card_energy = 4
+card_energy_X = false
+card_energy_refill = 0
+description = "이번 전투에서 소멸시킨 카드의 수만큼 에너지를 채웁니다."
+character_animation = "Sword_Idle"
+exhaust = false
+etherial = false
+etherial_max_count = 1

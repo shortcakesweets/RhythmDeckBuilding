@@ -28,10 +28,11 @@ func load() -> CharacterData:
 
 # updates defense += value
 #  automatically updates expire rate
-func apply_defense(value : int) -> void:
+func apply_defense(value : int, is_renewal : bool = true) -> void:
 	super.apply_defense(value)
-	defense_applied_this_turn = true
-	defense_expire_rate = max_defense_expire_rate
+	if is_renewal:
+		defense_applied_this_turn = true
+		defense_expire_rate = max_defense_expire_rate
 
 func decay_defense_expire_rate() -> void:
 	if defense_applied_this_turn:
@@ -44,5 +45,3 @@ func decay_defense_expire_rate() -> void:
 
 func apply_energy(value : int) -> void:
 	energy = clamp(energy + value, 0, max_energy)
-
-

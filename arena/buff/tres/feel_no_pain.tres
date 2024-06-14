@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Buff" load_steps=3 format=3 uid="uid://dwfwgpoutrl8w"]
+
+[ext_resource type="Texture2D" uid="uid://efqo5asc001v" path="res://buff/icon/feel_no_pain.png" id="1_pkyia"]
+[ext_resource type="Script" path="res://buff/buff.gd" id="2_om8lk"]
+
+[resource]
+script = ExtResource("2_om8lk")
+buff_name = "mist"
+buff_icon = ExtResource("1_pkyia")
+buff_description = "카드가 소멸할 때 마다 방어도를 X 얻습니다."
+is_debuff = false
+is_decaying = false

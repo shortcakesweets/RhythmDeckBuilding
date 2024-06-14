@@ -9,7 +9,12 @@ enum RARITY{
 @export var card_rarity : RARITY = RARITY.BASE
 @export var upgrade : Card = null
 
+# IF card energy X is true, the card will be available at card_energy,
+#  but it will use all energy when used
+#  that energy is stored in used_energy
 @export var card_energy : int = 1
+@export var card_energy_X : bool = false
+var used_energy : int = 0
 @export var card_energy_refill : int = 0
 @export var card_illust : CompressedTexture2D = null
 
@@ -33,7 +38,11 @@ func is_available(arena : Node) -> bool:
 # apply card's effect, and animate character
 func on_use(arena : Node) -> void:
 	var character_data : CharacterData = arena.get_node("%Character").character_data
-	character_data.apply_energy(-card_energy)
+	if not card_energy_X:
+		character_data.apply_energy(-card_energy)
+	else:
+		used_energy = character_data.energy
+		character_data.apply_energy(-character_data.energy)
 	character_data.apply_energy(card_energy_refill)
 	
 	# animation update
@@ -46,9 +55,10 @@ func on_use(arena : Node) -> void:
 func _on_use_end(arena : Node) -> void:
 	var deck_node := arena.get_node("%Deck") as Node
 	var card_idx : int = deck_node._get_card_idx(self)
-	if card_idx >= 0:
+	if exhaust:
+		deck_node._exhaust(card_idx)
+	else:
 		deck_node.hand_pile[card_idx] = null
-	if not exhaust:
 		deck_node.discard_pile.append(self)
 
 # effects when discarded.
@@ -72,4 +82,7 @@ func on_turn_end(arena : Node) -> void:
 
 # effects when card is exhausted
 func on_exhaust(arena : Node) -> void:
-	pass
+	var character_data : CharacterData = arena.get_node("%Character").character_data
+	var buff_value := character_data.get_buff_count("mist")
+	if buff_value != 0:
+		character_data.apply_defense(buff_value)

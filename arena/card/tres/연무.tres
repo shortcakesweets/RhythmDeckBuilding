@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="CardBasic" load_steps=3 format=3 uid="uid://bgexon2qkefgg"]
+
+[ext_resource type="Script" path="res://card/card_basic.gd" id="1_qrdrk"]
+[ext_resource type="Resource" uid="uid://dwfwgpoutrl8w" path="res://buff/tres/feel_no_pain.tres" id="2_ovxju"]
+
+[resource]
+script = ExtResource("1_qrdrk")
+base_damage = 0
+strength_multiplier = 1
+base_defense = 0
+self_buff = ExtResource("2_ovxju")
+self_buff_value = 1
+target_buff_value = 0
+discard_all = false
+exhaust_all = false
+draw = 0
+card_name = "연무"
+card_rarity = 1
+card_energy = 1
+card_energy_X = false
+card_energy_refill = 0
+description = "소멸한 카드마다 방어도 1을 얻습니다. 소멸"
+character_animation = "Sword_Idle"
+exhaust = true
+etherial = false
+etherial_max_count = 1

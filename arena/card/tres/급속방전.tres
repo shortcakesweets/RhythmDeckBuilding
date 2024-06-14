@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CardAOEShockWave" load_steps=3 format=3 uid="uid://kbm8sfcvel2p"]
+
+[ext_resource type="Script" path="res://card/card_aoe_shockwave.gd" id="1_kulc0"]
+[ext_resource type="Resource" uid="uid://dn5u1xhx3xvef" path="res://buff/tres/stunned.tres" id="2_o6j3j"]
+
+[resource]
+script = ExtResource("1_kulc0")
+target_buff = ExtResource("2_o6j3j")
+card_name = "급속 방전"
+card_rarity = 0
+card_energy = 1
+card_energy_X = true
+card_energy_refill = 0
+description = "모든 적에게 경직 X를 부여합니다."
+character_animation = "Sword_Idle"
+exhaust = false
+etherial = false
+etherial_max_count = 1

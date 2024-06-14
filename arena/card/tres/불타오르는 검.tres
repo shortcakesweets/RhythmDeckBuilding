@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="CardBasic" load_steps=2 format=3 uid="uid://sh13shvujyvb"]
+
+[ext_resource type="Script" path="res://card/card_basic.gd" id="1_0k6ql"]
+
+[resource]
+script = ExtResource("1_0k6ql")
+base_damage = 24
+strength_multiplier = 1
+base_defense = 0
+self_buff_value = 0
+target_buff_value = 0
+discard_all = false
+exhaust_all = true
+draw = 0
+card_name = "불타오르는 검"
+card_rarity = 0
+card_energy = 8
+card_energy_X = false
+card_energy_refill = 0
+description = "피해를 24 입힙니다. 핸드의 모든 카드를 소멸시킵니다. 소멸"
+character_animation = "Sword_Idle"
+exhaust = true
+etherial = false
+etherial_max_count = 1

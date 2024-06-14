@@ -3,6 +3,7 @@ extends Node
 var hand_pile : Array[Card] = [null, null, null, null, null, null]
 var draw_pile : Array[Card] = []
 var discard_pile : Array[Card] = []
+var exhaust_pile : Array[Card] = []
 
 func setup(character_data : CharacterData) -> void:
 	draw_pile = character_data.deck
@@ -112,8 +113,10 @@ func _discard_all() -> Array[Card]:
 func _exhaust(idx : int) -> Card:
 	var arena := $"../.."
 	var card := hand_pile[idx]
-	card.on_exhaust(arena)
-	hand_pile[idx] = null
+	if card != null:
+		card.on_exhaust(arena)
+		hand_pile[idx] = null
+		exhaust_pile.append(card)
 	return card
 
 func _exhaust_all() -> Array[Card]:

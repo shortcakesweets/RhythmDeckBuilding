@@ -2,7 +2,7 @@
 
 [ext_resource type="Resource" uid="uid://bltnskoyhrfpr" path="res://entity/enemy/tres/skeleton.tres" id="1_02qjy"]
 [ext_resource type="Script" path="res://wave/wave.gd" id="1_aecht"]
-[ext_resource type="Resource" uid="uid://bvjig4tfh4tns" path="res://entity/enemy/tres/slime_slowstart.tres" id="2_hg6c0"]
+[ext_resource type="Resource" uid="uid://dalqhlggc67td" path="res://entity/enemy/tres/slime_slowstart.tres" id="2_hg6c0"]
 
 [resource]
 script = ExtResource("1_aecht")

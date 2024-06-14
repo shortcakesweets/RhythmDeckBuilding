@@ -12,6 +12,9 @@ func get_target() -> Enemy:
 			return enemy
 	return null
 
+func get_all_target() -> Array[Enemy]:
+	return enemy_list
+
 # Deprecated
 #func kill_enemy_with_0_hp() -> void:
 	#for enemy in enemy_list:

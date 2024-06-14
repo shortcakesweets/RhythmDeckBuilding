@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="BodySlam" load_steps=2 format=3 uid="uid://bmyceqgmhr5i8"]
+
+[ext_resource type="Script" path="res://card/bodyslam.gd" id="1_ytsr1"]
+
+[resource]
+script = ExtResource("1_ytsr1")
+block_removal_ratio = 0.5
+card_name = "몸통 박치기"
+card_rarity = 1
+card_energy = 1
+card_energy_refill = 0
+description = "현재 방어도만큼 피해를 입힙니다. 방어도가 절반이 됩니다."
+character_animation = "Sword_Stab"
+exhaust = false
+etherial = false
+etherial_max_count = 1
